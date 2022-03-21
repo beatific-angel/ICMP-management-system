@@ -1,0 +1,496 @@
+/*
+ *  Document   : rtl.css
+ *  Author     : RedStar Theme
+ *  Description: A common stylesheet for right to left layout
+ */
+
+p {
+  text-align: right;
+}
+.noti-information .notification-list a {
+  text-align: right;
+}
+.notification-list a span.icon {
+  margin-left: 15px;
+  font-size: 16px;
+  float: right;
+}
+.quick-setting-main {
+  float: right;
+  left: 55px;
+}
+.course-likes {
+  float: left;
+  margin-left: 10px;
+}
+.page-header.navbar .page-logo {
+  float: right;
+  padding: 10px 20px 0px 60px;
+}
+.fa-rotate-45 {
+  -webkit-transform: rotate(384deg) !important;
+  -moz-transform: rotate(384deg) !important;
+  -ms-transform: rotate(384deg) !important;
+  -o-transform: rotate(384deg) !important;
+  transform: rotate(384deg) !important;
+  color: white;
+}
+.dropdown-quick-sidebar-toggler a {
+  right: 0px;
+}
+.page-header.navbar .top-menu {
+  float: left;
+}
+.page-header.navbar .top-menu .navbar-nav > li.dropdown .dropdown-menu {
+  text-align: right;
+}
+.page-header.navbar .top-menu .navbar-nav > li.dropdown .dropdown-menu:before {
+  left: 10px;
+  right: auto;
+}
+.page-header.navbar
+  .top-menu
+  .navbar-nav
+  > li.dropdown-extended
+  .dropdown-menu
+  .dropdown-menu-list {
+  text-align: right;
+}
+.page-header.navbar
+  .top-menu
+  .navbar-nav
+  > li.dropdown-notification
+  .dropdown-menu
+  .dropdown-menu-list
+  > li
+  a
+  .time {
+  float: left;
+}
+.page-header.navbar
+  .top-menu
+  .navbar-nav
+  > li.dropdown-inbox
+  > .dropdown-menu
+  .dropdown-menu-list
+  > li
+  .photo {
+  float: right;
+  margin: 0 6px 6px 10px;
+}
+.page-header.navbar
+  .top-menu
+  .navbar-nav
+  > li.dropdown-inbox
+  > .dropdown-menu
+  .dropdown-menu-list
+  > li
+  .subject
+  .time {
+  float: left;
+}
+.page-header.navbar .hor-menu .navbar-nav > li.mega-menu-dropdown {
+  position: static;
+}
+.sidemenu-container-reversed .sidemenu-container.fixed-menu {
+  position: fixed;
+}
+.sidemenu-container .sidemenu > li > a,
+.sidemenu-closed.sidemenu-container-fixed
+  .sidemenu-container:hover
+  .sidemenu
+  > li
+  > a {
+  text-align: right;
+}
+.sidemenu-container .sidemenu > li > a > i,
+.sidemenu-closed.sidemenu-container-fixed
+  .sidemenu-container:hover
+  .sidemenu
+  > li
+  > a
+  > i {
+  margin-left: 5px;
+  float: right;
+}
+.sidemenu-container .sidemenu li > a > .arrow:before,
+.sidemenu-closed.sidemenu-container-fixed
+  .sidemenu-container:hover
+  .sidemenu
+  li
+  > a
+  > .arrow:before {
+  left: 5px;
+}
+.sidemenu-container .sidemenu .sub-menu li,
+.sidemenu-closed.sidemenu-container-fixed
+  .sidemenu-container:hover
+  .sidemenu
+  .sub-menu
+  li {
+  text-align: right;
+}
+.sidemenu-container.fixed-menu {
+  position: fixed;
+  z-index: 999;
+}
+.sidemenu-closed .sidemenu-container.fixed-menu {
+  position: relative;
+}
+.sidemenu-container-reversed .sidemenu-container.fixed-menu {
+  right: 0;
+}
+.chat-sidebar-container {
+  left: -320px;
+}
+.chat-sidebar-open .chat-sidebar-container {
+  transition: left 0.3s;
+  left: 0;
+  right: auto;
+}
+.chat-sidebar-container .chat-sidebar .list-items > li {
+  text-align: right;
+}
+.chat-sidebar-container .chat-sidebar .chat-sidebar-item {
+  margin-right: 320px;
+}
+.chat-sidebar-container
+  .chat-sidebar
+  .chat-sidebar-chat
+  .chat-sidebar-chat-users
+  .media-list
+  .media
+  .media-status {
+  left: 10px;
+  right: auto;
+}
+.chat-sidebar-container
+  .chat-sidebar
+  .chat-sidebar-chat
+  .chat-sidebar-chat-users
+  .media-list
+  .media
+  .dot {
+  right: 20px;
+}
+.chat-sidebar-container
+  .chat-sidebar
+  .chat-sidebar-chat
+  .chat-sidebar-chat-users
+  .media-list
+  .media
+  .media-object {
+  margin-left: 10px;
+}
+.card-head header {
+  float: right;
+}
+.card-head .tools {
+  float: left;
+}
+.course-box {
+  padding-right: 20px;
+  text-align: right;
+}
+.label-menu {
+  margin-left: 30px;
+  float: left;
+  width: 37px;
+}
+.sidemenu-closed .label-menu {
+  margin-left: -5px;
+}
+.nav.pull-right > li > .dropdown-menu,
+.nav > li > .dropdown-menu.pull-right {
+  left: 0;
+  right: auto;
+}
+.nav.pull-right > li > .dropdown-menu:before,
+.nav > li > .dropdown-menu.pull-right:before {
+  /* right: 12px;
+    left: auto */
+}
+.info-box-content {
+  margin-left: 0px;
+  text-align: right;
+}
+.info-box-icon {
+  float: right;
+}
+.to-do-list li p {
+  float: right;
+}
+.todo-actionlist {
+  width: 100%;
+}
+.feedBody {
+  list-style: none;
+}
+.info-box-icon.push-bottom {
+  margin-left: 10px;
+}
+.selector-title {
+  text-align: right;
+}
+form.search-form-opened {
+  float: right !important;
+}
+
+/* .sidemenu-container .sidemenu li>a>.arrow:before, .sidemenu-closed.sidemenu-container-fixed .sidemenu-container:hover .sidemenu li>a>.arrow:before {
+    left: 5px !important;
+    right: 0px !important;
+} */
+
+.sidemenu-container .sidemenu li > a > .arrow:before,
+.sidemenu-closed.sidemenu-container-fixed
+  .sidemenu-container:hover
+  .sidemenu
+  li
+  > a
+  > .arrow:before {
+  right: auto;
+}
+.compose-mail .compose-options {
+  left: 30px;
+}
+.compose-mail .form-group label {
+  float: right;
+  margin-right: 0px;
+  text-align: right;
+  padding-right: 5px;
+}
+.panel-body,
+ul.docListWindow,
+.white-box,
+.btn-group > .dropdown-menu {
+  text-align: right;
+}
+ul.docListWindow li .prog-avatar {
+  float: right;
+  margin-right: 5px;
+  margin-left: 20px;
+}
+.dataTables_filter {
+  float: left;
+}
+.dataTables_length,
+.dataTables_info {
+  float: right;
+}
+.mdl-js-button {
+  right: 0px;
+}
+.dtp > .dtp-content {
+  position: fixed !important;
+  top: 50%;
+  left: 50%;
+}
+.mdl-menu__container.is-visible,
+.mdl-menu__container.is-animating {
+  left: 0 !important;
+  right: auto !important;
+}
+.page-header.navbar
+  .top-menu
+  .navbar-nav
+  > li.dropdown-inbox
+  > .dropdown-menu
+  .dropdown-menu-list
+  > li
+  .subject {
+  margin-left: 0px;
+}
+.profile-sidebar {
+  float: right;
+  margin-left: 20px;
+}
+ul.activity-list .avatar img {
+  float: right;
+  margin-left: 20px;
+}
+.inbox .inbox-nav {
+  text-align: right;
+}
+.nav.nav-pills.labels-info {
+  padding-right: 0;
+  text-align: right;
+}
+.nav.nav-pills.labels-info li a {
+  border-right: none;
+}
+.inbox .inbox-header {
+  padding-bottom: 13px;
+}
+.compose-mail .form-group label {
+  width: 76px;
+  float: right;
+  margin-right: 0px;
+}
+.compose-editor {
+  padding-right: 15px;
+}
+.control-label {
+  text-align: right;
+  max-width: 100%;
+}
+.panel-heading {
+  text-align: right;
+}
+.owl-carousel,
+.bx-wrapper {
+  direction: ltr;
+}
+.owl-carousel .owl-item {
+  direction: rtl;
+}
+
+.jsdemo-notification-button {
+  text-align: right;
+}
+.mdl-checkbox.is-upgraded,
+.mdl-switch.is-upgraded {
+  padding-left: 0px;
+  text-align: right;
+}
+#demo-menu-lower-left,
+#demo_menu-top-left {
+  float: right;
+}
+.mycheckbox {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.mycheckboxdiv {
+  text-align: right;
+}
+.checkbox.rtl {
+  padding-left: 0px;
+  padding-right: 20px;
+}
+.checkbox.rtl label {
+  padding-left: 0px;
+  padding-right: 5px;
+}
+.checkbox.rtl label::before {
+  left: auto;
+  right: 2px;
+  margin-left: 0;
+  margin-right: -20px;
+}
+.checkbox.rtl label::after {
+  left: auto;
+  right: 0;
+  margin-left: 0px;
+  margin-right: -20px;
+  padding-left: 0px;
+  padding-right: 3px;
+}
+.checkbox.rtl input[type="checkbox"] {
+  margin-left: 0px;
+}
+
+.radio.rtl {
+  padding-left: 0px;
+  padding-right: 20px;
+}
+.radio.rtl label {
+  padding-left: 0px;
+  padding-right: 5px;
+}
+.radio.rtl label::before {
+  left: auto;
+  right: -3px;
+  margin-left: 0;
+  margin-right: -20px;
+}
+.radio.rtl label::after {
+  left: auto;
+  right: 0;
+  margin-left: 0px;
+  margin-right: -20px;
+  padding-left: 0px;
+  padding-right: 3px;
+}
+.radio.rtl input[type="radio"] {
+  margin-left: 0px;
+}
+.wizard > .steps,
+.wizard .content .body {
+  text-align: right;
+}
+.validate-input {
+  text-align: right;
+}
+.input100 {
+  padding: 0 35px 0 0px;
+  text-align: right;
+}
+.label-checkbox100 {
+  text-align: right;
+}
+.dataTables_wrapper .dt-buttons {
+  float: right;
+}
+.user-panel .info {
+  text-align: right;
+}
+.chat-sidebar-container
+  .chat-sidebar
+  .chat-sidebar-content-item-shown
+  .chat-sidebar-item {
+  left: 0;
+}
+.chat-sidebar-back-to-list .fa-angle-double-left {
+  float: left;
+  margin-top: 1px;
+}
+.quick-setting-main {
+  top: 30%;
+}
+.doctor-profile p {
+  text-align: center;
+}
+.activity-desk .album a {
+  float: right;
+}
+.state-overview p {
+  text-align: left;
+}
+.formDatePicker {
+  margin-left: 0px;
+  margin-right: 15px;
+}
+.modal-header .btn-close {
+  margin: -0.5rem -0.5rem auto -0.5rem;
+}
+.slimScrollBar {
+  right: unset !important;
+  left: 1px;
+}
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 768px) {
+  .navbar-right {
+    float: right !important;
+    padding-right: 10px;
+  }
+  .form-horizontal .control-label {
+    text-align: left;
+  }
+}
+@media (max-width: 991px) {
+  .page-header.navbar .menu-toggler.responsive-toggler {
+    display: block;
+    float: left;
+  }
+  .header-white form.search-form-opened {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 626px) {
+  .page-content-wrapper .page-content {
+    padding: 70px 10px 10px !important;
+    overflow: hidden;
+  }
+}

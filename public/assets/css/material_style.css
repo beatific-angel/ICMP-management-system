@@ -1,0 +1,215 @@
+/*
+ *  Document   : material_style.css
+ *  Author     : RedStar Theme
+ *  Description: This style sheet is used for customize material design components.
+ 
+ 
+ 				[Table Of Content]
+ 				
+ 				1. MENU
+ 				2. TABLE
+ 				3. BADGES
+*/
+/**********************************
+			1. MENU
+**********************************/
+.menuBackground {
+  background: white;
+  height: 148px;
+  width: 100%;
+}
+
+.menuBar {
+  box-sizing: border-box;
+  background: #0080c0;
+  color: white;
+  width: 100%;
+  height: 64px;
+  padding: 16px;
+}
+
+/**********************************
+			2. TABLE
+**********************************/
+.ml-table-striped > tbody > tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+.mdl-data-table thead {
+  background: #fafafa;
+}
+.mdl-data-table {
+  width: 100% !important;
+}
+.ml-table-bordered > tbody > tr > td,
+.ml-table-bordered > thead > tr > td {
+  border: 1px solid #f0f0f0;
+}
+
+/**********************************
+			3. BADGES
+**********************************/
+.badges .ml-card-holder .demo-badge-3[data-badge]:after {
+  background-color: #9c27b0;
+}
+
+.mdl-badge .demo-badge-3[data-badge]:after {
+  background-color: #9c27b0;
+}
+
+.mdl-cell.mdl-cell--3-col.mdl-cell--4-col-tablet {
+  padding: 15px 10px 15px 20px;
+}
+.mdl-cell.mdl-cell--3-col.mdl-cell--4-col-tablet:hover {
+  background: rgba(0, 0, 0, 0.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.wrapper {
+  box-sizing: border-box;
+  position: absolute;
+  right: 16px;
+}
+
+.mdl-tabs__tab {
+  text-decoration: none !important;
+}
+.mdl-textfield__label:after {
+  bottom: 20px !important;
+}
+
+.mdl-gridcell {
+  background: #bdbdbd;
+  padding: 30px 0;
+  text-align: center;
+  color: #424242;
+  font-weight: bold;
+  margin: 8px;
+}
+.mdl-foo {
+  background: black;
+  padding: 5px;
+}
+.txt-width {
+  width: 100% !important;
+  max-width: 500px !important;
+}
+.full-width {
+  width: 100% !important;
+}
+.select-width {
+  width: 100% !important;
+  max-width: 300px !important;
+}
+.getmdl-select .mdl-icon-toggle__label {
+  float: right;
+  margin-top: -30px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.mdl-button--fab:focus {
+  outline: none !important;
+}
+.mdl-button--icon:focus {
+  outline: none !important;
+}
+.mdl-textfield__label {
+  color: #747474;
+  font-size: 13px !important;
+}
+.mdl-textfield__input {
+  color: #191313 !important;
+  font-size: 13px !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+}
+.tab-left-side {
+  justify-content: flex-start !important;
+}
+.tab-right-side {
+  justify-content: flex-end !important;
+}
+.page-header.navbar .page-logo {
+  line-height: 1.7 !important;
+}
+.txt-full-width {
+  width: 100% !important;
+}
+.menuBar .mdl-button .material-icons {
+  color: #ffffff;
+}
+.mdl-js-button {
+  right: 10px;
+}
+.mdl-menu__item {
+  font-size: 12px;
+}
+.mdl-menu__item .material-icons {
+  padding-right: 10px;
+  vertical-align: middle;
+}
+.mdl-cell {
+  float: left;
+}
+#headerSettingButton {
+  color: #ffffff;
+}
+.mdl-tabs__tab.tabs_three {
+  width: calc(100% / 3);
+}
+.mdl-tabs__panel table tr:first-child th {
+  border: 0;
+}
+.dtp .dtp-buttons {
+  text-align: center !important;
+}
+.dtp-buttons button {
+  margin-left: 10px;
+}
+/* select item fixed hight css */
+
+.getmdl-select {
+  outline: none;
+}
+
+.getmdl-select .mdl-textfield__input {
+  cursor: pointer;
+}
+
+.getmdl-select .selected {
+  background-color: #ddd;
+}
+
+.getmdl-select .mdl-icon-toggle__label {
+  float: right;
+  margin-top: -30px;
+  color: rgba(0, 0, 0, 0.4);
+  transform: rotate(0);
+  transition: transform 0.3s;
+}
+
+.getmdl-select.is-focused .mdl-icon-toggle__label {
+  color: #3f51b5;
+  transform: rotate(180deg);
+}
+
+.getmdl-select .mdl-menu__container {
+  width: 100% !important;
+  margin-top: 2px;
+}
+
+.getmdl-select .mdl-menu__container .mdl-menu {
+  width: 100%;
+}
+
+.getmdl-select .mdl-menu__container .mdl-menu .mdl-menu__item {
+  font-size: 16px;
+}
+
+.getmdl-select__fix-height .mdl-menu__container .mdl-menu {
+  overflow-y: auto;
+  max-height: 288px !important;
+}
+
+.getmdl-select__fix-height .mdl-menu.mdl-menu--top-left {
+  bottom: auto;
+  top: 0;
+}
