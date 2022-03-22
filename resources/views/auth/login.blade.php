@@ -7,8 +7,7 @@
     <div class="container">
         <div class="signin-content">
             <div class="signin-image">
-                <figure><img src="{{asset('assets/img/pages/signin.jpg')}}" alt="sing up image"></figure>
-                <a href="sign_up.html" class="signup-image-link">Create an account</a>
+                <img src="{{asset('assets/img/pages/signin.jpg')}}" alt="sing up image">
             </div>
             <div class="signin-form">
                 <h2 class="form-title">Login</h2>

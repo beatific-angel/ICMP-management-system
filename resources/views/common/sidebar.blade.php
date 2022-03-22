@@ -26,7 +26,7 @@
                     </a>
                 </li>
                 <li class="nav-item {{ return_if(on_page('group.index') or on_page('group.create') , ' active open') }}">
-                    <a href="#" class="nav-link nav-toggle"><i data-feather="users"></i>
+                    <a href="#" class="nav-link nav-toggle"><i data-feather="server"></i>
                         <span class="title">Groups</span><span class="arrow"></span></a>
                     <ul class="sub-menu">
                         <li class="nav-item">
@@ -39,14 +39,14 @@
                         <li class="nav-item">
                             <a class="nav-link{{ return_if(on_page('group.index'), ' active') }}"
                                href="{{ route('group.index') }}">
-                                <i class="icon-plus"></i>
+                                <i class="fas fa-layer-group"></i>
                                 <span class="title">Groups</span>
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li class="nav-item {{ return_if(on_page('device.index') or on_page('device.create') , ' active open') }}">
-                    <a href="#" class="nav-link nav-toggle"><i data-feather="users"></i>
+                    <a href="#" class="nav-link nav-toggle"><i data-feather="monitor"></i>
                         <span class="title">Devices</span><span class="arrow"></span></a>
                     <ul class="sub-menu">
                         <li class="nav-item">
@@ -59,7 +59,7 @@
                         <li class="nav-item">
                             <a class="nav-link{{ return_if(on_page('device.index'), ' active') }}"
                                href="{{ route('device.index') }}">
-                                <i class="icon-plus"></i>
+                                <i class="fas fa-layer-group"></i>
                                 <span class="title">Devices</span>
                             </a>
                         </li>
@@ -79,14 +79,14 @@
                         <li class="nav-item">
                             <a class="nav-link{{ return_if(on_page('users.index'), ' active') }}"
                                href="{{ route('users.index') }}">
-                                <i class="icon-plus"></i>
+                                <i class="fas fa-user-friends"></i>
                                 <span class="title">Customers</span>
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li class="nav-item {{ return_if(on_page('roles.index') or on_page('roles.create') , ' active open') }}">
-                    <a href="#" class="nav-link nav-toggle"><i data-feather="users"></i>
+                    <a href="#" class="nav-link nav-toggle"><i data-feather="shield"></i>
                         <span class="title">Roles</span><span class="arrow"></span></a>
                     <ul class="sub-menu">
                         <li class="nav-item">
@@ -99,14 +99,14 @@
                         <li class="nav-item">
                             <a class="nav-link{{ return_if(on_page('roles.index'), ' active') }}"
                                href="{{ route('roles.index') }}">
-                                <i class="icon-plus"></i>
+                                <i class="fas fa-user-shield"></i>
                                 <span class="title">Roles</span>
                             </a>
                         </li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link nav-toggle"><i data-feather="users"></i>
+                    <a href="#" class="nav-link nav-toggle"><i data-feather="settings"></i>
                         <span class="title">Statistics</span><span class="arrow"></span></a>
                     <ul class="sub-menu">
                         <li class="nav-item">

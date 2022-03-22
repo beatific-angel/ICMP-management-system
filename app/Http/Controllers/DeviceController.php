@@ -2,44 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
-use App\Exports\UsersExport;
-use App\Imports\UsersImport;
+use App\Models\Device;
+use App\Models\Group;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Hash;
-use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\Rules\Password;
 
 class DeviceController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-        $this->middleware('permission:user-list|user-create|user-edit|user-delete', ['only' => ['index']]);
-        $this->middleware('permission:user-create', ['only' => ['create','store', 'updateStatus']]);
-        $this->middleware('permission:user-edit', ['only' => ['edit','update']]);
-        $this->middleware('permission:user-delete', ['only' => ['delete']]);
-    }
 
-
-    /**
-     * List User
-     * @param Nill
-     * @return Array $user
-     * @author Shani Singh
-     */
     public function index()
     {
-        $users = User::with('roles')->paginate(10);
-        return view('users.index', ['users' => $users]);
+        $devices = Device::all();
+        $devices_cnt = Device::all()->count();
+        return view('device.index', ['devices' => $devices, 'count' => $devices_cnt]);
     }
 
     /**
@@ -50,9 +28,8 @@ class DeviceController extends Controller
      */
     public function create()
     {
-        $roles = Role::all();
-
-        return view('users.add', ['roles' => $roles]);
+        $groups = Group::all();
+        return view('tickets.create', compact('$groups'));
     }
 
     /**
