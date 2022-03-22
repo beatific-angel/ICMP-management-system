@@ -12,5 +12,5 @@ class Group extends Model
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['name','created_at','updated_at'];
+    protected $fillable = ['name','owner','description','created_at','updated_at'];
 }

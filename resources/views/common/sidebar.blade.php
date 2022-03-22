@@ -18,7 +18,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="nav-item start active">
+                <li class="nav-item start {{ return_if(on_page('home'), ' active') }}">
                     <a href="{{ route('home') }}" class="nav-link nav-toggle">
                         <i data-feather="airplay"></i>
                         <span class="title">Dashboard</span>

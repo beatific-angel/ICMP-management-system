@@ -14,9 +14,7 @@
                 @include('common.sidebar')
                 <!-- End of Sidebar -->
                 <div class="page-content-wrapper">
-                    <div class="page-content">
-                        @yield('content')
-                    </div>
+                    @yield('content')
                 </div>
             </div>
         @include('common.footer')
@@ -42,9 +40,11 @@
     <!--apex chart-->
     <script src="{{asset('assets/plugins/apexcharts/apexcharts.min.js')}}"></script>
     <script src="{{asset('assets/js/pages/chart/apex/home-data.js')}}"></script>
-    <!-- summernote -->
-    <script src="{{asset('assets/plugins/summernote/summernote.js')}}"></script>
-    <script src="{{asset('assets/js/pages/summernote/summernote-data.js')}}"></script>
+
+    <!-- data table -->
+    <script src="{{asset('assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap5.min.js')}}"></script>
+    <script src="{{asset('assets/js/pages/table/table_data.js')}}"></script>
 </body>
 
 </html>

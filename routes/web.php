@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\GroupController;
+use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -38,9 +40,9 @@ Route::prefix('group')->name('group.')->middleware('auth')->group(function(){
     Route::get('/', [GroupController::class, 'index'])->name('index');
     Route::get('/create', [GroupController::class, 'create'])->name('create');
     Route::post('/store', [GroupController::class, 'store'])->name('store');
-    Route::get('/edit/{user}', [GroupController::class, 'edit'])->name('edit');
-    Route::put('/update/{user}', [GroupController::class, 'update'])->name('update');
-    Route::delete('/delete/{user}', [GroupController::class, 'delete'])->name('destroy');
+    Route::get('/edit/{id}', [GroupController::class, 'edit'])->name('edit');
+    Route::post('/update', [GroupController::class, 'update'])->name('update');
+    Route::delete('/delete/{id}', [GroupController::class, 'delete'])->name('delete');
 });
 
 Route::prefix('device')->name('device.')->middleware('auth')->group(function(){

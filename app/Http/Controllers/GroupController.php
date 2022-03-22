@@ -6,11 +6,6 @@ use App\Models\Group;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Spatie\Permission\Models\Role;
-use Illuminate\Support\Facades\Hash;
-use Maatwebsite\Excel\Facades\Excel;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\Rules\Password;
 
 class GroupController extends Controller
 {
@@ -30,24 +25,44 @@ class GroupController extends Controller
 
     public function store(Request $request)
     {
+        $name = $request->input('groupname');
+        $owner = $request->input('groupowner');
+        $description = $request->input('groupdescription');
 
+        $group = new Group([
+            'name' => $name,
+            'owner' => $owner,
+            'description' => $description
+        ]);
+        $group->save();
+
+        return redirect()->back()->with("success", "New Group has been created.");
+    }
+
+    public function edit($id)
+    {
+        $group = Group::where('id', '=', $id)->get();
+
+        return view('group.edit', ['groups' => $group[0]]);
     }
 
 
-    public function updateStatus($user_id, $status)
+    public function update(Request $request)
     {
+        $id = $request->input('groupid');
+        $name = $request->input('groupname');
+        $owner = $request->input('groupowner');
+        $description = $request->input('groupdescription');
+        $group = Group::findOrFail($id);
 
-    }
+        $group->name = $name ;
+        $group->owner = $owner;
+        $group->username = $owner;
+        $group->description = $description;
 
+        $group->save();
 
-    public function edit(User $user)
-    {
-
-    }
-
-
-    public function update(Request $request, User $user)
-    {
+        return redirect()->back()->with("success", "New Group has been created.");
 
     }
 
