@@ -3,99 +3,88 @@
 @section('title', 'Users List')
 
 @section('content')
-    <div class="container-fluid">
-
-        <!-- Page Heading -->
-        <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Users</h1>
-            <div class="row">
-                <div class="col-md-6">
-                    <a href="{{ route('users.create') }}" class="btn btn-sm btn-primary">
-                        <i class="fas fa-plus"></i> Add New
-                    </a>
+    <div class="page-content">
+        <div class="page-bar">
+            <div class="page-title-breadcrumb">
+                <div class=" pull-left">
+                    <div class="page-title">Users List</div>
                 </div>
-                <div class="col-md-6">
-                    <a href="{{ route('users.export') }}" class="btn btn-sm btn-success">
-                        <i class="fas fa-check"></i> Export To Excel
-                    </a>
-                </div>
-                
+                <ol class="breadcrumb page-breadcrumb pull-right">
+                    <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item"
+                                                           href="{{route('home')}}">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
+                    </li>
+                    <li><a class="parent-item" href="{{route('users.index')}}">Users</a>&nbsp;<i class="fa fa-angle-right"></i>
+                    </li>
+                    <li class="active">Users List</li>
+                </ol>
             </div>
-
         </div>
-
-        {{-- Alert Messages --}}
-        @include('common.alert')
-
-        <!-- DataTales Example -->
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">All Users</h6>
-
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                        <thead>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-xl-12">
+                <div class="card card-box">
+                    <div class="card-head">
+                        <header>All Users List</header>
+                    </div>
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-6">
+                                <div class="btn-group">
+                                    <a href="{{route('users.create')}}" id="addRow"
+                                       class="btn btn-primary">
+                                        Add New <i class="fa fa-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <table
+                            class="table table-striped table-bordered table-hover table-checkable order-column valign-middle"
+                            id="user_lists">
+                            <thead>
                             <tr>
-                                <th width="20%">Name</th>
-                                <th width="25%">Email</th>
-                                <th width="15%">Mobile</th>
-                                <th width="15%">Role</th>
-                                <th width="15%">Status</th>
-                                <th width="10%">Action</th>
+                                <th> # </th>
+                                <th> ID </th>
+                                <th> Name </th>
+                                <th> Mobile </th>
+                                <th> Email </th>
+                                <th> Create Date </th>
+                                <th> Action </th>
                             </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($users as $user)
-                                <tr>
-                                    <td>{{ $user->full_name }}</td>
-                                    <td>{{ $user->email }}</td>
-                                    <td>{{ $user->mobile_number }}</td>
-                                    <td>{{ $user->roles ? $user->roles->pluck('name')->first() : 'N/A' }}</td>
+                            </thead>
+                            <tbody>
+                            @foreach($users as $user)
+                                <tr class="odd gradeX">
+                                    <td class="patient-img">
+                                        <img src="../assets/img/user/user1.jpg" alt="">
+                                    </td>
+                                    <td class="left">{{$user->id}}</td>
+                                    <td>{{$user->firstname}} {{$user->lastname}}</td>
+                                    <td><a href="tel:{{$user->phone}}">
+                                            {{$user->phone}} </a></td>
+                                    <td><a href="mailto:{{$user->email}}">
+                                            {{$user->email}} </a></td>
+                                    <td class="left">{{$user->created_at}}</td>
                                     <td>
-                                        @if ($user->status == 0)
-                                            <span class="badge badge-danger">Inactive</span>
-                                        @elseif ($user->status == 1)
-                                            <span class="badge badge-success">Active</span>
-                                        @endif
-                                    </td>
-                                    <td style="display: flex">
-                                        @if ($user->status == 0)
-                                            <a href="{{ route('users.status', ['user_id' => $user->id, 'status' => 1]) }}"
-                                                class="btn btn-success m-2">
-                                                <i class="fa fa-check"></i>
-                                            </a>
-                                        @elseif ($user->status == 1)
-                                            <a href="{{ route('users.status', ['user_id' => $user->id, 'status' => 0]) }}"
-                                                class="btn btn-danger m-2">
-                                                <i class="fa fa-ban"></i>
-                                            </a>
-                                        @endif
-                                        <a href="{{ route('users.edit', ['user' => $user->id]) }}"
-                                            class="btn btn-primary m-2">
-                                            <i class="fa fa-pen"></i>
+                                        <a href="{{ route('users.edit', ['id' => $user->id]) }}" class="tblEditBtn">
+                                            <i class="fa fa-pencil"></i>
                                         </a>
-                                        <a class="btn btn-danger m-2" href="#" data-toggle="modal" data-target="#deleteModal">
-                                            <i class="fas fa-trash"></i>
+                                        <a href="{{ route('users.delete', ['id' => $user->id]) }}" class="tblDelBtn">
+                                            <i class="fa fa-trash-o"></i>
                                         </a>
                                     </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-
-                    {{ $users->links() }}
+                            </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
 
-    @include('users.delete-modal')
+{{--    @include('users.delete-modal')--}}
 
 @endsection
 
 @section('scripts')
-    
+
 @endsection
