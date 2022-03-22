@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -28,11 +29,15 @@ class UserController extends Controller
 
     public function create()
     {
-        return view('users.create');
+        $roles = Role::all();
+        return view('users.create', ['roles' => $roles]);
     }
 
     public function store(Request $request)
     {
+        $role_name = $request->input('user_role');
+        $role = DB::select("select * from user_role where role_name='$role_name'");
+        $role_id = $role[0]->id;
 
         $user = new User([
             'firstname' => $request->input('firstname'),
@@ -40,7 +45,7 @@ class UserController extends Controller
             'username' => $request->input('username'),
             'email' => $request->input('email'),
             'phone' => $request->input('phone'),
-            'role_id' => 1,
+            'role_id' => $role_id,
             'password' => Hash::make($request->input('password')),
         ]);
         $user->save();
@@ -52,7 +57,8 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = User::where('id', '=', $id)->get();
-        return view('users.edit', ['user' => $user[0]]);
+        $roles = Role::all();
+        return view('users.edit', ['user' => $user[0],'roles' => $roles]);
     }
 
     public function delete($id)

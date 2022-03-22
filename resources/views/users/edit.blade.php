@@ -72,10 +72,38 @@
                             </div>
                             <div class="col-lg-6 p-t-20">
                                 <div
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height txt-full-width">
+                                    <?php
+                                    $selected_role = DB::select(DB::raw('select * from user_role where id = ' . $user->role_id));
+                                    ?>
+                                    <input class="mdl-textfield__input" type="text" id="user_role" name="user_role" readonly value="<?php echo $selected_role[0]->role_name; ?>"
+                                           tabIndex="-1">
+                                    <label for="user_role" class="pull-right margin-0">
+                                        <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                                    </label>
+                                    <label for="user_role" class="mdl-textfield__label">Select Group</label>
+                                    <ul data-mdl-for="user_role" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                                        @foreach($roles as $role)
+                                            <li class="mdl-menu__item" data-val="{{$role->id}}" >{{$role->role_name}}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 p-t-20">
+                                <div
                                     class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                     <input class="mdl-textfield__input" type="email" id="email" name="email" value="{{$user->email}}">
                                     <label class="mdl-textfield__label">Email</label>
                                     <span class="mdl-textfield__error">Enter Valid Email Address!</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 p-t-20">
+                                <div
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+                                    <input class="mdl-textfield__input" type="text"
+                                           pattern="-?[0-9]*(\.[0-9]+)?" id="phone" name="phone" value="{{$user->phone}}">
+                                    <label class="mdl-textfield__label" for="text5">Mobile Number</label>
+                                    <span class="mdl-textfield__error">Number required!</span>
                                 </div>
                             </div>
                             <div class="col-lg-6 p-t-20">
@@ -93,15 +121,7 @@
                                     <label class="mdl-textfield__label">Confirm Password</label>
                                 </div>
                             </div>
-                            <div class="col-lg-6 p-t-20">
-                                <div
-                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
-                                    <input class="mdl-textfield__input" type="text"
-                                           pattern="-?[0-9]*(\.[0-9]+)?" id="phone" name="phone" value="{{$user->phone}}">
-                                    <label class="mdl-textfield__label" for="text5">Mobile Number</label>
-                                    <span class="mdl-textfield__error">Number required!</span>
-                                </div>
-                            </div>
+
                             <input class="mdl-textfield__input" type="hidden" id="userid"
                                    name="userid" value="{{$user->id}}">
                             <div class="col-lg-12 p-t-20 text-center">

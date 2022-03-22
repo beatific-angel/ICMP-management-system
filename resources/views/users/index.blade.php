@@ -55,7 +55,7 @@
                             @foreach($users as $user)
                                 <tr class="odd gradeX">
                                     <td class="patient-img">
-                                        <img src="../assets/img/user/user1.jpg" alt="">
+                                        <img src="../assets/img/admin.png" alt="">
                                     </td>
                                     <td class="left">{{$user->id}}</td>
                                     <td>{{$user->firstname}} {{$user->lastname}}</td>

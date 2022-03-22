@@ -72,10 +72,35 @@
                             </div>
                             <div class="col-lg-6 p-t-20">
                                 <div
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height txt-full-width">
+                                    <input class="mdl-textfield__input" type="text" id="user_role" name="user_role" readonly
+                                           tabIndex="-1">
+                                    <label for="user_role" class="pull-right margin-0">
+                                        <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                                    </label>
+                                    <label for="user_role" class="mdl-textfield__label">Select User Role</label>
+                                    <ul data-mdl-for="user_role" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                                        @foreach($roles as $role)
+                                            <li class="mdl-menu__item" data-val="{{$role->id}}" >{{$role->role_name}}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 p-t-20">
+                                <div
                                     class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                     <input class="mdl-textfield__input" type="email" id="email" name="email">
                                     <label class="mdl-textfield__label">Email</label>
                                     <span class="mdl-textfield__error">Enter Valid Email Address!</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 p-t-20">
+                                <div
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+                                    <input class="mdl-textfield__input" type="text"
+                                           pattern="-?[0-9]*(\.[0-9]+)?" id="phone" name="phone">
+                                    <label class="mdl-textfield__label" for="text5">Mobile Number</label>
+                                    <span class="mdl-textfield__error">Number required!</span>
                                 </div>
                             </div>
                             <div class="col-lg-6 p-t-20">
@@ -93,15 +118,7 @@
                                     <label class="mdl-textfield__label">Confirm Password</label>
                                 </div>
                             </div>
-                            <div class="col-lg-6 p-t-20">
-                                <div
-                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
-                                    <input class="mdl-textfield__input" type="text"
-                                           pattern="-?[0-9]*(\.[0-9]+)?" id="phone" name="phone">
-                                    <label class="mdl-textfield__label" for="text5">Mobile Number</label>
-                                    <span class="mdl-textfield__error">Number required!</span>
-                                </div>
-                            </div>
+
                             <div class="col-lg-12 p-t-20 text-center">
                                 <button type="submit"
                                         class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 m-r-20 btn-circle btn-primary">
