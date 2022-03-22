@@ -1,5 +1,8 @@
 <?php
-
+/*
+ * Created by Beatific Angel
+ *  20222/3/22 5.30 am
+ * */
 namespace App\Http\Controllers;
 
 use App\Models\Group;
@@ -57,18 +60,19 @@ class GroupController extends Controller
 
         $group->name = $name ;
         $group->owner = $owner;
-        $group->username = $owner;
         $group->description = $description;
 
         $group->save();
 
-        return redirect()->back()->with("success", "New Group has been created.");
+        return redirect()->back()->with("success", "The Group has been Updated.");
 
     }
 
-    public function delete(User $user)
+    public function delete($id)
     {
-
+        $group_query = "delete from groups where id = '$id'";
+        $group_query_res = DB::select($group_query);
+        return redirect()->back()->with("success", "The Group has been deleted.");
     }
 
 

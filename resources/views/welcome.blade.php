@@ -1,3 +1,4 @@
+{{--Created by Beatific Angel    20222/3/21 11.00 am --}}
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>

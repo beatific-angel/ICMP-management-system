@@ -1,3 +1,4 @@
+{{--Created by Beatific Angel    20222/3/21 11.00 am --}}
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,7 +44,7 @@
     <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet" type="text/css" />
 
     <link href="{{ asset('assets/css/theme/light/theme-color.css') }}" rel="stylesheet" type="text/css" />
-
+    <link href="{{ asset('assets/plugins/dropzone/dropzone.css') }}" rel="stylesheet" media="screen" />
     <!-- favicon -->
     <link rel="shortcut icon" href="{{ asset('assets/img/favicon.ico') }}" />
 

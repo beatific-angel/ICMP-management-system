@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
-|
+| Created Beatific Angel
 */
 
 Route::get('/', function () {
@@ -36,22 +36,23 @@ Route::prefix('profile')->name('profile.')->middleware('auth')->group(function()
 // Roles
 Route::resource('roles', App\Http\Controllers\RolesController::class);
 
+/*  Group Part */
 Route::prefix('group')->name('group.')->middleware('auth')->group(function(){
     Route::get('/', [GroupController::class, 'index'])->name('index');
     Route::get('/create', [GroupController::class, 'create'])->name('create');
     Route::post('/store', [GroupController::class, 'store'])->name('store');
     Route::get('/edit/{id}', [GroupController::class, 'edit'])->name('edit');
     Route::post('/update', [GroupController::class, 'update'])->name('update');
-    Route::delete('/delete/{id}', [GroupController::class, 'delete'])->name('delete');
+    Route::get('/delete/{id}', [GroupController::class, 'delete'])->name('delete');
 });
-
+/*  Device Part */
 Route::prefix('device')->name('device.')->middleware('auth')->group(function(){
     Route::get('/', [DeviceController::class, 'index'])->name('index');
     Route::get('/create', [DeviceController::class, 'create'])->name('create');
     Route::post('/store', [DeviceController::class, 'store'])->name('store');
-    Route::get('/edit/{user}', [DeviceController::class, 'edit'])->name('edit');
-    Route::put('/update/{user}', [DeviceController::class, 'update'])->name('update');
-    Route::delete('/delete/{user}', [DeviceController::class, 'delete'])->name('destroy');
+    Route::get('/edit/{id}', [DeviceController::class, 'edit'])->name('edit');
+    Route::post('/update', [DeviceController::class, 'update'])->name('update');
+    Route::delete('/delete/{id}', [DeviceController::class, 'delete'])->name('delete');
 });
 
 // Users

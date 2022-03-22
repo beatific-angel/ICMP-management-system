@@ -1,3 +1,4 @@
+{{--Created by Beatific Angel    20222/3/21 11.00 am --}}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,6 +38,9 @@
     <script src="{{asset('assets/js/theme-color.js')}}"></script>
     <!-- material -->
     <script src="{{asset('assets/plugins/material/material.min.js')}}"></script>
+    <script src="{{asset('assets/plugins/flatpicker/js/flatpicker.min.js')}}"></script>
+    <script src="{{asset('assets/js/pages/material-select/getmdl-select.js')}}"></script>
+
     <!--apex chart-->
     <script src="{{asset('assets/plugins/apexcharts/apexcharts.min.js')}}"></script>
     <script src="{{asset('assets/js/pages/chart/apex/home-data.js')}}"></script>
@@ -45,6 +49,11 @@
     <script src="{{asset('assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap5.min.js')}}"></script>
     <script src="{{asset('assets/js/pages/table/table_data.js')}}"></script>
+
+
+    <!-- dropzone -->
+    <script src="{{asset('assets/plugins/dropzone/dropzone.js')}}"></script>
+    <script src="{{asset('assets/plugins/dropzone/dropzone-call.js')}}"></script>
 </body>
 
 </html>

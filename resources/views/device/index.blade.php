@@ -8,15 +8,15 @@
         <div class="page-bar">
             <div class="page-title-breadcrumb">
                 <div class=" pull-left">
-                    <div class="page-title">Group List</div>
+                    <div class="page-title">Device List</div>
                 </div>
                 <ol class="breadcrumb page-breadcrumb pull-right">
                     <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item"
-                                                           href="index.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
+                                                           href="{{route('home')}}">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
                     </li>
-                    <li><a class="parent-item" href="">Group</a>&nbsp;<i class="fa fa-angle-right"></i>
+                    <li><a class="parent-item" href="{{route('device.index')}}">Device</a>&nbsp;<i class="fa fa-angle-right"></i>
                     </li>
-                    <li class="active">Group List</li>
+                    <li class="active">Device List</li>
                 </ol>
             </div>
         </div>
@@ -24,7 +24,7 @@
             <div class="col-sm-12 col-md-12 col-xl-12">
                 <div class="card-box">
                     <div class="card-head">
-                        <header>Group List</header>
+                        <header>Device List</header>
                         <button id="sdntmenu" class="mdl-button mdl-js-button mdl-button--icon pull-right"
                                 data-upgraded=",MaterialButton">
                             <i class="material-icons">more_vert</i>
@@ -43,7 +43,7 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-6">
                                 <div class="btn-group">
-                                    <a href="{{route('group.create')}}" id="addRow" class="btn btn-primary">
+                                    <a href="{{route('device.create')}}" id="addRow" class="btn btn-primary">
                                         Add New <i class="fa fa-plus"></i>
                                     </a>
                                 </div>
@@ -55,33 +55,38 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
+                                <th>Device Name</th>
                                 <th>Group Name</th>
-                                <th>Group Owner</th>
-                                <th>Device Lists</th>
-                                <th>Up Devices</th>
-                                <th>Down Devices</th>
+                                <th>IP Address</th>
+                                <th>Status</th>
+                                <th>Last Seen</th>
                                 <th>Edit</th>
                             </tr>
                             </thead>
-                            <tbody>
-                            @if($groups)
-                                @foreach($groups as $group)
+                            <tbody id="device_status" class="device_status">
+                            @if($devices)
+                                @foreach($devices as $device)
                                     <tr class="odd">
-                                <td>{{$group->id}}</td>
-                                <td>{{$group->name}}</td>
-                                <td>{{$group->owner}}</td>
-                                <td>+123 4567890</td>
-                                <td>test@example.com</td>
-                                <td>1998</td>
-                                <td>
-                                    <a href="{{ route('group.edit', ['id' => $group->id]) }}" class="tblEditBtn">
-                                        <i class="fa fa-pencil"></i>
-                                    </a>
-                                    <a class="tblDelBtn" href="{{ route('group.delete', ['id' => $group->id]) }}" id="groupdelete">
-                                        <i class="fa fa-trash-o"></i>
-                                    </a>
-                                </td>
-                            </tr>
+                                        <td>{{$device->id}}</td>
+                                        <td>{{$device->name}}</td>
+                                        <td>
+                                            <?php
+                                                $groups = DB::select(DB::raw('select * from groups where id = ' . $device->groupid));
+                                                echo $groups[0]->name;
+                                            ?>
+                                            </td>
+                                        <td>{{$device->ipaddress}}</td>
+                                        <td></td>
+                                        <td>{{$device->last_seen}}</td>
+                                        <td>
+                                            <a href="{{ route('device.edit', ['id' => $device->id]) }}" class="tblEditBtn">
+                                                <i class="fa fa-pencil"></i>
+                                            </a>
+                                            <a class="tblDelBtn" href="{{ route('device.delete', ['id' => $device->id]) }}" id="devicedelete">
+                                                <i class="fa fa-trash-o"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
                                 @endforeach
                             @endif
                             </tbody>
