@@ -1,36 +1,36 @@
-{{--Created by Beatific Angel    20222/3/22 9.00 am --}}
+{{--Created by Beatific Angel    20222/3/22 03.00 pm --}}
 @extends('layouts.app')
 
-@section('title', 'Edit Permission')
+@section('title', 'Create Role')
 
 @section('content')
-    <div class="page-content">
+<div class="page-content">
         <div class="page-bar">
             <div class="page-title-breadcrumb">
                 <div class=" pull-left">
-                    <div class="page-title">Edit Group</div>
+                    <div class="page-title">Create Role</div>
                 </div>
                 <ol class="breadcrumb page-breadcrumb pull-right">
                     <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item"
                                                            href="{{route('home')}}">Home</a>&nbsp;<i
                             class="fa fa-angle-right"></i>
                     </li>
-                    <li><a class="parent-item" href="{{route('group.index')}}">Group</a>&nbsp;<i class="fa fa-angle-right"></i>
+                    <li><a class="parent-item" href="{{route('roles.index')}}">Roles</a>&nbsp;<i class="fa fa-angle-right"></i>
                     </li>
-                    <li class="active">Edit Group</li>
+                    <li class="active">Create Role</li>
                 </ol>
             </div>
         </div>
         @include('common.alert')
         <div class="row">
             <div class="col-sm-12">
-                <form accept-charset="UTF-8" action="{{ route('group.update') }}" class="form-horizontal"
+                <form accept-charset="UTF-8" action="{{ route('roles.store') }}" class="form-horizontal"
                       id="group_form" enctype="multipart/form-data"
                       method="post">
                     {{ csrf_field() }}
                     <div class="card-box">
                         <div class="card-head">
-                            <header>Edit Group</header>
+                            <header>Create Role</header>
                             <button id="panel-button"
                                     class="mdl-button mdl-js-button mdl-button--icon pull-right"
                                     data-upgraded=",MaterialButton">
@@ -51,30 +51,22 @@
                             <div class="form-group col-lg-6 p-t-20">
                                 <div
                                     class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
-                                    <input class="mdl-textfield__input" type="text" id="groupname" name="groupname" value="{{$groups->name}}">
-                                    <label class="mdl-textfield__label">Group Name</label>
+                                    <input class="mdl-textfield__input" type="text" id="role_name" name="role_name">
+                                    <label class="mdl-textfield__label">Role Name</label>
                                 </div>
                             </div>
                             <div class="form-group col-lg-6 p-t-20">
-                                <div
-                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
-                                    <input class="mdl-textfield__input" type="text" id="groupowner" name="groupowner" value="{{$groups->owner}}">
-                                    <label class="mdl-textfield__label">Group Owner </label>
-                                </div>
-                            </div>
-                            <div class="form-group col-lg-12 p-t-20">
                                 <div class="mdl-textfield mdl-js-textfield txt-full-width">
-                                    <textarea class="mdl-textfield__input" rows="2" id="groupdescription" name="groupdescription" >{{$groups->description}}</textarea>
-                                    <label class="mdl-textfield__label" for="text7">Group Details</label>
+                                    <textarea class="mdl-textfield__input" rows="2" id="role_description" name="role_description" ></textarea>
+                                    <label class="mdl-textfield__label" for="text7">Role Details</label>
                                 </div>
                             </div>
-                            <input class="mdl-textfield__input" type="hidden" id="groupid" name="groupid" value="{{$groups->id}}">
                             <div class="form-group col-lg-12 p-t-20 text-center">
                                 <button type="submit"
                                         class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 m-r-20 btn-circle btn-primary">
-                                    Update
+                                    Submit
                                 </button>
-                                <a href="{{route('group.index')}}"
+                                <a href="{{route('roles.index')}}"
                                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-circle btn-danger">
                                     Cancel
                                 </a>

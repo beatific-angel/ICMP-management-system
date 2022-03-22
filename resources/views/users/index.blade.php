@@ -1,3 +1,4 @@
+{{--Created by Beatific Angel    20222/3/22 03.30 pm --}}
 @extends('layouts.app')
 
 @section('title', 'Users List')
@@ -50,7 +51,7 @@
                                 <th> Action </th>
                             </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="user_list" class="user_list">
                             @foreach($users as $user)
                                 <tr class="odd gradeX">
                                     <td class="patient-img">
@@ -80,11 +81,5 @@
             </div>
         </div>
     </div>
-
-{{--    @include('users.delete-modal')--}}
-
-@endsection
-
-@section('scripts')
 
 @endsection

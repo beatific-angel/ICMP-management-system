@@ -26,105 +26,60 @@ class UserController extends Controller
         return view('users.index', compact('users'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        $this->authorize('create', User::class);
-        return view('admin.users.user.create');
+        return view('users.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        $this->authorize('create', User::class);
 
         $user = new User([
-            'first_name' => $request->input('firts_name'),
-            'last_name' => $request->input('last_name'),
+            'firstname' => $request->input('firstname'),
+            'lastname' => $request->input('lastname'),
             'username' => $request->input('username'),
             'email' => $request->input('email'),
             'phone' => $request->input('phone'),
-            'activated' => 1,
+            'role_id' => 1,
             'password' => Hash::make($request->input('password')),
         ]);
         $user->save();
 
-        return redirect()->back()->with("status", "Your user has been created.");
+        return redirect()->back()->with("success", "New Customer has been created.");
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \CreatyDev\Domain\Users\Models\User $user
-     * @return \Illuminate\Http\Response
-     */
-    public function show(User $user)
-    {
-        $this->authorize('view', $user);
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \CreatyDev\Domain\Users\Models\User $user
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-
-        print_r('asdfasdfasdfasdf');exit;
-        $this->authorize('update', User::class);
-
-        $user = User::findOrFail($id);
-        return view('admin.users.user.edit', compact('user'));
+        $user = User::where('id', '=', $id)->get();
+        return view('users.edit', ['user' => $user[0]]);
     }
 
-    public function destroy($id)
+    public function delete($id)
     {
 
         $user_query = "delete from users where id = '$id'";
         $user_query_res = DB::select($user_query);
-        return view('admin.users');
+        return redirect()->back()->with("success", "User has been deleted.");
     }
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request $request
-     * @param  \CreatyDev\Domain\Users\Models\User $user
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+
+    public function update(Request $request)
     {
-        $this->authorize('update', User::class);
 
-        $this->validate($request, [
-            'first_name' => 'required',
-            'last_name' => 'required',
-            'username' => 'required',
-            'email' => 'required|email',
-            'phone' => 'required',
-        ]);
-
+        $id = $request->input('userid') ;
         $user = User::findOrFail($id);
 
-        $user->first_name = $request->input('first_name') ;
-        $user->last_name = $request->input('last_name') ;
+        $user->firstname = $request->input('firstname') ;
+        $user->lastname = $request->input('lastname') ;
         $user->username = $request->input('username') ;
         $user->email = $request->input('email') ;
         $user->phone = $request->input('phone') ;
+        $user->role_id = 1;
+        $user->password = Hash::make($request->input('password'));
         $user->save();
 
 
-        return redirect()->back()->with("status", "User has been updated.");
+        return redirect()->back()->with("success", "User has been updated.");
     }
 
 

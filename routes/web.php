@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -33,8 +34,15 @@ Route::prefix('profile')->name('profile.')->middleware('auth')->group(function()
     Route::post('/change-password', [HomeController::class, 'changePassword'])->name('change-password');
 });
 
-// Roles
-Route::resource('roles', App\Http\Controllers\RolesController::class);
+/*  Role Part */
+Route::prefix('roles')->name('roles.')->middleware('auth')->group(function(){
+    Route::get('/', [RoleController::class, 'index'])->name('index');
+    Route::get('/create', [RoleController::class, 'create'])->name('create');
+    Route::post('/store', [RoleController::class, 'store'])->name('store');
+    Route::get('/edit/{id}', [RoleController::class, 'edit'])->name('edit');
+    Route::post('/update', [RoleController::class, 'update'])->name('update');
+    Route::get('/delete/{id}', [RoleController::class, 'delete'])->name('delete');
+});
 
 /*  Group Part */
 Route::prefix('group')->name('group.')->middleware('auth')->group(function(){
@@ -52,7 +60,7 @@ Route::prefix('device')->name('device.')->middleware('auth')->group(function(){
     Route::post('/store', [DeviceController::class, 'store'])->name('store');
     Route::get('/edit/{id}', [DeviceController::class, 'edit'])->name('edit');
     Route::post('/update', [DeviceController::class, 'update'])->name('update');
-    Route::delete('/delete/{id}', [DeviceController::class, 'delete'])->name('delete');
+    Route::get('/delete/{id}', [DeviceController::class, 'delete'])->name('delete');
 });
 
 // Users
@@ -62,7 +70,7 @@ Route::middleware('auth')->prefix('users')->name('users.')->group(function(){
     Route::post('/store', [UserController::class, 'store'])->name('store');
     Route::get('/edit/{id}', [UserController::class, 'edit'])->name('edit');
     Route::post('/update', [UserController::class, 'update'])->name('update');
-    Route::delete('/delete/{id}', [UserController::class, 'delete'])->name('delete');
+    Route::get('/delete/{id}', [UserController::class, 'delete'])->name('delete');
     Route::get('/update/status/{id}/{status}', [UserController::class, 'updateStatus'])->name('status');
 
 });
