@@ -189,6 +189,7 @@ class ComposerStaticInit04597b9e098097a0e03fd0888fb1c4c9
         array (
             'Asm89\\Stack\\' => 12,
             'App\\' => 4,
+            'Acamposm\\Ping\\' => 14,
         ),
     );
 
@@ -200,8 +201,8 @@ class ComposerStaticInit04597b9e098097a0e03fd0888fb1c4c9
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'ZipStream\\' => 
         array (
@@ -353,8 +354,8 @@ class ComposerStaticInit04597b9e098097a0e03fd0888fb1c4c9
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -553,6 +554,10 @@ class ComposerStaticInit04597b9e098097a0e03fd0888fb1c4c9
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
+        'Acamposm\\Ping\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/acamposm/ping/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -573,9 +578,26 @@ class ComposerStaticInit04597b9e098097a0e03fd0888fb1c4c9
     );
 
     public static $classMap = array (
+        'Acamposm\\Ping\\Console\\InstallPingPackageCommand' => __DIR__ . '/..' . '/acamposm/ping/src/Console/InstallPingPackageCommand.php',
+        'Acamposm\\Ping\\Exceptions\\InvalidIPAddressException' => __DIR__ . '/..' . '/acamposm/ping/src/Exceptions/InvalidIPAddressException.php',
+        'Acamposm\\Ping\\Exceptions\\MaxValueException' => __DIR__ . '/..' . '/acamposm/ping/src/Exceptions/MaxValueException.php',
+        'Acamposm\\Ping\\Exceptions\\NegativeValueException' => __DIR__ . '/..' . '/acamposm/ping/src/Exceptions/NegativeValueException.php',
+        'Acamposm\\Ping\\Exceptions\\TimerNotStartedException' => __DIR__ . '/..' . '/acamposm/ping/src/Exceptions/TimerNotStartedException.php',
+        'Acamposm\\Ping\\Exceptions\\UnknownOSException' => __DIR__ . '/..' . '/acamposm/ping/src/Exceptions/UnknownOSException.php',
+        'Acamposm\\Ping\\IPAddress' => __DIR__ . '/..' . '/acamposm/ping/src/IPAddress.php',
+        'Acamposm\\Ping\\Interfaces\\PingCommand' => __DIR__ . '/..' . '/acamposm/ping/src/Interfaces/PingCommand.php',
+        'Acamposm\\Ping\\Interfaces\\PingParserInterface' => __DIR__ . '/..' . '/acamposm/ping/src/Interfaces/PingParserInterface.php',
+        'Acamposm\\Ping\\Parsers\\PingParser' => __DIR__ . '/..' . '/acamposm/ping/src/Parsers/PingParser.php',
+        'Acamposm\\Ping\\Parsers\\PingParserForLinux' => __DIR__ . '/..' . '/acamposm/ping/src/Parsers/PingParserForLinux.php',
+        'Acamposm\\Ping\\Parsers\\PingParserForWindows' => __DIR__ . '/..' . '/acamposm/ping/src/Parsers/PingParserForWindows.php',
+        'Acamposm\\Ping\\Ping' => __DIR__ . '/..' . '/acamposm/ping/src/Ping.php',
+        'Acamposm\\Ping\\PingCommandBuilder' => __DIR__ . '/..' . '/acamposm/ping/src/PingCommandBuilder.php',
+        'Acamposm\\Ping\\PingFacade' => __DIR__ . '/..' . '/acamposm/ping/src/PingFacade.php',
+        'Acamposm\\Ping\\PingServiceProvider' => __DIR__ . '/..' . '/acamposm/ping/src/PingServiceProvider.php',
+        'Acamposm\\Ping\\System' => __DIR__ . '/..' . '/acamposm/ping/src/System.php',
+        'Acamposm\\Ping\\Timer' => __DIR__ . '/..' . '/acamposm/ping/src/Timer.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
-        'App\\Exports\\UsersExport' => __DIR__ . '/../..' . '/app/Exports/UsersExport.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -583,9 +605,10 @@ class ComposerStaticInit04597b9e098097a0e03fd0888fb1c4c9
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\DeviceController' => __DIR__ . '/../..' . '/app/Http/Controllers/DeviceController.php',
+        'App\\Http\\Controllers\\GroupController' => __DIR__ . '/../..' . '/app/Http/Controllers/GroupController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
-        'App\\Http\\Controllers\\PermissionsController' => __DIR__ . '/../..' . '/app/Http/Controllers/PermissionsController.php',
-        'App\\Http\\Controllers\\RolesController' => __DIR__ . '/../..' . '/app/Http/Controllers/RolesController.php',
+        'App\\Http\\Controllers\\RoleController' => __DIR__ . '/../..' . '/app/Http/Controllers/RoleController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -596,12 +619,15 @@ class ComposerStaticInit04597b9e098097a0e03fd0888fb1c4c9
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
-        'App\\Imports\\UsersImport' => __DIR__ . '/../..' . '/app/Imports/UsersImport.php',
+        'App\\Models\\Device' => __DIR__ . '/../..' . '/app/Models/Device.php',
+        'App\\Models\\Group' => __DIR__ . '/../..' . '/app/Models/Group.php',
+        'App\\Models\\Role' => __DIR__ . '/../..' . '/app/Models/Role.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
+        'App\\Providers\\HelperServiceProvider' => __DIR__ . '/../..' . '/app/Providers/HelperServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\Rules\\MatchOldPassword' => __DIR__ . '/../..' . '/app/Rules/MatchOldPassword.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',

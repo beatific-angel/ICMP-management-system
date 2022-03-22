@@ -122,6 +122,7 @@
       <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
       <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/acamposm/ping" />
     </include_path>
   </component>
   <component name="PhpUnit">

@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ad21a33-8551-423a-8ca6-b79f66d5af63" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/htdocs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/htdocs.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DeviceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DeviceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,6 +150,7 @@
       <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
       <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
       <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/acamposm/ping" />
     </include_path>
   </component>
   <component name="ProjectId" id="26gsVX3anLvbQ4SN2VT5XOImlpM" />
@@ -184,7 +191,7 @@
       <option name="presentableId" value="Default" />
       <updated>1647856587788</updated>
       <workItem from="1647856591873" duration="47263000" />
-      <workItem from="1647951712113" duration="7313000" />
+      <workItem from="1647951712113" duration="7981000" />
     </task>
     <servers />
   </component>

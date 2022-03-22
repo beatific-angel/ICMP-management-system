@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
+use Acamposm\Ping\Ping;
+use Acamposm\Ping\PingCommandBuilder;
 
 class DeviceController extends Controller
 {
@@ -28,7 +29,6 @@ class DeviceController extends Controller
         $groups = group::all();
         return view('device.create', ['groups' => $groups]);
     }
-
 
     public function store(Request $request)
     {
