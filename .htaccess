@@ -17,6 +17,7 @@
     # Remove public URL from the path
     RewriteCond %{REQUEST_URI} !^/public/
     RewriteRule ^(.*)$ /public/$1 [L,QSA]
+    
 
     # Send Requests To Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
