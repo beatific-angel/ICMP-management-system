@@ -4,7 +4,7 @@
  *  Description: This style sheet is used for light layout theme customizations.
 
 
-						1. USER LIST 
+						1. USER LIST
 						2. NOTIFICATIONS
 						3. EMAIL
 						4. SELECT ITEM
@@ -992,13 +992,16 @@ tr.group:hover {
   background: linear-gradient(45deg, #4099ff, #73b4ff);
 }
 .bg-b-green {
-  background: linear-gradient(45deg, #2ed8b6, #59e0c5);
+    background: linear-gradient(45deg, #306c22, #59e0c5);
 }
 .bg-b-yellow {
   background: linear-gradient(45deg, #ffb64d, #ffcb80);
 }
 .bg-b-pink {
   background: linear-gradient(45deg, #ff5370, #ff869a);
+}
+.bg-b-red {
+    background: linear-gradient(45deg, #ff4d4d, #ffcb80);
 }
 
 .bg-blue {
