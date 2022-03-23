@@ -1,7 +1,7 @@
 {{--Created by Beatific Angel    20222/3/22 9.00 am --}}
 @extends('layouts.app')
 
-@section('title', 'Devices')
+@section('title', 'Device Status')
 
 @section('content')
     <div class="page-content">
@@ -40,15 +40,6 @@
                         </ul>
                     </div>
                     <div class="card-body ">
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6 col-6">
-                                <div class="btn-group">
-                                    <a href="{{route('device.create')}}" id="addRow" class="btn btn-primary">
-                                        Add New <i class="fa fa-plus"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
                         <table
                             class="table table-striped table-bordered table-hover table-checkable order-column valign-middle"
                             id="example4">
@@ -58,22 +49,26 @@
                                 <th>Device Name</th>
                                 <th>Group Name</th>
                                 <th>IP Address</th>
+                                <th>Status</th>
+                                <th>Last Seen</th>
                                 <th>Edit</th>
                             </tr>
                             </thead>
                             <tbody id="device_status" class="device_status">
-                            @if($devices)
-                                @foreach($devices as $device)
+                            @if($devicestatus)
+                                @foreach($devicestatus as $status)
                                     <tr class="odd">
-                                        <td>{{$device->id}}</td>
-                                        <td>{{$device->name}}</td>
+                                        <td>{{$status->id}}</td>
+                                        <td>{{$status->name}}</td>
                                         <td>
                                             <?php
                                                 $groups = DB::select(DB::raw('select * from groups where id = ' . $device->groupid));
                                                 echo $groups[0]->name;
                                             ?>
                                             </td>
-                                        <td>{{$device->ipaddress}}</td>
+                                        <td>{{$status->ipaddress}}</td>
+                                        <td></td>
+                                        <td>{{$status->last_seen}}</td>
                                         <td>
                                             <a href="{{ route('device.edit', ['id' => $device->id]) }}" class="tblEditBtn">
                                                 <i class="fa fa-pencil"></i>

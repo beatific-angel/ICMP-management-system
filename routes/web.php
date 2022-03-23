@@ -5,6 +5,7 @@ use App\Http\Controllers\GroupController;
 use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\ICMPController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +27,7 @@ Route::get('/', function () {
 Auth::routes(['register' => false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/servicestatus', [App\Http\Controllers\ICMPController::class, 'index'])->name('servicestatus');
 
 // Profile Routes
 Route::prefix('profile')->name('profile.')->middleware('auth')->group(function(){

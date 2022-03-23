@@ -14,15 +14,35 @@ use Illuminate\Support\Facades\Hash;
 use Acamposm\Ping\Ping;
 use Acamposm\Ping\PingCommandBuilder;
 
-class DeviceController extends Controller
+class ICMPController extends Controller
 {
 
     public function index()
     {
         $devices = device::all();
         $device_cnt = device::all()->count();
+        $devicestatus = array();
+        foreach ($devices as $key => $device)
+        {
+            $ipaddress = $device->ipaddress;
+            if (PHP_OS === 'WINNT') {
+                exec("ping -n 3 $ipaddress", $outcome, $status);
+            } else if (PHP_OS === 'Linux') {
+                exec("/bin/ping -n 3 $ipaddress", $outcome, $status);
+            }
 
-        return view('device.index', ['devices' => $devices, 'count' => $device_cnt]);
+            if (0 == $status) {
+                $status = "alive";
+            } else {
+                $status = "dead";
+            }
+            $devicestatus[$key]['devicename'] = $device->name;
+            $devicestatus[$key]['groupname'] = $device->groupid;
+            $devicestatus[$key]['ipaddress'] = $device->ipaddress;
+            $devicestatus[$key]['status'] = $status;
+        }
+
+        return view('device.index', ['devicestatus' => $devicestatus]);
     }
 
     public function create()

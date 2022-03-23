@@ -4,117 +4,158 @@
 @section('title', 'Profile')
 
 @section('content')
-    <div class="container-fluid">
-
-        <!-- Page Heading -->
-        <div class="d-sm-flex align-items-center justify-content-between mb-4 border-bottom">
-            <h1 class="h3 mb-0 text-gray-800">Profile</h1>
+    <div class="page-content">
+        <div class="page-bar">
+            <div class="page-title-breadcrumb">
+                <div class=" pull-left">
+                    <div class="page-title">Edit Profile</div>
+                </div>
+                <ol class="breadcrumb page-breadcrumb pull-right">
+                    <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item"
+                                                           href="{{route('home')}}">Home</a>&nbsp;<i
+                            class="fa fa-angle-right"></i>
+                    </li>
+                </ol>
+            </div>
         </div>
-
         {{-- Alert Messages --}}
         @include('common.alert')
-
-        {{-- Page Content --}}
         <div class="row">
-            <div class="col-md-3 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                    <img class="rounded-circle mt-5" width="150px" src="{{ asset('admin/img/undraw_profile.svg') }}">
-                    <span class="font-weight-bold">{{ auth()->user()->full_name }}</span>
-                    <span class="text-black-50"><i>Role:
-                            {{ auth()->user()->roles
-                                ? auth()->user()->roles->pluck('name')->first()
-                                : 'N/A' }}</i></span>
-                    <span class="text-black-50">{{ auth()->user()->email }}</span>
-                </div>
-            </div>
-            <div class="col-md-9 border-right">
-                {{-- Profile --}}
-                <div class="p-3 py-5">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="text-right">Profile</h4>
+            <div class="col-sm-12">
+                    <div class="card-box">
+                        <div class="card-head">
+                            <header>Basic Information</header>
+                            <button id="panel-button"
+                                    class="mdl-button mdl-js-button mdl-button--icon pull-right"
+                                    data-upgraded=",MaterialButton">
+                                <i class="material-icons">more_vert</i>
+                            </button>
+                            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+                                data-mdl-for="panel-button">
+                                <li class="mdl-menu__item"><i class="material-icons">assistant_photo</i>Action
+                                </li>
+                                <li class="mdl-menu__item"><i class="material-icons">print</i>Another action
+                                </li>
+                                <li class="mdl-menu__item"><i class="material-icons">favorite</i>Something else
+                                    here
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body row">
+                            <div class="row">
+                                <div class="col-md-3 border-right">
+                                    <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                                        <img class="rounded-circle mt-5" width="150px" src="{{ asset('assets/img/admin.png') }}">
+                                        <span class="font-weight-bold">{{ auth()->user()->username }}</span>
+                                        <span class="text-black-50"><i>Role:Admin</i></span>
+                                        <span class="text-black-50">{{ auth()->user()->email }}</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 border-right">
+                                    <form action="{{ route('profile.update') }}" method="POST">
+                                        @csrf
+                                        <div class="row mt-2">
+                                            <div class="col-lg-6 p-t-20">
+                                                <div
+                                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+                                                    <label class="mdl-textfield__label">First Name</label>
+                                                    <input type="text" class="mdl-textfield__input @error('firstname') is-invalid @enderror"
+                                                           name="first_name" placeholder="First Name"
+                                                           value="{{ old('first_name') ? old('first_name') : auth()->user()->firstname }}">
+
+                                                    @error('first_name')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6 p-t-20">
+                                                <div
+                                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+                                                    <label class="mdl-textfield__label">Last Name</label>
+                                                    <input type="text" name="last_name"
+                                                           class="mdl-textfield__input @error('lastname') is-invalid @enderror"
+                                                           value="{{ old('last_name') ? old('last_name') : auth()->user()->lastname }}"
+                                                           placeholder="Last Name">
+
+                                                    @error('last_name')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                            </div>
+                                            <div class="col-lg-6 p-t-20">
+                                                <div
+                                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+                                                    <label class="mdl-textfield__label">Phone</label>
+                                                    <input type="text" class="mdl-textfield__input @error('phone') is-invalid @enderror" name="mobile_number"
+                                                           value="{{ old('phone') ? old('phone') : auth()->user()->phone }}"
+                                                           placeholder="Mobile Number">
+                                                    @error('phone')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 p-t-20 text-center">
+                                            <button type="submit"
+                                                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 m-r-20 btn-circle btn-primary">Update Profile</button>
+                                        </div>
+                                    </form>
+
+                                    <hr>
+                                    {{-- Change Password --}}
+                                    <form action="{{ route('profile.change-password') }}" method="POST">
+                                        @csrf
+                                        <div class="row mt-2">
+                                            <div class="col-lg-6 p-t-20">
+                                                <div
+                                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+
+                                                <input type="password" name="current_password" class="mdl-textfield__input @error('current_password') is-invalid @enderror" placeholder="Current Password" required>
+                                                @error('current_password')
+                                                <span class="text-danger">{{ $message }}</span>
+                                                @enderror
+                                                    <label class="mdl-textfield__label">Current Password</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 p-t-20">
+                                                <div
+                                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+
+                                                <input type="password" name="new_password" class="mdl-textfield__input @error('new_password') is-invalid @enderror" required placeholder="New Password">
+                                                @error('new_password')
+                                                <span class="text-danger">{{ $message }}</span>
+                                                @enderror
+                                                    <label class="mdl-textfield__label">New Password</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 p-t-20">
+                                                <div
+                                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+
+                                                <input type="password" name="new_confirm_password" class="mdl-textfield__input @error('new_confirm_password') is-invalid @enderror" required placeholder="Confirm Password">
+                                                @error('new_confirm_password')
+                                                <span class="text-danger">{{ $message }}</span>
+                                                @enderror
+                                                    <label class="mdl-textfield__label">Confirm Password</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 p-t-20 text-center">
+                                            <button type="submit"
+                                                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 m-r-20 btn-circle btn-primary">Update Profile</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
-                    <form action="{{ route('profile.update') }}" method="POST">
-                        @csrf
-                        <div class="row mt-2">
-                            <div class="col-md-4">
-                                <label class="labels">First Name</label>
-                                <input type="text" class="form-control @error('first_name') is-invalid @enderror"
-                                    name="first_name" placeholder="First Name"
-                                    value="{{ old('first_name') ? old('first_name') : auth()->user()->first_name }}">
-
-                                @error('first_name')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                            <div class="col-md-4">
-                                <label class="labels">Last Name</label>
-                                <input type="text" name="last_name"
-                                    class="form-control @error('last_name') is-invalid @enderror"
-                                    value="{{ old('last_name') ? old('last_name') : auth()->user()->last_name }}"
-                                    placeholder="Last Name">
-
-                                @error('last_name')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                            <div class="col-md-4">
-                                <label class="labels">Mobile Number</label>
-                                <input type="text" class="form-control @error('mobile_number') is-invalid @enderror" name="mobile_number"
-                                    value="{{ old('mobile_number') ? old('mobile_number') : auth()->user()->mobile_number }}"
-                                    placeholder="Mobile Number">
-                                @error('mobile_number')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="mt-5 text-center">
-                            <button class="btn btn-primary profile-button" type="submit">Update Profile</button>
-                        </div>
-                    </form>
-                </div>
-
-                <hr>
-                {{-- Change Password --}}
-                <div class="p-3 py-5">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="text-right">Change Password</h4>
-                    </div>
-
-                    <form action="{{ route('profile.change-password') }}" method="POST">
-                        @csrf
-                        <div class="row mt-2">
-                            <div class="col-md-4">
-                                <label class="labels">Current Password</label>
-                                <input type="password" name="current_password" class="form-control @error('current_password') is-invalid @enderror" placeholder="Current Password" required>
-                                @error('current_password')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                            <div class="col-md-4">
-                                <label class="labels">New Password</label>
-                                <input type="password" name="new_password" class="form-control @error('new_password') is-invalid @enderror" required placeholder="New Password">
-                                @error('new_password')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                            <div class="col-md-4">
-                                <label class="labels">Confirm Password</label>
-                                <input type="password" name="new_confirm_password" class="form-control @error('new_confirm_password') is-invalid @enderror" required placeholder="Confirm Password">
-                                @error('new_confirm_password')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="mt-5 text-center">
-                            <button class="btn btn-success profile-button" type="submit">Change Password</button>
-                        </div>
-                    </form>
-                </div>
             </div>
-
         </div>
-
-
 
     </div>
 @endsection
+

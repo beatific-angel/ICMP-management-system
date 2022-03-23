@@ -32,12 +32,12 @@
                 <li class="dropdown dropdown-user" style="cursor:pointer;">
                     <a class="dropdown-toggle" data-bs-toggle="dropdown" data-hover="dropdown"
                        data-close-others="true">
-                        <span class="username username-hide-on-mobile"> {{ auth()->user()->name }} </span>
+                        <span class="username username-hide-on-mobile"> {{ auth()->user()->username }} </span>
                         <i class="fas fa-user"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-default">
                         <li>
-                            <a href="user_profile.html">
+                            <a href="{{ route('profile.detail') }}">
                                 <i class="icon-user"></i> Profile </a>
                         </li>
                         <li>

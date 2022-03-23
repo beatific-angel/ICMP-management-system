@@ -95,5 +95,4 @@ return array(
     'Brick\\Math\\' => array($vendorDir . '/brick/math/src'),
     'Asm89\\Stack\\' => array($vendorDir . '/asm89/stack-cors/src'),
     'App\\' => array($baseDir . '/app'),
-    'Acamposm\\Ping\\' => array($vendorDir . '/acamposm/ping/src'),
 );

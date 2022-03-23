@@ -5,20 +5,11 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'e556a522d1b1b5e1637fa9ee7e1710063b21e511',
+        'reference' => '6fedccd02e1f3a03400e59a3038be43da0c40f77',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
     'versions' => array(
-        'acamposm/ping' => array(
-            'pretty_version' => '2.1.1',
-            'version' => '2.1.1.0',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../acamposm/ping',
-            'aliases' => array(),
-            'reference' => '3651fb234bc204735d421e3a6c291b19dc4afd37',
-            'dev_requirement' => false,
-        ),
         'asm89/stack-cors' => array(
             'pretty_version' => 'v2.1.1',
             'version' => '2.1.1.0',
@@ -418,7 +409,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'e556a522d1b1b5e1637fa9ee7e1710063b21e511',
+            'reference' => '6fedccd02e1f3a03400e59a3038be43da0c40f77',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(

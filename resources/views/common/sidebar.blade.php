@@ -26,6 +26,13 @@
                         <span class="selected"></span>
                     </a>
                 </li>
+                <li class="nav-item start {{ return_if(on_page('servicestatus'), ' active') }}">
+                    <a href="{{ route('servicestatus') }}" class="nav-link nav-toggle">
+                        <i data-feather="hard-drive"></i>
+                        <span class="title">ICMP Manage</span>
+                        <span class="selected"></span>
+                    </a>
+                </li>
                 <li class="nav-item {{ return_if(on_page('group.index') or on_page('group.create') , ' active open') }}">
                     <a href="#" class="nav-link nav-toggle"><i data-feather="server"></i>
                         <span class="title">Groups</span><span class="arrow"></span></a>
