@@ -113,16 +113,13 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link nav-toggle"><i data-feather="settings"></i>
-                        <span class="title">Statistics</span><span class="arrow"></span></a>
-                    <ul class="sub-menu">
-                        <li class="nav-item">
-
-                        </li>
-                    </ul>
+                <li class="nav-item start {{ return_if(on_page('visitlog'), ' active') }}">
+                    <a href="{{ route('visitlog') }}" class="nav-link nav-toggle">
+                        <i data-feather="settings"></i>
+                        <span class="title">Statistics</span>
+                        <span class="selected"></span>
+                    </a>
                 </li>
-
             </ul>
         </div>
     </div>

@@ -4,11 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b2115d7ffe05c8af5d45ad0043b22c5f",
+    "content-hash": "4a2fbe16cdb588d804f04f7cc2d99839",
     "packages": [
         {
-<<<<<<< HEAD
-=======
             "name": "acamposm/ping",
             "version": "2.1.1",
             "source": {
@@ -37,7 +35,6 @@
                     ],
                     "aliases": {
                         "Ping": "Acamposm\\Ping\\PingFacade"
-                        
                     }
                 }
             },
@@ -78,7 +75,6 @@
             "time": "2021-02-07T17:03:02+00:00"
         },
         {
->>>>>>> 3a770c9eecc8c213dbe30d93febe47a45290278b
             "name": "asm89/stack-cors",
             "version": "v2.1.1",
             "source": {
@@ -3452,6 +3448,63 @@
                 }
             ],
             "time": "2021-09-25T23:10:38+00:00"
+        },
+        {
+            "name": "sarfraznawaz2005/visitlog",
+            "version": "1.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sarfraznawaz2005/visitlog.git",
+                "reference": "e4289985fda955a427da347e47bd0ed77704d5a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sarfraznawaz2005/visitlog/zipball/e4289985fda955a427da347e47bd0ed77704d5a6",
+                "reference": "e4289985fda955a427da347e47bd0ed77704d5a6",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5|~6|~7|~8",
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Sarfraznawaz2005\\VisitLog\\VisitLogServiceProvider"
+                    ],
+                    "aliases": {
+                        "VisitLog": "Sarfraznawaz2005\\VisitLog\\Facades\\VisitLog"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sarfraznawaz2005\\VisitLog\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sarfraz Ahmed",
+                    "email": "sarfraznawaz2005@gmail.com"
+                }
+            ],
+            "description": "Laravel package to log visitor information into database.",
+            "keywords": [
+                "IP",
+                "laravel",
+                "log",
+                "visitor"
+            ],
+            "support": {
+                "issues": "https://github.com/sarfraznawaz2005/visitlog/issues",
+                "source": "https://github.com/sarfraznawaz2005/visitlog/tree/1.3.4"
+            },
+            "time": "2020-09-24T06:16:04+00:00"
         },
         {
             "name": "spatie/laravel-permission",

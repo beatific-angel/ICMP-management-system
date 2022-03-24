@@ -5,11 +5,20 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '6fedccd02e1f3a03400e59a3038be43da0c40f77',
+        'reference' => 'af1f2f43f8f90074aaa0dd7b52f1dd699ec86ac1',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
     'versions' => array(
+        'acamposm/ping' => array(
+            'pretty_version' => '2.1.1',
+            'version' => '2.1.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../acamposm/ping',
+            'aliases' => array(),
+            'reference' => '3651fb234bc204735d421e3a6c291b19dc4afd37',
+            'dev_requirement' => false,
+        ),
         'asm89/stack-cors' => array(
             'pretty_version' => 'v2.1.1',
             'version' => '2.1.1.0',
@@ -409,7 +418,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '6fedccd02e1f3a03400e59a3038be43da0c40f77',
+            'reference' => 'af1f2f43f8f90074aaa0dd7b52f1dd699ec86ac1',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -898,6 +907,15 @@
             'replaced' => array(
                 0 => '4.2.3',
             ),
+        ),
+        'sarfraznawaz2005/visitlog' => array(
+            'pretty_version' => '1.3.4',
+            'version' => '1.3.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../sarfraznawaz2005/visitlog',
+            'aliases' => array(),
+            'reference' => 'e4289985fda955a427da347e47bd0ed77704d5a6',
+            'dev_requirement' => false,
         ),
         'sebastian/cli-parser' => array(
             'pretty_version' => '1.0.1',

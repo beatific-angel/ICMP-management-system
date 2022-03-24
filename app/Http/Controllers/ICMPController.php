@@ -3,6 +3,7 @@
  * Created by Beatific Angel
  *  20222/3/23 9.00am
  * */
+
 namespace App\Http\Controllers;
 
 use App\Models\Device;
@@ -12,6 +13,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Acamposm\Ping\Ping;
+use Acamposm\Ping\PingCommandBuilder;
 
 
 class ICMPController extends Controller
@@ -20,6 +23,8 @@ class ICMPController extends Controller
     public function index()
     {
         $status_lists = Status::all();
+        $command = (new PingCommandBuilder('199.38.82.85'));
+
         return view('status.index', ['status_lists' => $status_lists]);
     }
 
@@ -27,25 +32,34 @@ class ICMPController extends Controller
     {
         $devices = device::all();
         $devicestatus = array();
-        foreach ($devices as $key => $device)
-        {
+        foreach ($devices as $key => $device) {
             $ipaddress = $device->ipaddress;
+            $status = '';
             if (PHP_OS === 'WINNT') {
                 exec("ping -n 3 $ipaddress", $outcome, $status);
+                if (0 == $status) {
+                    $status = "alive";
+                } else {
+                    $status = "dead";
+                }
             } else if (PHP_OS === 'Linux') {
-                exec("/bin/ping -n 3 $ipaddress", $outcome, $status);
+                $command = (new PingCommandBuilder($ipaddress));
+
+                // Pass the PingCommand instance to Ping and run...
+                $ping = (new Ping($command))->run();
+                if ($ping->host_status == 'Ok') {
+                    $status = "alive";
+                } else {
+                    $status = "dead";
+                }
+
             }
 
-            if (0 == $status) {
-                $status = "alive";
-            } else {
-                $status = "dead";
-            }
+
             $devicestatus[$key] = $status;
 
             $get_device = DB::select("select * from servicestatus where deviceid='$device->id'");
-            if(!empty($get_device))
-            {
+            if (!empty($get_device)) {
                 $status_id = $get_device[0]->id;
                 $device_status = Status::findOrFail($status_id);
                 $device_status->deviceid = $device->id;
@@ -54,8 +68,7 @@ class ICMPController extends Controller
                 $device_status->ipaddress = $device->ipaddress;
                 $device_status->status = $status;
                 $device_status->save();
-            }
-            else{
+            } else {
                 $new_status = new Status([
                     'deviceid' => $device->id,
                     'devicename' => $device->name,

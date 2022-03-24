@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Http;
 use App\Models\Device;
 use App\Models\Group;
 use App\Models\Status;
+use App\Rules\MatchOldPassword;
+use Sarfraznawaz2005\VisitLog\Facades\VisitLog;
 
 class HomeController extends Controller
 {
@@ -20,6 +22,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+        VisitLog::save();
         $this->middleware('auth');
     }
 
@@ -119,4 +122,9 @@ class HomeController extends Controller
         }
     }
 
+    public function visitlog(){
+        $visitlogs = VisitLog::all();
+        // dd($visitlogs);
+        return view('visitlog.index', compact('visitlogs'));
+    }
 }

@@ -92,6 +92,7 @@ class ComposerStaticInit04597b9e098097a0e03fd0888fb1c4c9
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Spatie\\Permission\\' => 18,
+            'Sarfraznawaz2005\\VisitLog\\' => 26,
         ),
         'R' => 
         array (
@@ -189,6 +190,7 @@ class ComposerStaticInit04597b9e098097a0e03fd0888fb1c4c9
         array (
             'Asm89\\Stack\\' => 12,
             'App\\' => 4,
+            'Acamposm\\Ping\\' => 14,
         ),
     );
 
@@ -330,6 +332,10 @@ class ComposerStaticInit04597b9e098097a0e03fd0888fb1c4c9
         'Spatie\\Permission\\' => 
         array (
             0 => __DIR__ . '/..' . '/spatie/laravel-permission/src',
+        ),
+        'Sarfraznawaz2005\\VisitLog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sarfraznawaz2005/visitlog/src',
         ),
         'Ramsey\\Uuid\\' => 
         array (
@@ -553,6 +559,10 @@ class ComposerStaticInit04597b9e098097a0e03fd0888fb1c4c9
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
+        'Acamposm\\Ping\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/acamposm/ping/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -573,6 +583,24 @@ class ComposerStaticInit04597b9e098097a0e03fd0888fb1c4c9
     );
 
     public static $classMap = array (
+        'Acamposm\\Ping\\Console\\InstallPingPackageCommand' => __DIR__ . '/..' . '/acamposm/ping/src/Console/InstallPingPackageCommand.php',
+        'Acamposm\\Ping\\Exceptions\\InvalidIPAddressException' => __DIR__ . '/..' . '/acamposm/ping/src/Exceptions/InvalidIPAddressException.php',
+        'Acamposm\\Ping\\Exceptions\\MaxValueException' => __DIR__ . '/..' . '/acamposm/ping/src/Exceptions/MaxValueException.php',
+        'Acamposm\\Ping\\Exceptions\\NegativeValueException' => __DIR__ . '/..' . '/acamposm/ping/src/Exceptions/NegativeValueException.php',
+        'Acamposm\\Ping\\Exceptions\\TimerNotStartedException' => __DIR__ . '/..' . '/acamposm/ping/src/Exceptions/TimerNotStartedException.php',
+        'Acamposm\\Ping\\Exceptions\\UnknownOSException' => __DIR__ . '/..' . '/acamposm/ping/src/Exceptions/UnknownOSException.php',
+        'Acamposm\\Ping\\IPAddress' => __DIR__ . '/..' . '/acamposm/ping/src/IPAddress.php',
+        'Acamposm\\Ping\\Interfaces\\PingCommand' => __DIR__ . '/..' . '/acamposm/ping/src/Interfaces/PingCommand.php',
+        'Acamposm\\Ping\\Interfaces\\PingParserInterface' => __DIR__ . '/..' . '/acamposm/ping/src/Interfaces/PingParserInterface.php',
+        'Acamposm\\Ping\\Parsers\\PingParser' => __DIR__ . '/..' . '/acamposm/ping/src/Parsers/PingParser.php',
+        'Acamposm\\Ping\\Parsers\\PingParserForLinux' => __DIR__ . '/..' . '/acamposm/ping/src/Parsers/PingParserForLinux.php',
+        'Acamposm\\Ping\\Parsers\\PingParserForWindows' => __DIR__ . '/..' . '/acamposm/ping/src/Parsers/PingParserForWindows.php',
+        'Acamposm\\Ping\\Ping' => __DIR__ . '/..' . '/acamposm/ping/src/Ping.php',
+        'Acamposm\\Ping\\PingCommandBuilder' => __DIR__ . '/..' . '/acamposm/ping/src/PingCommandBuilder.php',
+        'Acamposm\\Ping\\PingFacade' => __DIR__ . '/..' . '/acamposm/ping/src/PingFacade.php',
+        'Acamposm\\Ping\\PingServiceProvider' => __DIR__ . '/..' . '/acamposm/ping/src/PingServiceProvider.php',
+        'Acamposm\\Ping\\System' => __DIR__ . '/..' . '/acamposm/ping/src/System.php',
+        'Acamposm\\Ping\\Timer' => __DIR__ . '/..' . '/acamposm/ping/src/Timer.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
@@ -600,6 +628,7 @@ class ComposerStaticInit04597b9e098097a0e03fd0888fb1c4c9
         'App\\Models\\Device' => __DIR__ . '/../..' . '/app/Models/Device.php',
         'App\\Models\\Group' => __DIR__ . '/../..' . '/app/Models/Group.php',
         'App\\Models\\Role' => __DIR__ . '/../..' . '/app/Models/Role.php',
+        'App\\Models\\Status' => __DIR__ . '/../..' . '/app/Models/Status.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
@@ -5364,6 +5393,13 @@ class ComposerStaticInit04597b9e098097a0e03fd0888fb1c4c9
         'Ramsey\\Uuid\\Validator\\GenericValidator' => __DIR__ . '/..' . '/ramsey/uuid/src/Validator/GenericValidator.php',
         'Ramsey\\Uuid\\Validator\\ValidatorInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/Validator/ValidatorInterface.php',
         'ReturnTypeWillChange' => __DIR__ . '/..' . '/symfony/polyfill-php81/Resources/stubs/ReturnTypeWillChange.php',
+        'Sarfraznawaz2005\\VisitLog\\Browser' => __DIR__ . '/..' . '/sarfraznawaz2005/visitlog/src/Browser.php',
+        'Sarfraznawaz2005\\VisitLog\\Facades\\VisitLog' => __DIR__ . '/..' . '/sarfraznawaz2005/visitlog/src/Facades/VisitLog.php',
+        'Sarfraznawaz2005\\VisitLog\\Http\\Controllers\\VisitLogController' => __DIR__ . '/..' . '/sarfraznawaz2005/visitlog/src/Http/Controllers/VisitLogController.php',
+        'Sarfraznawaz2005\\VisitLog\\Middleware\\ipCheckMiddleware' => __DIR__ . '/..' . '/sarfraznawaz2005/visitlog/src/Middleware/ipCheckMiddleware.php',
+        'Sarfraznawaz2005\\VisitLog\\Models\\VisitLog' => __DIR__ . '/..' . '/sarfraznawaz2005/visitlog/src/Models/VisitLog.php',
+        'Sarfraznawaz2005\\VisitLog\\VisitLog' => __DIR__ . '/..' . '/sarfraznawaz2005/visitlog/src/VisitLog.php',
+        'Sarfraznawaz2005\\VisitLog\\VisitLogServiceProvider' => __DIR__ . '/..' . '/sarfraznawaz2005/visitlog/src/VisitLogServiceProvider.php',
         'SebastianBergmann\\CliParser\\AmbiguousOptionException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/AmbiguousOptionException.php',
         'SebastianBergmann\\CliParser\\Exception' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/Exception.php',
         'SebastianBergmann\\CliParser\\OptionDoesNotAllowArgumentException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/OptionDoesNotAllowArgumentException.php',

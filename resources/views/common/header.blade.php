@@ -10,16 +10,7 @@
         <ul class="nav navbar-nav navbar-left in">
             <li><a href="#" class="menu-toggler sidebar-toggler"><i data-feather="menu"></i></a></li>
         </ul>
-        <form class="search-form-opened" action="#" method="GET">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search..." name="query">
-                <span class="input-group-btn">
-							<a href="javascript:;" class="btn submit">
-								<i class="icon-magnifier"></i>
-							</a>
-						</span>
-            </div>
-        </form>
+
         <!-- start mobile menu -->
         <a class="menu-toggler responsive-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
             <span></span>
@@ -41,8 +32,14 @@
                                 <i class="icon-user"></i> Profile </a>
                         </li>
                         <li>
-                            <a href="login.html">
-                                <i class="icon-logout"></i> Log Out </a>
+                            <a  href="{{ route('logout') }}"
+                               onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <i class="icon-logout"></i> Log Out
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
                         </li>
                     </ul>
                 </li>
