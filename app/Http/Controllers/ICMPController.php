@@ -1,26 +1,31 @@
 <?php
 /*
  * Created by Beatific Angel
- *  20222/3/22 11.00am
+ *  20222/3/23 9.00am
  * */
 namespace App\Http\Controllers;
 
 use App\Models\Device;
 use App\Models\Group;
+use App\Models\Status;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-use Acamposm\Ping\Ping;
-use Acamposm\Ping\PingCommandBuilder;
+
 
 class ICMPController extends Controller
 {
 
     public function index()
     {
+        $status_lists = Status::all();
+        return view('status.index', ['status_lists' => $status_lists]);
+    }
+
+    public function getstatus()
+    {
         $devices = device::all();
-        $device_cnt = device::all()->count();
         $devicestatus = array();
         foreach ($devices as $key => $device)
         {
@@ -36,80 +41,38 @@ class ICMPController extends Controller
             } else {
                 $status = "dead";
             }
-            $devicestatus[$key]['devicename'] = $device->name;
-            $devicestatus[$key]['groupname'] = $device->groupid;
-            $devicestatus[$key]['ipaddress'] = $device->ipaddress;
-            $devicestatus[$key]['status'] = $status;
+            $devicestatus[$key] = $status;
+
+            $get_device = DB::select("select * from servicestatus where deviceid='$device->id'");
+            if(!empty($get_device))
+            {
+                $status_id = $get_device[0]->id;
+                $device_status = Status::findOrFail($status_id);
+                $device_status->deviceid = $device->id;
+                $device_status->devicename = $device->name;
+                $device_status->groupid = $device->groupid;
+                $device_status->ipaddress = $device->ipaddress;
+                $device_status->status = $status;
+                $device_status->save();
+            }
+            else{
+                $new_status = new Status([
+                    'deviceid' => $device->id,
+                    'devicename' => $device->name,
+                    'groupid' => $device->groupid,
+                    'ipaddress' => $device->ipaddress,
+                    'status' => $status
+                ]);
+                $new_status->save();
+            }
         }
 
-        return view('device.index', ['devicestatus' => $devicestatus]);
+        $status_result = array();
+        $a = &$status_result;
+        $a["get_status"] = '';
+        if (!empty($device)) {
+            $a["get_status"] = view('status.status', ['devices' => $devices, 'devicestatus' => $devicestatus])->render();
+        }
+        return response()->json($status_result);
     }
-
-    public function create()
-    {
-        $groups = group::all();
-        return view('device.create', ['groups' => $groups]);
-    }
-
-    public function store(Request $request)
-    {
-
-        $name = $request->input('devicename');
-        $groupname = $request->input('groupname');
-        $ipaddress = $request->input('ipaddress');
-        $description = $request->input('devicedescription');
-
-        $group = DB::select("select * from groups where name='$groupname'");
-        $groupid = $group[0]->id;
-
-        $device = new Device([
-            'name' => $name,
-            'groupid' => $groupid,
-            'ipaddress' => $ipaddress,
-            'description' => $description
-        ]);
-        $device->save();
-
-        return redirect()->back()->with("success", "New Device has been created.");
-    }
-
-    public function edit($id)
-    {
-        $device = Device::where('id', '=', $id)->get();
-        $groups = group::all();
-        return view('device.edit', ['device' => $device[0], 'groups' => $groups]);
-    }
-
-
-    public function update(Request $request)
-    {
-
-        $id = $request->input('deviceid');
-        $name = $request->input('devicename');
-        $groupname = $request->input('groupname');
-        $ipaddress = $request->input('ipaddress');
-        $description = $request->input('devicedescription');
-
-        $group = DB::select("select * from groups where name='$groupname'");
-        $groupid = $group[0]->id;
-
-        $device = Device::findOrFail($id);
-
-        $device->name = $name ;
-        $device->groupid = $groupid;
-        $device->ipaddress = $ipaddress;
-        $device->description = $description;
-        $device->save();
-
-        return redirect()->back()->with("success", "The Device has been updated.");
-    }
-
-    public function delete($id)
-    {
-        $device_query = "delete from devices where id = '$id'";
-        $device_query_res = DB::select($device_query);
-        return redirect()->back()->with("success", "The Device has been deleted.");
-    }
-
-
 }

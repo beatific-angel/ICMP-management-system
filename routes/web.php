@@ -28,6 +28,7 @@ Auth::routes(['register' => false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/servicestatus', [App\Http\Controllers\ICMPController::class, 'index'])->name('servicestatus');
+Route::get('/getdevicestatus', [App\Http\Controllers\ICMPController::class, 'getstatus'])->name('getstatus');
 
 // Profile Routes
 Route::prefix('profile')->name('profile.')->middleware('auth')->group(function(){

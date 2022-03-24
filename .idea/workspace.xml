@@ -2,52 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ad21a33-8551-423a-8ca6-b79f66d5af63" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/htdocs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/htdocs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DeviceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DeviceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GroupController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GroupController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/common/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/common/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/common/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/common/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/device/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/device/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ICMPController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ICMPController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/group/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/group/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/status/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/status/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/.env.travis" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/.github/CODE_OF_CONDUCT.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/.github/CONTRIBUTING.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/.github/FUNDING.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/.github/ISSUE_TEMPLATE/bug_report.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/.github/SECURITY.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/config/config.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/src/Console/InstallPingPackageCommand.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/src/Exceptions/InvalidIPAddressException.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/src/Exceptions/MaxValueException.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/src/Exceptions/NegativeValueException.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/src/Exceptions/TimerNotStartedException.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/src/Exceptions/UnknownOSException.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/src/IPAddress.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/src/Interfaces/PingCommand.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/src/Interfaces/PingParserInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/src/Parsers/PingParser.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/src/Parsers/PingParserForLinux.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/src/Parsers/PingParserForWindows.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/src/Ping.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/src/PingCommandBuilder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/src/PingFacade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/src/PingServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/src/System.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/acamposm/ping/src/Timer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,14 +162,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="G:/PROJECT/2021/4-1/Work/htdocs" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\app\Models" />
+      <recent name="C:\xampp\htdocs\resources\views\status" />
       <recent name="C:\xampp\htdocs\resources\views" />
       <recent name="C:\xampp\htdocs\app\Http\Controllers" />
-      <recent name="C:\xampp\htdocs\app\Models" />
       <recent name="C:\xampp\htdocs\resources\views\group" />
     </key>
   </component>
@@ -225,7 +191,8 @@
       <option name="presentableId" value="Default" />
       <updated>1647856587788</updated>
       <workItem from="1647856591873" duration="47263000" />
-      <workItem from="1647951712113" duration="21380000" />
+      <workItem from="1647951712113" duration="33914000" />
+      <workItem from="1648075343318" duration="948000" />
     </task>
     <servers />
   </component>
@@ -233,30 +200,34 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="271" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1647958393551">
+    <state x="690" y="271" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1648039691651">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="690" y="271" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1647958393551" />
+    <state x="690" y="271" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1648039691651" />
     <state x="92" y="92" width="1736" height="848" key="DiffContextDialog" timestamp="1647943253915">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="92" y="92" width="1736" height="848" key="DiffContextDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1647943253915" />
-    <state x="740" y="271" key="FileChooserDialogImpl" timestamp="1647866262938">
+    <state x="740" y="271" key="FileChooserDialogImpl" timestamp="1648039264206">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="740" y="271" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1647866262938" />
+    <state x="740" y="271" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1648039264206" />
     <state x="92" y="92" width="1736" height="848" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1647862116992">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="92" y="92" width="1736" height="848" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1647862116992" />
-    <state x="656" y="248" width="1098" height="536" key="find.popup" timestamp="1647961247075">
+    <state x="656" y="248" width="1098" height="536" key="find.popup" timestamp="1648085822792">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="656" y="248" width="1098" height="536" key="find.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1647961247075" />
+    <state x="656" y="248" width="1098" height="536" key="find.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1648085822792" />
     <state x="637" y="307" key="git4idea.merge.GitPullDialog" timestamp="1647943222085">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="637" y="307" key="git4idea.merge.GitPullDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1647943222085" />
+    <state x="616" y="238" key="run.anything.popup" timestamp="1648022316199">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="616" y="238" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1648022316199" />
     <state x="616" y="169" width="672" height="676" key="search.everywhere.popup" timestamp="1648006500502">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>

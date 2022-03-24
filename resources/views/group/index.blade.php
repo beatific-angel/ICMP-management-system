@@ -65,14 +65,14 @@
                             </thead>
                             <tbody>
                             @if($groups)
-                                @foreach($groups as $group)
+                                @foreach($groups as $key=> $group)
                                     <tr class="odd">
                                 <td>{{$group->id}}</td>
                                 <td>{{$group->name}}</td>
                                 <td>{{$group->owner}}</td>
-                                <td>+123 4567890</td>
-                                <td>test@example.com</td>
-                                <td>1998</td>
+                                <td>{{$devicelists[$key]}}</td>
+                                <td>{{$uplists[$key]}}</td>
+                                <td>{{$downlists[$key]}}</td>
                                 <td>
                                     <a href="{{ route('group.edit', ['id' => $group->id]) }}" class="tblEditBtn">
                                         <i class="fa fa-pencil"></i>

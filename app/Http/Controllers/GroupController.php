@@ -5,8 +5,10 @@
  * */
 namespace App\Http\Controllers;
 
+use App\Models\Device;
 use App\Models\Group;
 use App\Models\User;
+use App\Models\Status;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -17,7 +19,26 @@ class GroupController extends Controller
     {
         $groups = Group::all();
         $groups_cnt = Group::all()->count();
-        return view('group.index', ['groups' => $groups, 'count' => $groups_cnt]);
+
+        $devicelists =array();
+        $uplists =array();
+        $downlists =array();
+
+        foreach ($groups as $key => $group) {
+            $groupid = $group->id;
+
+            $devicelists[$key] = Device::where('groupid', '=', $groupid)->get()->count();
+
+            $uplists[$key] = Status::where('groupid', '=', $groupid)
+                ->where('status', '=', 'alive')
+                ->get()->count();
+
+            $downlists[$key] = Status::where('groupid', '=', $groupid)
+                ->where('status', '=', 'dead')
+                ->get()->count();
+        }
+
+        return view('group.index', ['groups' => $groups, 'devicelists' => $devicelists, 'uplists' => $uplists, 'downlists' => $downlists]);
     }
 
     public function create()

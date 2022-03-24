@@ -27,9 +27,9 @@
                         <span class="info-box-icon push-bottom"><i data-feather="users"></i></span>
                         <div class="info-box-content">
                             <span class="info-box-text">Customers</span>
-                            <span class="info-box-number">555 users</span>
+                            <span class="info-box-number">{{$usercnt}}</span>
                             <hr style="border-top: 3px solid #fff;margin: 5px 0;">
-                            <span class="info-box-text">Last 30 seconds</span>
+                            <span class="info-box-text">Just Now</span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -41,9 +41,9 @@
                         <span class="info-box-icon push-bottom"><i data-feather="server"></i></span>
                         <div class="info-box-content">
                             <span class="info-box-text">Groups</span>
-                            <span class="info-box-number">5</span>
+                            <span class="info-box-number">{{$groups_cnt}}</span>
                             <hr style="border-top: 3px solid #fff;margin: 5px 0;">
-                            <span class="info-box-text">Last 30 seconds</span>
+                            <span class="info-box-text">Just Now</span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -55,9 +55,9 @@
                         <span class="info-box-icon push-bottom"><i data-feather="monitor"></i></span>
                         <div class="info-box-content">
                             <span class="info-box-text">Devices</span>
-                            <span class="info-box-number">15</span>
+                            <span class="info-box-number">{{$devices_cnt}}</span>
                             <hr style="border-top: 3px solid #fff;margin: 5px 0;">
-                            <span class="info-box-text">Last 30 seconds</span>
+                            <span class="info-box-text">Just Now</span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -91,21 +91,25 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td>
-                                            <a href="javascript:void(0)" class="tblEditBtn">
-                                                <i class="fa fa-pencil"></i>
-                                            </a>
-                                            <a href="javascript:void(0)" class="tblDelBtn">
-                                                <i class="fa fa-trash-o"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
+                                    @if($groups)
+                                        @foreach($groups as $key=> $group)
+                                            <tr class="odd">
+                                                <td>{{$group->id}}</td>
+                                                <td>{{$group->name}}</td>
+                                                <td>{{$devicelists[$key]}}</td>
+                                                <td>{{$uplists[$key]}}</td>
+                                                <td>{{$downlists[$key]}}</td>
+                                                <td>
+                                                    <a href="{{ route('group.edit', ['id' => $group->id]) }}" class="tblEditBtn">
+                                                        <i class="fa fa-pencil"></i>
+                                                    </a>
+                                                    <a class="tblDelBtn" href="{{ route('group.delete', ['id' => $group->id]) }}" id="groupdelete">
+                                                        <i class="fa fa-trash-o"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    @endif
                                     </tbody>
                                 </table>
                             </div>
@@ -135,8 +139,9 @@
                         <div class="card-body ">
                             <div class="table-responsive">
                                 <table class="table table-hover">
-                                    <tbody>
+                                    <thead>
                                     <tr>
+                                        <th>#</th>
                                         <th>ID</th>
                                         <th>Device Name</th>
                                         <th>Group Name</th>
@@ -144,16 +149,33 @@
                                         <th>Status</th>
                                         <th>Last Seen</th>
                                     </tr>
-                                    <tr>
-                                        <td class="patient-img">
-                                            <img src="../assets/img/user/user10.jpg" alt="">
-                                        </td>
-                                        <td>XY56987</td>
-                                        <td>John Deo</td>
-                                        <td><i class="fas fa-circle col-green me-2"></i>Confirm</td>
-                                        <td>$955</td>
-                                        <td><i class="fas fa-file-pdf col-red"></i></td>
-                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    @if($status_lists)
+                                        @foreach($status_lists as $key => $device)
+
+                                            <tr class="odd">
+                                                <td><i data-feather="monitor"></i></td>
+                                                <td>{{$device->deviceid}}</td>
+                                                <td>{{$device->devicename}}</td>
+                                                <td>
+                                                    <?php
+                                                    $groups = DB::select(DB::raw('select * from groups where id = ' . $device->groupid));
+                                                    echo $groups[0]->name;
+                                                    ?>
+                                                </td>
+                                                <td>{{$device->ipaddress}}</td>
+                                                <td>
+                                                    @if($device->status == 'alive')
+                                                        <i class="fas fa-circle col-green me-2"></i>
+                                                    @else
+                                                        <i class="fas fa-circle col-red me-2"></i>
+                                                    @endif
+                                                    {{$device->status}}</td>
+                                                <td>{{$device->updated_at}}</td>
+                                            </tr>
+                                        @endforeach
+                                    @endif
                                     </tbody>
                                 </table>
                             </div>

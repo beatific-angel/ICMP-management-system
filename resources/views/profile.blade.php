@@ -60,10 +60,10 @@
                                                     class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                                     <label class="mdl-textfield__label">First Name</label>
                                                     <input type="text" class="mdl-textfield__input @error('firstname') is-invalid @enderror"
-                                                           name="first_name" placeholder="First Name"
-                                                           value="{{ old('first_name') ? old('first_name') : auth()->user()->firstname }}">
+                                                           name="firstname" placeholder="First Name"
+                                                           value="{{ old('firstname') ? old('firstname') : auth()->user()->firstname }}">
 
-                                                    @error('first_name')
+                                                    @error('firstname')
                                                     <span class="text-danger">{{ $message }}</span>
                                                     @enderror
                                                 </div>
@@ -73,12 +73,12 @@
                                                 <div
                                                     class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                                     <label class="mdl-textfield__label">Last Name</label>
-                                                    <input type="text" name="last_name"
+                                                    <input type="text" name="lastname"
                                                            class="mdl-textfield__input @error('lastname') is-invalid @enderror"
-                                                           value="{{ old('last_name') ? old('last_name') : auth()->user()->lastname }}"
+                                                           value="{{ old('lastname') ? old('lastname') : auth()->user()->lastname }}"
                                                            placeholder="Last Name">
 
-                                                    @error('last_name')
+                                                    @error('lastname')
                                                     <span class="text-danger">{{ $message }}</span>
                                                     @enderror
                                                 </div>
@@ -88,7 +88,7 @@
                                                 <div
                                                     class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                                     <label class="mdl-textfield__label">Phone</label>
-                                                    <input type="text" class="mdl-textfield__input @error('phone') is-invalid @enderror" name="mobile_number"
+                                                    <input type="text" class="mdl-textfield__input @error('phone') is-invalid @enderror" name="phone"
                                                            value="{{ old('phone') ? old('phone') : auth()->user()->phone }}"
                                                            placeholder="Mobile Number">
                                                     @error('phone')
