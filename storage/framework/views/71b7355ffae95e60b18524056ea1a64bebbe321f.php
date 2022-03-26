@@ -81,6 +81,23 @@
                                         <?php endif; ?>
                                     </div>
                                 </div>
+                                <div class="form-group row <?php echo e($errors->has('device_id') ? ' has-error' : ''); ?>">
+                                    <label for="device_id" class="col-md-2 col-form-label form-control-label">Select Device</label>
+                                    <div class="col-md-7">
+                                        <select id="device_id" type="category" class="form-control" name="device_id">
+                                            <option value="">Select Device</option>
+                                            <?php $__currentLoopData = $devices; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $device): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <option value="<?php echo e($device->id); ?>"><?php echo e($device->name); ?></option>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                        </select>
+
+                                        <?php if($errors->has('device_id')): ?>
+                                            <span class="help-block">
+                                                <span class="text-danger"><?php echo e($errors->first('device_id')); ?></span>
+                                            </span>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
 
                                 <div class="form-group row <?php echo e($errors->has('priority') ? ' has-error' : ''); ?>">
                                     <label for="priority" class="col-md-2 col-form-label form-control-label">Priority</label>

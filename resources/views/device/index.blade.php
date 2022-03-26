@@ -56,6 +56,7 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Device Name</th>
+                                <th>User Name</th>
                                 <th>Group Name</th>
                                 <th>IP Address</th>
                                 <th>Edit</th>
@@ -67,6 +68,12 @@
                                     <tr class="odd">
                                         <td>{{$device->id}}</td>
                                         <td>{{$device->name}}</td>
+                                        <td>
+                                            <?php
+                                            $users = DB::select(DB::raw('select * from users where id = ' . $device->userid));
+                                            echo $users[0]->username;
+                                            ?>
+                                        </td>
                                         <td>
                                             <?php
                                                 $groups = DB::select(DB::raw('select * from groups where id = ' . $device->groupid));

@@ -24,16 +24,21 @@
                 <div class="card-box">
                     <div class="card-head">
                         <header>Edit Ticket</header>
-                        <button id="panel-print"
-                                class="mdl-button mdl-js-button mdl-button--icon pull-right"
-                                data-upgraded=",MaterialButton">
-                            <i class="material-icons">print</i>
-                        </button>
-                        <a  href="<?php echo e(route('logout')); ?>" id="panel-print" class="mdl-button mdl-js-button mdl-button--icon pull-right"
+                        <a  href="<?php echo e(route('ticket.print_ticket')); ?>" id="panel-print" class="mdl-button mdl-js-button mdl-button--icon pull-right"
                             data-upgraded=",MaterialButton"
-                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            <i class="icon-logout"></i> Log Out
+                            onclick="event.preventDefault(); document.getElementById('ticket_print_form').submit();">
+                            <i class="material-icons">print</i>
                         </a>
+                        <form id="ticket_print_form" action="<?php echo e(route('ticket.print_ticket')); ?>" method="POST" style="display: none;">
+                            <input id="ticket_id_print" type="text" class="form-control" name="ticket_id_print"
+                                   value="<?php echo e($ticket->ticket_id); ?>" >
+                            <input id="user_id_print" type="text" class="form-control" name="user_id_print"
+                                   value="<?php echo e($ticket->user_id); ?>" >
+                            <input id="device_id_print" type="text" class="form-control" name="device_id_print"
+                                   value="<?php echo e($ticket->device_id); ?>" >
+                            <?php echo e(csrf_field()); ?>
+
+                        </form>
                     </div>
                     <div class="card-body">
                         <form class="form-horizontal offset-sm-2" id="ticket_form" action="<?php echo e(route('ticket.update')); ?>" role="form" method="POST">
@@ -60,7 +65,18 @@
                                     </select>
                                 </div>
                             </div>
+                            <div class="form-group row <?php echo e($errors->has('device_id') ? ' has-error' : ''); ?>">
+                                <label for="category" class="col-md-2 col-form-label form-control-label">Select Device</label>
 
+                                <div class="col-md-7">
+                                    <?php
+                                    $selecteddevice = DB::select(DB::raw('select * from devices where id = ' . $ticket->device_id));
+                                    ?>
+                                    <select id="user_id" type="category" class="form-control" name="user_id">
+                                        <option value="<?php echo e($ticket->device_id); ?>"><?php echo e($selecteddevice[0]->name); ?></option>
+                                    </select>
+                                </div>
+                            </div>
                             <div class="form-group row">
                                 <label for="priority" class="col-md-2 col-form-label form-control-label">Priority</label>
                                 <div class="col-md-7">

@@ -1,10 +1,19 @@
 <center>
     <h1>Ticket Information</h1>
     <table class="table" >
-        <tr><th>Id</th><th>Name</th><th>Email</th><th>Course</th></tr>
-        @foreach($students as $student)
-            <tr><td>{{ $student->id }}</td>
-                <td>{{ $student->name }}</td>
-                <td>{{ $student->email }}</td>
-                <td>{{ $student->course }}</td> </tr>
+        <tr><th>Name</th><th>Email</th><th>Phone</th><th>Device IP</th><th>Group</th><th>Issue</th><th>Created At</th></tr>
+            <tr><td>{{ $user->firstname }} {{ $user->lastname }}</td>
+                <td>{{ $user->email }}</td>
+                <td>{{ $user->phone }}</td>
+                <td>{{ $device->ipaddress }}</td>
+                <td><?php
+                    $groups = DB::select(DB::raw('select * from groups where id = ' . $device->groupid));
+                    echo $groups[0]->name;
+                    ?></td>
+                <td>{{ $ticket->message }}</td>
+                <td>{{ $ticket->created_at }}</td>
+            </tr>
 </center>
+<script>
+    window.print();
+</script>

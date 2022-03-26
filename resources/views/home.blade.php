@@ -97,8 +97,8 @@
                                                 <td>{{$group->id}}</td>
                                                 <td>{{$group->name}}</td>
                                                 <td>{{$devicelists[$key]}}</td>
-                                                <td>{{$uplists[$key]}}</td>
-                                                <td>{{$downlists[$key]}}</td>
+                                                <td class="bg-success">{{$uplists[$key]}}</td>
+                                                <td class="bg-danger">{{$downlists[$key]}}</td>
                                                 <td>
                                                     <a href="{{ route('group.edit', ['id' => $group->id]) }}" class="tblEditBtn">
                                                         <i class="fa fa-pencil"></i>

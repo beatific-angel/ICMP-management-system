@@ -58,6 +58,22 @@
                             <div class="col-lg-6 p-t-20">
                                 <div
                                     class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height txt-full-width">
+                                    <input class="mdl-textfield__input" type="text" id="username" name="username" readonly
+                                           tabIndex="-1">
+                                    <label for="username" class="pull-right margin-0">
+                                        <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                                    </label>
+                                    <label for="username" class="mdl-textfield__label">Select User</label>
+                                    <ul data-mdl-for="username" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                                        @foreach($users as $user)
+                                            <li class="mdl-menu__item" data-val="{{$user->id}}" >{{$user->username}}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 p-t-20">
+                                <div
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height txt-full-width">
                                     <input class="mdl-textfield__input" type="text" id="groupname" name="groupname" readonly
                                            tabIndex="-1">
                                     <label for="groupname" class="pull-right margin-0">

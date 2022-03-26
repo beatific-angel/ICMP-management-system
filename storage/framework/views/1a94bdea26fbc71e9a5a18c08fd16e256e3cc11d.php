@@ -94,8 +94,8 @@
                                                 <td><?php echo e($group->id); ?></td>
                                                 <td><?php echo e($group->name); ?></td>
                                                 <td><?php echo e($devicelists[$key]); ?></td>
-                                                <td><?php echo e($uplists[$key]); ?></td>
-                                                <td><?php echo e($downlists[$key]); ?></td>
+                                                <td class="bg-success"><?php echo e($uplists[$key]); ?></td>
+                                                <td class="bg-danger"><?php echo e($downlists[$key]); ?></td>
                                                 <td>
                                                     <a href="<?php echo e(route('group.edit', ['id' => $group->id])); ?>" class="tblEditBtn">
                                                         <i class="fa fa-pencil"></i>

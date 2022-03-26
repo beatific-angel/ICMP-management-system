@@ -77,7 +77,7 @@ Route::prefix('ticket')->name('ticket.')->middleware('auth')->group(function(){
     Route::post('/update', [TicketController::class, 'update'])->name('update');
     Route::get('/close/{ticket_id}', [TicketController::class, 'close'])->name('close');
     Route::get('/delete/{id}', [TicketController::class, 'delete'])->name('delete');
-    Route::get('/print_ticket/{id}', [TicketController::class, 'print_ticket'])->name('print_ticket');
+    Route::post('/print_ticket', [TicketController::class, 'print_ticket'])->name('print_ticket');
 });
 
 // Users

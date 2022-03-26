@@ -6,6 +6,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Ticket;
+use App\Models\Device;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -27,15 +28,18 @@ class TicketController extends Controller
     public function create()
     {
         $users = User::all();
-        return view('tickets.create', compact('users'));
+        $devices = Device::all();
+        return view('tickets.create', compact('users','devices'));
     }
 
 
     public function store(Request $request)
     {
+
         $this->validate($request, [
             'title' => 'required',
             'user_id' => 'required',
+            'device_id' => 'required',
             'priority' => 'required',
             'message' => 'required'
         ]);
@@ -44,6 +48,7 @@ class TicketController extends Controller
             'title' => $request->input('title'),
             'user_id' => $request->input('user_id'),
             'ticket_id' => strtoupper(Str::random(10)),
+            'device_id' => $request->input('device_id'),
             'priority' => $request->input('priority'),
             'message' => $request->input('message'),
             'status' => "Open"
@@ -98,9 +103,16 @@ class TicketController extends Controller
         $ticket_query_res = DB::select($ticket_query);
         return redirect()->back()->with("success", "The Ticket has been deleted.");
     }
-    public function print_ticket($id)
+    public function print_ticket(Request $request)
     {
+        $ticket_id = $request->ticket_id_print;
+        $user_id = $request->user_id_print;
+        $device_id = $request->device_id_print;
+        $ticket = Ticket::where('ticket_id', $ticket_id)->firstOrFail();
+        $user = User::where('id', $user_id)->firstOrFail();
+        $device = Device::where('id', $device_id)->firstOrFail();
 
-        return view('tickets.print', compact('ticket'));
+
+        return view('tickets.print', compact('ticket','user','device'));
     }
 }
