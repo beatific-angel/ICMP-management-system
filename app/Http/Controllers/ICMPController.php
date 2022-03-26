@@ -44,20 +44,14 @@ class ICMPController extends Controller
                 }
             } else if (PHP_OS === 'Linux') {
                 $command = (new PingCommandBuilder($ipaddress));
-
-                // Pass the PingCommand instance to Ping and run...
                 $ping = (new Ping($command))->run();
                 if ($ping->host_status == 'Ok') {
                     $status = "alive";
                 } else {
                     $status = "dead";
                 }
-
             }
-
-
             $devicestatus[$key] = $status;
-
             $get_device = DB::select("select * from servicestatus where deviceid='$device->id'");
             if (!empty($get_device)) {
                 $status_id = $get_device[0]->id;

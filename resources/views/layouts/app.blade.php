@@ -30,8 +30,6 @@
     <!-- bootstrap -->
     <script src="{{asset('assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('assets/plugins/bootstrap-switch/js/bootstrap-switch.min.js')}}"></script>
-    <script src="{{asset('assets/plugins/sparkline/jquery.sparkline.js')}}"></script>
-    <script src="{{asset('assets/js/pages/sparkline/sparkline-data.js')}}"></script>
     <!-- Common js-->
     <script src="{{asset('assets/js/app.js')}}"></script>
     <script src="{{asset('assets/js/layout.js')}}"></script>
@@ -51,9 +49,6 @@
     <script src="{{asset('assets/js/pages/table/table_data.js')}}"></script>
 
 
-    <!-- dropzone -->
-    <script src="{{asset('assets/plugins/dropzone/dropzone.js')}}"></script>
-    <script src="{{asset('assets/plugins/dropzone/dropzone-call.js')}}"></script>
 </body>
 
 </html>

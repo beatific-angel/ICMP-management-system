@@ -2,23 +2,778 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ad21a33-8551-423a-8ca6-b79f66d5af63" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/htdocs.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/htdocs.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ICMPController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ICMPController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/common/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/common/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme/boxed/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme/boxed/theme-color.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme/boxed/theme_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme/collapse/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme/collapse/theme-color.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme/collapse/theme_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme/dark/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme/dark/theme-color.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme/dark/theme_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme/full/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme/full/theme-color.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme/full/theme_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme/hover/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme/hover/theme-color.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme/hover/theme_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme/right/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme/right/theme-color.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme/right/theme_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme/rtl/rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme/rtl/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme/rtl/theme-color.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/theme/rtl/theme_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/bg-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/blog/blog1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/blog/blog2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/blog/blog3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/blog/blog4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/course/course1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/course/course2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/course/course3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/course/course4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ad.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ae.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/af.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ag.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ai.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/al.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/am.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/an.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ao.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/as.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/at.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/au.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/aw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ax.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/az.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ba.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/bb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/bd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/be.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/bf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/bh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/bi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/bj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/bm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/bn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/bo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/br.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/bs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/bt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/bv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/bw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/by.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/bz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ca.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/catalonia.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/cc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/cd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/cf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/cg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ch.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ci.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ck.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/cl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/cm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/cn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/co.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/cr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/cs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/cu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/cv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/cx.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/cy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/cz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/de.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/dj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/dk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/dm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/do.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/dz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ee.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/eg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/eh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/england.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/er.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/es.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/et.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/europeanunion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/fam.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/fi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/fj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/fk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/fm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/fo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/fr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/french_flag.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ga.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/gb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/gd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/germany_flag.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/gf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/gh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/gi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/gl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/gm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/gn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/gp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/gq.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/gr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/gs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/gt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/gu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/gw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/gy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/hk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/hm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/hn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/hr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ht.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/hu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/id.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ie.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/il.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/in.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/io.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/iq.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/is.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/it.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/italy_flag.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/jm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/jo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/jp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ke.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/kg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/kh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ki.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/km.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/kn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/kp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/kr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/kw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ky.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/kz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/la.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/lb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/lc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/li.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/lk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/lr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ls.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/lt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/lu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/lv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ly.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ma.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/mc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/md.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/me.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/mg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/mh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/mk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ml.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/mm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/mn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/mo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/mp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/mq.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/mr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/mt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/mu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/mv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/mw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/mx.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/my.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/mz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/na.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/nc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ne.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/nf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ng.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ni.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/nl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/no.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/np.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/nr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/nu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/nz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/om.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/pa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/pe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/pf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/pg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ph.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/pk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/pl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/pm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/pn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/pr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ps.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/pt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/pw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/py.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/qa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/re.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ro.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/rs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ru.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/russia_flag.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/rw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/sa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/sb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/sc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/scotland.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/sd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/se.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/sg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/sh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/si.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/sj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/sk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/sl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/sm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/sn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/so.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/spain_flag.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/sr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/st.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/sv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/sy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/sz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/tc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/td.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/tf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/tg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/th.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/tj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/tk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/tl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/tm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/tn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/to.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/tr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/tt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/tv.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/tw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/tz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ua.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ug.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/um.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/us.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/usa_flag.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/uy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/uz.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/va.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/vc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/vg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/vi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/vn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/vu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/wales.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/wf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ws.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/ye.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/yt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/za.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/zm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/flags/zw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/invoice_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/mega-img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/mega-img2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/mega-img3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/pages/404.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/pages/500.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/pages/forgot.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/pages/signup.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/prof/prof1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/prof/prof10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/prof/prof2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/prof/prof3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/prof/prof4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/prof/prof5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/prof/prof6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/prof/prof7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/prof/prof8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/prof/prof9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/slider/fullimage1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/slider/fullimage2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/slider/fullimage3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/slider/owl1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/slider/owl2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/slider/owl3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/slider/owl4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/slider/owl5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/slider/owl6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/slider/owl7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/slider/owl8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/slider/slider1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/slider/slider2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/slider/slider3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/std/std1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/std/std10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/std/std2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/std/std3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/std/std4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/std/std5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/std/std6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/std/std7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/std/std8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/std/std9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/user/user1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/user/user10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/user/user2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/user/user3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/user/user4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/user/user5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/user/user6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/user/user7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/user/user8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/user/user9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/pages/calendar/calendar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/pages/date-time/date-time.init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/pages/map/google-maps-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/pages/map/vector-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/pages/owl-carousel/owl_data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/pages/select2/select2-init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/pages/summernote/summernote-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/pages/sweet-alert/sweet-alert-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/pages/treeview/treeview-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/amcharts4/animated.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/amcharts4/charts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/amcharts4/core.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/amcharts4/maps.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/amcharts4/worldLow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/bootstrap-colorpicker/img/bootstrap-colorpicker/alpha-horizontal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/bootstrap-colorpicker/img/bootstrap-colorpicker/alpha.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/bootstrap-colorpicker/img/bootstrap-colorpicker/hue-horizontal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/bootstrap-colorpicker/img/bootstrap-colorpicker/hue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/bootstrap-colorpicker/img/bootstrap-colorpicker/saturation.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker-init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/bootstrap-datepicker/datepicker-init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/bootstrap-datepicker/datepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/bootstrap-treeview/bootstrap-treeview.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/dropzone/dropzone-call.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/dropzone/dropzone.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/dropzone/dropzone.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/echarts/chart/bar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/echarts/chart/chord.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/echarts/chart/eventRiver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/echarts/chart/force.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/echarts/chart/funnel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/echarts/chart/gauge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/echarts/chart/heatmap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/echarts/chart/k.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/echarts/chart/line.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/echarts/chart/map.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/echarts/chart/pie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/echarts/chart/radar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/echarts/chart/scatter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/echarts/chart/tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/echarts/chart/treemap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/echarts/chart/venn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/echarts/chart/wordCloud.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/echarts/echart-data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/echarts/echarts-all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/echarts/echarts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/bootstrap/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/bootstrap/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/bootstrap/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/bootstrap/main.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/bootstrap/main.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/bootstrap/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/bootstrap/main.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/bootstrap/main.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/bootstrap/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales-all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales-all.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/af.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/ar-dz.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/ar-kw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/ar-ly.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/ar-ma.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/ar-sa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/ar-tn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/ar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/az.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/bg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/bs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/cs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/el.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/en-au.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/en-gb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/en-nz.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/es-us.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/et.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/eu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/fa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/fi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/fr-ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/fr-ch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/fr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/gl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/he.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/hi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/hr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/hu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/id.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/is.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/it.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/ja.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/ka.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/kk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/ko.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/lb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/lt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/lv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/mk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/ms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/nb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/nl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/nn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/pl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/pt-br.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/pt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/ro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/ru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/sk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/sl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/sq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/sr-cyrl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/sr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/sv.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/th.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/tr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/ug.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/uk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/uz.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/vi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/zh-cn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/locales/zh-tw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/main.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/main.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/main.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/main.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/core/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/daygrid/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/daygrid/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/daygrid/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/daygrid/main.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/daygrid/main.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/daygrid/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/daygrid/main.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/daygrid/main.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/daygrid/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/google-calendar/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/google-calendar/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/google-calendar/main.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/google-calendar/main.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/google-calendar/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/google-calendar/main.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/google-calendar/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/interaction/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/interaction/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/interaction/main.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/interaction/main.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/interaction/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/interaction/main.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/interaction/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/list/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/list/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/list/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/list/main.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/list/main.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/list/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/list/main.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/list/main.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/list/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/luxon/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/luxon/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/luxon/main.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/luxon/main.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/luxon/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/luxon/main.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/luxon/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/moment-timezone/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/moment-timezone/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/moment-timezone/main.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/moment-timezone/main.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/moment-timezone/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/moment-timezone/main.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/moment-timezone/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/moment/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/moment/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/moment/main.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/moment/main.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/moment/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/moment/main.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/moment/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/rrule/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/rrule/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/rrule/main.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/rrule/main.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/rrule/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/rrule/main.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/rrule/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/timegrid/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/timegrid/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/timegrid/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/timegrid/main.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/timegrid/main.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/timegrid/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/timegrid/main.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/timegrid/main.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/fullcalendar/packages/timegrid/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/gmaps/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/gmaps/gmaps.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/gmaps/gmaps.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/blueimp-gallery/blueimp-gallery.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/blueimp-gallery/jquery.blueimp-gallery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/cors/postmessage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/cors/result.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/css/demo-ie8.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/css/demo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/css/jquery.fileupload-noscript.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/css/jquery.fileupload-ui-noscript.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/css/jquery.fileupload-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/css/jquery.fileupload.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/img/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/img/progressbar.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/js/cors/jquery.postmessage-transport.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/js/cors/jquery.xdr-transport.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/js/jquery.fileupload-angular.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/js/jquery.fileupload-audio.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/js/jquery.fileupload-image.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/js/jquery.fileupload-jquery-ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/js/jquery.fileupload-process.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/js/jquery.fileupload-ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/js/jquery.fileupload-validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/js/jquery.fileupload-video.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/js/jquery.fileupload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/js/jquery.iframe-transport.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/js/vendor/canvas-to-blob.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/js/vendor/jquery.ui.widget.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/js/vendor/load-image.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-file-upload/js/vendor/tmpl.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-toast/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-toast/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-toast/demos/css/jquery.toast.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-toast/demos/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-toast/demos/js/jquery.toast.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-toast/dist/jquery.toast.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-toast/dist/jquery.toast.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-toast/dist/toast.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-toast/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-toast/src/jquery.toast.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jquery-toast/src/jquery.toast.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jqvmap/jquery-jvectormap-world-mill-en.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jqvmap/jquery-jvectormap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jqvmap/jquery-jvectormap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jqvmap/jquery-jvectormap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/jqvmap/jvectormap.jquery.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/owl-carousel/owl.carousel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/owl-carousel/owl.carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/owl-carousel/owl.carousel.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/owl-carousel/owl.theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/plotyjs/plotly.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/select2/css/select2-bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/select2/css/select2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/select2/img/select2-spinner.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/select2/img/select2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/select2/img/select2x2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/select2/js/select2-init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/select2/js/select2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/sparkline/jquery.sparkline.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/font/summernote.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/font/summernote.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/font/summernote.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/font/summernote.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-ar-AR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-ar-AR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-ar-AR.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-az-AZ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-az-AZ.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-az-AZ.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-bg-BG.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-bg-BG.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-bg-BG.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-ca-ES.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-ca-ES.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-ca-ES.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-cs-CZ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-cs-CZ.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-cs-CZ.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-da-DK.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-da-DK.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-da-DK.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-de-DE.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-de-DE.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-de-DE.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-el-GR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-el-GR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-el-GR.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-es-ES.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-es-ES.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-es-ES.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-es-EU.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-es-EU.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-es-EU.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-fa-IR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-fa-IR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-fa-IR.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-fi-FI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-fi-FI.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-fi-FI.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-fr-FR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-fr-FR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-fr-FR.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-gl-ES.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-gl-ES.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-gl-ES.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-he-IL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-he-IL.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-he-IL.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-hr-HR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-hr-HR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-hr-HR.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-hu-HU.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-hu-HU.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-hu-HU.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-id-ID.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-id-ID.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-id-ID.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-it-IT.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-it-IT.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-it-IT.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-ja-JP.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-ja-JP.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-ja-JP.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-ko-KR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-ko-KR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-ko-KR.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-lt-LT.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-lt-LT.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-lt-LT.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-lt-LV.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-lt-LV.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-lt-LV.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-mn-MN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-mn-MN.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-mn-MN.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-nb-NO.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-nb-NO.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-nb-NO.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-nl-NL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-nl-NL.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-nl-NL.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-pl-PL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-pl-PL.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-pl-PL.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-pt-BR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-pt-BR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-pt-BR.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-pt-PT.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-pt-PT.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-pt-PT.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-ro-RO.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-ro-RO.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-ro-RO.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-ru-RU.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-ru-RU.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-ru-RU.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-sk-SK.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-sk-SK.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-sk-SK.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-sl-SI.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-sl-SI.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-sl-SI.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-sr-RS-Latin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-sr-RS-Latin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-sr-RS-Latin.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-sr-RS.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-sr-RS.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-sr-RS.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-sv-SE.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-sv-SE.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-sv-SE.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-ta-IN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-ta-IN.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-ta-IN.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-th-TH.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-th-TH.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-th-TH.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-tr-TR.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-tr-TR.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-tr-TR.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-uk-UA.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-uk-UA.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-uk-UA.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-uz-UZ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-uz-UZ.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-uz-UZ.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-vi-VN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-vi-VN.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-vi-VN.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-zh-CN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-zh-CN.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-zh-CN.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-zh-TW.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-zh-TW.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/lang/summernote-zh-TW.min.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/plugin/databasic/summernote-ext-databasic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/plugin/databasic/summernote-ext-databasic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/plugin/hello/summernote-ext-hello.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/plugin/specialchars/summernote-ext-specialchars.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/summernote.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/summernote.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/summernote.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/summernote.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/plugins/summernote/summernote.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/pagination.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/common/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/common/head.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/common/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/common/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/.gitignore" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,16 +925,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="G:/PROJECT/2021/4-1/Work/htdocs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/tickets" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\resources\views" />
+      <recent name="C:\xampp\htdocs\resources\views\tickets" />
       <recent name="C:\xampp\htdocs\app\Models" />
-      <recent name="C:\xampp\htdocs\resources\views\status" />
       <recent name="C:\xampp\htdocs\app\Http\Controllers" />
-      <recent name="C:\xampp\htdocs\resources\views\group" />
+      <recent name="C:\xampp\htdocs\resources\views" />
+      <recent name="C:\xampp\htdocs\resources\views\status" />
     </key>
   </component>
   <component name="RunManager">
@@ -201,7 +956,12 @@
       <workItem from="1647856591873" duration="47263000" />
       <workItem from="1647951712113" duration="33914000" />
       <workItem from="1648075343318" duration="5307000" />
-      <workItem from="1648119117139" duration="7899000" />
+      <workItem from="1648119117139" duration="9149000" />
+      <workItem from="1648130775219" duration="4327000" />
+      <workItem from="1648171594594" duration="3726000" />
+      <workItem from="1648192169104" duration="17749000" />
+      <workItem from="1648219821054" duration="2586000" />
+      <workItem from="1648264635780" duration="151000" />
     </task>
     <servers />
   </component>
@@ -209,34 +969,34 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="271" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1648127971111">
+    <state x="690" y="271" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1648214854548">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="690" y="271" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1648127971111" />
+    <state x="690" y="271" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1648214854548" />
     <state x="92" y="92" width="1736" height="848" key="DiffContextDialog" timestamp="1647943253915">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="92" y="92" width="1736" height="848" key="DiffContextDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1647943253915" />
-    <state x="740" y="271" key="FileChooserDialogImpl" timestamp="1648125618682">
+    <state x="740" y="271" key="FileChooserDialogImpl" timestamp="1648192199469">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="740" y="271" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1648125618682" />
+    <state x="740" y="271" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1648192199469" />
     <state x="92" y="92" width="1736" height="848" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1647862116992">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="92" y="92" width="1736" height="848" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1647862116992" />
-    <state x="656" y="248" width="1098" height="536" key="find.popup" timestamp="1648124525204">
+    <state x="656" y="248" width="1098" height="536" key="find.popup" timestamp="1648221654698">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="656" y="248" width="1098" height="536" key="find.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1648124525204" />
+    <state x="656" y="248" width="1098" height="536" key="find.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1648221654698" />
     <state x="637" y="307" key="git4idea.merge.GitPullDialog" timestamp="1647943222085">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="637" y="307" key="git4idea.merge.GitPullDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1647943222085" />
-    <state x="616" y="238" key="run.anything.popup" timestamp="1648022316199">
+    <state x="616" y="238" key="run.anything.popup" timestamp="1648197207064">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="616" y="238" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1648022316199" />
+    <state x="616" y="238" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1648197207064" />
     <state x="616" y="169" width="672" height="676" key="search.everywhere.popup" timestamp="1648006500502">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>

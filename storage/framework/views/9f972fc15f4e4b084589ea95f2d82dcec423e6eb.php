@@ -1,4 +1,4 @@
-{{--Created by Beatific Angel    20222/3/21 11.00 am --}}
+
 <div class="sidebar-container">
     <div class="sidemenu-container navbar-collapse collapse fixed-menu">
         <div id="remove-scroll" class="left-sidemenu">
@@ -12,129 +12,129 @@
                 <li class="sidebar-user-panel">
                     <div class="sidebar-user">
                         <div class="sidebar-user-picture">
-                            <img alt="image" src="{{asset('assets/img/admin.png')}}">
+                            <img alt="image" src="<?php echo e(asset('assets/img/admin.png')); ?>">
                         </div>
                         <div class="sidebar-user-details">
                             <div class="user-role" style="font-weight: bold">Administrator</div>
                         </div>
                     </div>
                 </li>
-                <li class="nav-item start {{ return_if(on_page('home'), ' active') }}">
-                    <a href="{{ route('home') }}" class="nav-link nav-toggle">
+                <li class="nav-item start <?php echo e(return_if(on_page('home'), ' active')); ?>">
+                    <a href="<?php echo e(route('home')); ?>" class="nav-link nav-toggle">
                         <i data-feather="airplay"></i>
                         <span class="title">Dashboard</span>
                         <span class="selected"></span>
                     </a>
                 </li>
-                <li class="nav-item start {{ return_if(on_page('servicestatus'), ' active') }}">
-                    <a href="{{ route('servicestatus') }}" class="nav-link nav-toggle">
+                <li class="nav-item start <?php echo e(return_if(on_page('servicestatus'), ' active')); ?>">
+                    <a href="<?php echo e(route('servicestatus')); ?>" class="nav-link nav-toggle">
                         <i data-feather="hard-drive"></i>
                         <span class="title">ICMP Manage</span>
                         <span class="selected"></span>
                     </a>
                 </li>
-                <li class="nav-item {{ return_if(on_page('group.index') or on_page('group.create') , ' active open') }}">
+                <li class="nav-item <?php echo e(return_if(on_page('group.index') or on_page('group.create') , ' active open')); ?>">
                     <a href="#" class="nav-link nav-toggle"><i data-feather="server"></i>
                         <span class="title">Groups</span><span class="arrow"></span></a>
                     <ul class="sub-menu">
                         <li class="nav-item">
-                            <a class="nav-link{{ return_if(on_page('group.create'), ' active') }}"
-                               href="{{ route('group.create') }}">
+                            <a class="nav-link<?php echo e(return_if(on_page('group.create'), ' active')); ?>"
+                               href="<?php echo e(route('group.create')); ?>">
                                 <i class="icon-plus"></i>
                                 <span class="title">Add Group</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link{{ return_if(on_page('group.index'), ' active') }}"
-                               href="{{ route('group.index') }}">
+                            <a class="nav-link<?php echo e(return_if(on_page('group.index'), ' active')); ?>"
+                               href="<?php echo e(route('group.index')); ?>">
                                 <i class="fas fa-layer-group"></i>
                                 <span class="title">Groups</span>
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item {{ return_if(on_page('device.index') or on_page('device.create') , ' active open') }}">
+                <li class="nav-item <?php echo e(return_if(on_page('device.index') or on_page('device.create') , ' active open')); ?>">
                     <a href="#" class="nav-link nav-toggle"><i data-feather="monitor"></i>
                         <span class="title">Devices</span><span class="arrow"></span></a>
                     <ul class="sub-menu">
                         <li class="nav-item">
-                            <a class="nav-link{{ return_if(on_page('device.create'), ' active') }}"
-                               href="{{ route('device.create') }}">
+                            <a class="nav-link<?php echo e(return_if(on_page('device.create'), ' active')); ?>"
+                               href="<?php echo e(route('device.create')); ?>">
                                 <i class="icon-plus"></i>
                                 <span class="title">Add Device</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link{{ return_if(on_page('device.index'), ' active') }}"
-                               href="{{ route('device.index') }}">
+                            <a class="nav-link<?php echo e(return_if(on_page('device.index'), ' active')); ?>"
+                               href="<?php echo e(route('device.index')); ?>">
                                 <i class="fas fa-layer-group"></i>
                                 <span class="title">Devices</span>
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item {{ return_if(on_page('users.index') or on_page('users.create') , ' active open') }}">
+                <li class="nav-item <?php echo e(return_if(on_page('users.index') or on_page('users.create') , ' active open')); ?>">
                     <a href="#" class="nav-link nav-toggle"><i data-feather="users"></i>
                         <span class="title">Customers</span><span class="arrow"></span></a>
                     <ul class="sub-menu">
                         <li class="nav-item">
-                            <a class="nav-link{{ return_if(on_page('users.create'), ' active') }}"
-                               href="{{ route('users.create') }}">
+                            <a class="nav-link<?php echo e(return_if(on_page('users.create'), ' active')); ?>"
+                               href="<?php echo e(route('users.create')); ?>">
                                 <i class="icon-plus"></i>
                                 <span class="title">Add Customer</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link{{ return_if(on_page('users.index'), ' active') }}"
-                               href="{{ route('users.index') }}">
+                            <a class="nav-link<?php echo e(return_if(on_page('users.index'), ' active')); ?>"
+                               href="<?php echo e(route('users.index')); ?>">
                                 <i class="fas fa-user-friends"></i>
                                 <span class="title">Customers</span>
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item {{ return_if(on_page('roles.index') or on_page('roles.create') , ' active open') }}">
+                <li class="nav-item <?php echo e(return_if(on_page('roles.index') or on_page('roles.create') , ' active open')); ?>">
                     <a href="#" class="nav-link nav-toggle"><i data-feather="shield"></i>
                         <span class="title">Roles</span><span class="arrow"></span></a>
                     <ul class="sub-menu">
                         <li class="nav-item">
-                            <a class="nav-link{{ return_if(on_page('roles.create'), ' active') }}"
-                               href="{{ route('roles.create') }}">
+                            <a class="nav-link<?php echo e(return_if(on_page('roles.create'), ' active')); ?>"
+                               href="<?php echo e(route('roles.create')); ?>">
                                 <i class="icon-plus"></i>
                                 <span class="title">Add Role</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link{{ return_if(on_page('roles.index'), ' active') }}"
-                               href="{{ route('roles.index') }}">
+                            <a class="nav-link<?php echo e(return_if(on_page('roles.index'), ' active')); ?>"
+                               href="<?php echo e(route('roles.index')); ?>">
                                 <i class="fas fa-user-shield"></i>
                                 <span class="title">Roles</span>
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item {{ return_if(on_page('ticket.index') or on_page('ticket.create') , ' active open') }}">
+                <li class="nav-item <?php echo e(return_if(on_page('ticket.index') or on_page('ticket.create') , ' active open')); ?>">
                     <a href="#" class="nav-link nav-toggle"><i data-feather="message-square"></i>
                         <span class="title">Tickets</span><span class="arrow"></span></a>
                     <ul class="sub-menu">
                         <li class="nav-item">
-                            <a class="nav-link{{ return_if(on_page('ticket.create'), ' active') }}"
-                               href="{{ route('ticket.create') }}">
+                            <a class="nav-link<?php echo e(return_if(on_page('ticket.create'), ' active')); ?>"
+                               href="<?php echo e(route('ticket.create')); ?>">
                                 <i class="icon-plus"></i>
                                 <span class="title">Create Ticket</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link{{ return_if(on_page('ticket.index'), ' active') }}"
-                               href="{{ route('ticket.index') }}">
+                            <a class="nav-link<?php echo e(return_if(on_page('ticket.index'), ' active')); ?>"
+                               href="<?php echo e(route('ticket.index')); ?>">
                                 <i class="fas fa-ticket"></i>
                                 <span class="title">Tickets</span>
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item start {{ return_if(on_page('visitlog'), ' active') }}">
-                    <a href="{{ route('visitlog') }}" class="nav-link nav-toggle">
+                <li class="nav-item start <?php echo e(return_if(on_page('visitlog'), ' active')); ?>">
+                    <a href="<?php echo e(route('visitlog')); ?>" class="nav-link nav-toggle">
                         <i data-feather="settings"></i>
                         <span class="title">Statistics</span>
                         <span class="selected"></span>
@@ -144,3 +144,4 @@
         </div>
     </div>
 </div>
+<?php /**PATH C:\xampp\htdocs\resources\views/common/sidebar.blade.php ENDPATH**/ ?>
