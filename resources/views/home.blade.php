@@ -90,7 +90,7 @@
                                         <th>Action</th>
                                     </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="home_group_status">
                                     @if($groups)
                                         @foreach($groups as $key=> $group)
                                             <tr class="odd">
@@ -150,7 +150,7 @@
                                         <th>Last Seen</th>
                                     </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="home_device_status">
                                     @if($status_lists)
                                         @foreach($status_lists as $key => $device)
 
@@ -210,4 +210,30 @@
             </div>
         </div>
     </div>
+@endsection
+@section('scripts')
+    <script>
+        var ajax_call = function () {
+            $.ajax({
+                url: '/getdevicestatus',
+                type: 'get',
+                dataType: 'json',
+                success: function (response) {
+                    console.log(response);
+                    document.getElementById('home_device_status').innerHTML = response.get_status;
+                }
+            });
+            $.ajax({
+                url: '/groupstatus',
+                type: 'get',
+                dataType: 'json',
+                success: function (response) {
+                    console.log(response);
+                    document.getElementById('home_group_status').innerHTML = response.get_status;
+                }
+            });
+        };
+        var interval = 20000; // where X is your every X minutes
+        setInterval(ajax_call, interval);
+    </script>
 @endsection

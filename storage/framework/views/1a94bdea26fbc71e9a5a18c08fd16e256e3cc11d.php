@@ -87,7 +87,7 @@
                                         <th>Action</th>
                                     </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="home_group_status">
                                     <?php if($groups): ?>
                                         <?php $__currentLoopData = $groups; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key=> $group): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                             <tr class="odd">
@@ -147,7 +147,7 @@
                                         <th>Last Seen</th>
                                     </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="home_device_status">
                                     <?php if($status_lists): ?>
                                         <?php $__currentLoopData = $status_lists; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $device): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
 
@@ -207,6 +207,32 @@
             </div>
         </div>
     </div>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('scripts'); ?>
+    <script>
+        var ajax_call = function () {
+            $.ajax({
+                url: '/getdevicestatus',
+                type: 'get',
+                dataType: 'json',
+                success: function (response) {
+                    console.log(response);
+                    document.getElementById('home_device_status').innerHTML = response.get_status;
+                }
+            });
+            $.ajax({
+                url: '/groupstatus',
+                type: 'get',
+                dataType: 'json',
+                success: function (response) {
+                    console.log(response);
+                    document.getElementById('home_group_status').innerHTML = response.get_status;
+                }
+            });
+        };
+        var interval = 20000; // where X is your every X minutes
+        setInterval(ajax_call, interval);
+    </script>
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\resources\views/home.blade.php ENDPATH**/ ?>

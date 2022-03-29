@@ -55,6 +55,35 @@ class HomeController extends Controller
 
         return view('home',['usercnt' => $usercnt,'groups' => $groups,'groups_cnt' => $groups_cnt,'devices_cnt' => $devices_cnt,'status_lists' => $status_lists, 'devicelists' => $devicelists, 'uplists' => $uplists, 'downlists' => $downlists]);
     }
+    public function groupstatus()
+    {
+        $groups = Group::all();
+
+        $devicelists =array();
+        $uplists =array();
+        $downlists =array();
+
+        foreach ($groups as $key => $group) {
+            $groupid = $group->id;
+
+            $devicelists[$key] = Device::where('groupid', '=', $groupid)->get()->count();
+
+            $uplists[$key] = Status::where('groupid', '=', $groupid)
+                ->where('status', '=', 'alive')
+                ->get()->count();
+
+            $downlists[$key] = Status::where('groupid', '=', $groupid)
+                ->where('status', '=', 'dead')
+                ->get()->count();
+        }
+        $status_result = array();
+        $a = &$status_result;
+        $a["get_status"] = '';
+        if (!empty($groups)) {
+            $a["get_status"] = view('status.groupstatus', ['groups' => $groups,'devicelists' => $devicelists,'uplists' => $uplists,'downlists' => $downlists])->render();
+        }
+        return response()->json($status_result);
+    }
     public function getProfile()
     {
         return view('profile');

@@ -9,6 +9,7 @@ namespace App\Http\Controllers;
 use App\Models\Device;
 use App\Models\Group;
 use App\Models\Status;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -22,8 +23,28 @@ class ICMPController extends Controller
 
     public function index()
     {
+        $devices = device::whereDate('created_at',Carbon::now())->get();
+        foreach ($devices as $key => $device) {
+            $ipaddress = $device->ipaddress;
+            $status = '';
+            $command = (new PingCommandBuilder($ipaddress));
+            $ping = (new Ping($command))->run();
+            if ($ping->host_status == 'Ok') {
+                $status = "alive";
+            } else {
+                $status = "dead";
+            }
+
+            $new_status = new Status([
+                'deviceid' => $device->id,
+                'devicename' => $device->name,
+                'groupid' => $device->groupid,
+                'ipaddress' => $device->ipaddress,
+                'status' => $status
+            ]);
+            $new_status->save();
+        }
         $status_lists = Status::all();
-        $command = (new PingCommandBuilder('199.38.82.85'));
 
         return view('status.index', ['status_lists' => $status_lists]);
     }
