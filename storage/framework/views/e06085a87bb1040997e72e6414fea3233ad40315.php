@@ -1,36 +1,34 @@
-{{--Created by Beatific Angel    20222/3/22 9.00 am --}}
-@extends('layouts.app')
+<?php $__env->startSection('title', 'Edit Permission'); ?>
 
-@section('title', 'Create Group')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div class="page-content">
         <div class="page-bar">
             <div class="page-title-breadcrumb">
                 <div class=" pull-left">
-                    <div class="page-title">Add Group</div>
+                    <div class="page-title">Edit Group</div>
                 </div>
                 <ol class="breadcrumb page-breadcrumb pull-right">
                     <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item"
-                                                           href="{{route('home')}}">Home</a>&nbsp;<i
+                                                           href="<?php echo e(route('home')); ?>">Home</a>&nbsp;<i
                             class="fa fa-angle-right"></i>
                     </li>
-                    <li><a class="parent-item" href="{{route('group.index')}}">Group</a>&nbsp;<i class="fa fa-angle-right"></i>
+                    <li><a class="parent-item" href="<?php echo e(route('group.index')); ?>">Group</a>&nbsp;<i class="fa fa-angle-right"></i>
                     </li>
-                    <li class="active">Add Group</li>
+                    <li class="active">Edit Group</li>
                 </ol>
             </div>
         </div>
-        @include('common.alert')
+        <?php echo $__env->make('common.alert', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <div class="row">
             <div class="col-sm-12">
-                <form accept-charset="UTF-8" action="{{ route('group.store') }}" class="form-horizontal"
+                <form accept-charset="UTF-8" action="<?php echo e(route('group.update')); ?>" class="form-horizontal"
                       id="group_form" enctype="multipart/form-data"
                       method="post">
-                    {{ csrf_field() }}
+                    <?php echo e(csrf_field()); ?>
+
                     <div class="card-box">
                         <div class="card-head">
-                            <header>Add Group</header>
+                            <header>Edit Group</header>
                             <button id="panel-button"
                                     class="mdl-button mdl-js-button mdl-button--icon pull-right"
                                     data-upgraded=",MaterialButton">
@@ -50,37 +48,38 @@
                         <div class="card-body row">
                             <div class="form-group col-lg-6 p-t-20">
                                 <div
-                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width {{ $errors->has('groupname') ? ' has-error' : '' }}">
-                                    <input class="mdl-textfield__input" type="text" id="groupname" name="groupname" value="{{ old('groupname') }}">
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+                                    <input class="mdl-textfield__input" type="text" id="groupname" name="groupname" value="<?php echo e($groups->name); ?>">
                                     <label class="mdl-textfield__label">Group Name</label>
-                                    @if ($errors->has('groupname'))
-                                        <span class="text-danger">{{ $errors->first('groupname') }}</span>
-                                    @endif
+                                    <?php if($errors->has('groupname')): ?>
+                                        <span class="text-danger"><?php echo e($errors->first('groupname')); ?></span>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="form-group col-lg-6 p-t-20">
                                 <div
-                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width {{ $errors->has('groupowner') ? ' has-error' : '' }}">
-                                    <input class="mdl-textfield__input" type="text" id="groupowner" name="groupowner" value="{{ old('groupowner') }}">
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+                                    <input class="mdl-textfield__input" type="text" id="groupowner" name="groupowner" value="<?php echo e($groups->owner); ?>">
                                     <label class="mdl-textfield__label">Group Owner </label>
-                                    @if ($errors->has('groupowner'))
-                                        <span class="text-danger">{{ $errors->first('groupowner') }}</span>
-                                    @endif
+                                    <?php if($errors->has('groupowner')): ?>
+                                        <span class="text-danger"><?php echo e($errors->first('groupowner')); ?></span>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="form-group col-lg-12 p-t-20">
                                 <div class="mdl-textfield mdl-js-textfield txt-full-width">
-                                    <textarea class="mdl-textfield__input" rows="2" id="groupdescription" name="groupdescription"></textarea>
+                                    <textarea class="mdl-textfield__input" rows="2" id="groupdescription" name="groupdescription" ><?php echo e($groups->description); ?></textarea>
                                     <label class="mdl-textfield__label" for="text7">Group Details</label>
                                 </div>
                             </div>
+                            <input class="mdl-textfield__input" type="hidden" id="groupid" name="groupid" value="<?php echo e($groups->id); ?>">
                             <div class="form-group col-lg-12 p-t-20 text-center">
                                 <button type="submit"
                                         class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 m-r-20 btn-circle btn-primary">
-                                    Submit
+                                    Update
                                 </button>
-                                <a href="{{route('group.index')}}"
-                                        class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-circle btn-danger">
+                                <a href="<?php echo e(route('group.index')); ?>"
+                                   class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-circle btn-danger">
                                     Cancel
                                 </a>
                             </div>
@@ -90,4 +89,6 @@
             </div>
         </div>
     </div>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\resources\views/group/edit.blade.php ENDPATH**/ ?>

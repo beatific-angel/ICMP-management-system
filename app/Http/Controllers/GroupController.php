@@ -49,6 +49,10 @@ class GroupController extends Controller
 
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'groupname' => 'required',
+            'groupowner' => 'required'
+        ]);
         $name = $request->input('groupname');
         $owner = $request->input('groupowner');
         $description = $request->input('groupdescription');
@@ -73,6 +77,10 @@ class GroupController extends Controller
 
     public function update(Request $request)
     {
+        $this->validate($request, [
+            'groupname' => 'required',
+            'groupowner' => 'required'
+        ]);
         $id = $request->input('groupid');
         $name = $request->input('groupname');
         $owner = $request->input('groupowner');

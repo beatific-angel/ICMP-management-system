@@ -48,14 +48,17 @@
                         <div class="card-body row">
                             <div class="col-lg-6 p-t-20">
                                 <div
-                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
-                                    <input class="mdl-textfield__input" type="text" id="devicename" name="devicename">
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width <?php echo e($errors->has('devicename') ? ' has-error' : ''); ?>" >
+                                    <input class="mdl-textfield__input" type="text" id="devicename" name="devicename" value="<?php echo e(old('devicename')); ?>">
                                     <label class="mdl-textfield__label">Device Name</label>
+                                    <?php if($errors->has('devicename')): ?>
+                                        <span class="text-danger"><?php echo e($errors->first('devicename')); ?></span>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="col-lg-6 p-t-20">
                                 <div
-                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height txt-full-width">
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height txt-full-width <?php echo e($errors->has('username') ? ' has-error' : ''); ?>">
                                     <input class="mdl-textfield__input" type="text" id="username" name="username" readonly
                                            tabIndex="-1">
                                     <label for="username" class="pull-right margin-0">
@@ -67,11 +70,14 @@
                                             <li class="mdl-menu__item" data-val="<?php echo e($user->id); ?>" ><?php echo e($user->username); ?></li>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </ul>
+                                    <?php if($errors->has('username')): ?>
+                                        <span class="text-danger"><?php echo e($errors->first('username')); ?></span>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="col-lg-6 p-t-20">
                                 <div
-                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height txt-full-width">
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height txt-full-width <?php echo e($errors->has('groupname') ? ' has-error' : ''); ?>">
                                     <input class="mdl-textfield__input" type="text" id="groupname" name="groupname" readonly
                                            tabIndex="-1">
                                     <label for="groupname" class="pull-right margin-0">
@@ -83,13 +89,19 @@
                                             <li class="mdl-menu__item" data-val="<?php echo e($group->id); ?>" ><?php echo e($group->name); ?></li>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </ul>
+                                    <?php if($errors->has('groupname')): ?>
+                                        <span class="text-danger"><?php echo e($errors->first('groupname')); ?></span>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="col-lg-6 p-t-20">
                                 <div
-                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
-                                    <input class="mdl-textfield__input" type="text" id="ipaddress" name="ipaddress">
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width <?php echo e($errors->has('ipaddress') ? ' has-error' : ''); ?>">
+                                    <input class="mdl-textfield__input" type="text" id="ipaddress" name="ipaddress" value="<?php echo e(old('ipaddress')); ?>">
                                     <label class="mdl-textfield__label">IP Address</label>
+                                    <?php if($errors->has('ipaddress')): ?>
+                                        <span class="text-danger"><?php echo e($errors->first('ipaddress')); ?></span>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="col-lg-6 p-t-20">

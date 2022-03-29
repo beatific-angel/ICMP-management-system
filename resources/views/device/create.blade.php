@@ -50,14 +50,17 @@
                         <div class="card-body row">
                             <div class="col-lg-6 p-t-20">
                                 <div
-                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
-                                    <input class="mdl-textfield__input" type="text" id="devicename" name="devicename">
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width {{ $errors->has('devicename') ? ' has-error' : '' }}" >
+                                    <input class="mdl-textfield__input" type="text" id="devicename" name="devicename" value="{{ old('devicename') }}">
                                     <label class="mdl-textfield__label">Device Name</label>
+                                    @if ($errors->has('devicename'))
+                                        <span class="text-danger">{{ $errors->first('devicename') }}</span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="col-lg-6 p-t-20">
                                 <div
-                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height txt-full-width">
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height txt-full-width {{ $errors->has('username') ? ' has-error' : '' }}">
                                     <input class="mdl-textfield__input" type="text" id="username" name="username" readonly
                                            tabIndex="-1">
                                     <label for="username" class="pull-right margin-0">
@@ -69,11 +72,14 @@
                                             <li class="mdl-menu__item" data-val="{{$user->id}}" >{{$user->username}}</li>
                                         @endforeach
                                     </ul>
+                                    @if ($errors->has('username'))
+                                        <span class="text-danger">{{ $errors->first('username') }}</span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="col-lg-6 p-t-20">
                                 <div
-                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height txt-full-width">
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height txt-full-width {{ $errors->has('groupname') ? ' has-error' : '' }}">
                                     <input class="mdl-textfield__input" type="text" id="groupname" name="groupname" readonly
                                            tabIndex="-1">
                                     <label for="groupname" class="pull-right margin-0">
@@ -85,13 +91,19 @@
                                             <li class="mdl-menu__item" data-val="{{$group->id}}" >{{$group->name}}</li>
                                         @endforeach
                                     </ul>
+                                    @if ($errors->has('groupname'))
+                                        <span class="text-danger">{{ $errors->first('groupname') }}</span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="col-lg-6 p-t-20">
                                 <div
-                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
-                                    <input class="mdl-textfield__input" type="text" id="ipaddress" name="ipaddress">
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width {{ $errors->has('ipaddress') ? ' has-error' : '' }}">
+                                    <input class="mdl-textfield__input" type="text" id="ipaddress" name="ipaddress" value="{{ old('ipaddress') }}">
                                     <label class="mdl-textfield__label">IP Address</label>
+                                    @if ($errors->has('ipaddress'))
+                                        <span class="text-danger">{{ $errors->first('ipaddress') }}</span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="col-lg-6 p-t-20">

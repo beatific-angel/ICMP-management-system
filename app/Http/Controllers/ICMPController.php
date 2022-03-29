@@ -9,7 +9,6 @@ namespace App\Http\Controllers;
 use App\Models\Device;
 use App\Models\Group;
 use App\Models\Status;
-use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -23,28 +22,51 @@ class ICMPController extends Controller
 
     public function index()
     {
-        $devices = device::whereDate('created_at',Carbon::now())->get();
+        $devices = device::all();
+        $devicestatus = array();
         foreach ($devices as $key => $device) {
             $ipaddress = $device->ipaddress;
             $status = '';
-            $command = (new PingCommandBuilder($ipaddress));
-            $ping = (new Ping($command))->run();
-            if ($ping->host_status == 'Ok') {
-                $status = "alive";
-            } else {
-                $status = "dead";
+            if (PHP_OS === 'WINNT') {
+                exec("ping -n 3 $ipaddress", $outcome, $status);
+                if (0 == $status) {
+                    $status = "alive";
+                } else {
+                    $status = "dead";
+                }
+            } else if (PHP_OS === 'Linux') {
+                $command = (new PingCommandBuilder($ipaddress));
+                $ping = (new Ping($command))->run();
+                if ($ping->host_status == 'Ok') {
+                    $status = "alive";
+                } else {
+                    $status = "dead";
+                }
             }
-
-            $new_status = new Status([
-                'deviceid' => $device->id,
-                'devicename' => $device->name,
-                'groupid' => $device->groupid,
-                'ipaddress' => $device->ipaddress,
-                'status' => $status
-            ]);
-            $new_status->save();
+            $devicestatus[$key] = $status;
+            $get_device = DB::select("select * from servicestatus where deviceid='$device->id'");
+            if (!empty($get_device)) {
+                $status_id = $get_device[0]->id;
+                $device_status = Status::findOrFail($status_id);
+                $device_status->deviceid = $device->id;
+                $device_status->devicename = $device->name;
+                $device_status->groupid = $device->groupid;
+                $device_status->ipaddress = $device->ipaddress;
+                $device_status->status = $status;
+                $device_status->save();
+            } else {
+                $new_status = new Status([
+                    'deviceid' => $device->id,
+                    'devicename' => $device->name,
+                    'groupid' => $device->groupid,
+                    'ipaddress' => $device->ipaddress,
+                    'status' => $status
+                ]);
+                $new_status->save();
+            }
         }
         $status_lists = Status::all();
+
 
         return view('status.index', ['status_lists' => $status_lists]);
     }

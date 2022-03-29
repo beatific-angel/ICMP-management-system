@@ -51,6 +51,9 @@
                                     class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                     <input class="mdl-textfield__input" type="text" id="devicename" name="devicename" value="<?php echo e($device->name); ?>">
                                     <label class="mdl-textfield__label">Device Name</label>
+                                    <?php if($errors->has('devicename')): ?>
+                                        <span class="text-danger"><?php echo e($errors->first('devicename')); ?></span>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="col-lg-6 p-t-20">
@@ -96,6 +99,9 @@
                                     class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                     <input class="mdl-textfield__input" type="text" id="ipaddress" name="ipaddress" value="<?php echo e($device->ipaddress); ?>">
                                     <label class="mdl-textfield__label">IP Address</label>
+                                    <?php if($errors->has('ipaddress')): ?>
+                                        <span class="text-danger"><?php echo e($errors->first('ipaddress')); ?></span>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="col-lg-6 p-t-20">

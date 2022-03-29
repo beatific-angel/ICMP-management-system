@@ -33,6 +33,12 @@ class DeviceController extends Controller
 
     public function store(Request $request)
     {
+        $this->validate($request, [
+        'devicename' => 'required',
+        'username' => 'required',
+        'groupname' => 'required',
+        'ipaddress' => 'required'
+        ]);
 
         $name = $request->input('devicename');
         $username = $request->input('username');
@@ -69,6 +75,12 @@ class DeviceController extends Controller
 
     public function update(Request $request)
     {
+        $this->validate($request, [
+            'devicename' => 'required',
+            'username' => 'required',
+            'groupname' => 'required',
+            'ipaddress' => 'required'
+        ]);
 
         $id = $request->input('deviceid');
         $username = $request->input('username');

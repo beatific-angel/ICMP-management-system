@@ -53,6 +53,9 @@
                                     class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                     <input class="mdl-textfield__input" type="text" id="groupname" name="groupname" value="{{$groups->name}}">
                                     <label class="mdl-textfield__label">Group Name</label>
+                                    @if ($errors->has('groupname'))
+                                        <span class="text-danger">{{ $errors->first('groupname') }}</span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="form-group col-lg-6 p-t-20">
@@ -60,6 +63,9 @@
                                     class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                     <input class="mdl-textfield__input" type="text" id="groupowner" name="groupowner" value="{{$groups->owner}}">
                                     <label class="mdl-textfield__label">Group Owner </label>
+                                    @if ($errors->has('groupowner'))
+                                        <span class="text-danger">{{ $errors->first('groupowner') }}</span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="form-group col-lg-12 p-t-20">

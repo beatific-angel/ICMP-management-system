@@ -53,6 +53,9 @@
                                     class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                     <input class="mdl-textfield__input" type="text" id="devicename" name="devicename" value="{{$device->name}}">
                                     <label class="mdl-textfield__label">Device Name</label>
+                                    @if ($errors->has('devicename'))
+                                        <span class="text-danger">{{ $errors->first('devicename') }}</span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="col-lg-6 p-t-20">
@@ -98,6 +101,9 @@
                                     class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                     <input class="mdl-textfield__input" type="text" id="ipaddress" name="ipaddress" value="{{$device->ipaddress}}">
                                     <label class="mdl-textfield__label">IP Address</label>
+                                    @if ($errors->has('ipaddress'))
+                                        <span class="text-danger">{{ $errors->first('ipaddress') }}</span>
+                                    @endif
                                 </div>
                             </div>
                             <div class="col-lg-6 p-t-20">
