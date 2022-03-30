@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ad21a33-8551-423a-8ca6-b79f66d5af63" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DeviceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DeviceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GroupController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GroupController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ICMPController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ICMPController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/device/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/device/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/device/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/device/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/group/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/group/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/group/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/group/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/05f51adb8425789475487f9df3b451c62fcfaed7.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/05f51adb8425789475487f9df3b451c62fcfaed7.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/3b44e28ae818ffd64bc5ec1532b4bf34ca86c5b3.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/3b44e28ae818ffd64bc5ec1532b4bf34ca86c5b3.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/d07e2d20e89b3d2bd7c3925477e8e38cec4fdc08.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/d07e2d20e89b3d2bd7c3925477e8e38cec4fdc08.php" afterDir="false" />
-    </list>
+    <list default="true" id="7ad21a33-8551-423a-8ca6-b79f66d5af63" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -201,7 +189,7 @@
       <workItem from="1648192169104" duration="17749000" />
       <workItem from="1648219821054" duration="2586000" />
       <workItem from="1648264635780" duration="6286000" />
-      <workItem from="1648536577367" duration="7488000" />
+      <workItem from="1648536577367" duration="7925000" />
     </task>
     <servers />
   </component>
