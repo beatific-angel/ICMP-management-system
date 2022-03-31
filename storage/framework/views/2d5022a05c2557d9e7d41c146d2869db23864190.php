@@ -53,7 +53,7 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Device Name</th>
-                                <th>User Name</th>
+                                <th>Customer Name</th>
                                 <th>Group Name</th>
                                 <th>IP Address</th>
                                 <th>Edit</th>
@@ -67,8 +67,8 @@
                                         <td><?php echo e($device->name); ?></td>
                                         <td>
                                             <?php
-                                            $users = DB::select(DB::raw('select * from users where id = ' . $device->userid));
-                                            echo $users[0]->username;
+                                            $customers = DB::select(DB::raw('select * from customers where id = ' . $device->customerid));
+                                            echo $customers[0]->short_name;
                                             ?>
                                         </td>
                                         <td>

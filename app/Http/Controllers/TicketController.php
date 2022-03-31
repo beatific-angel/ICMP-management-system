@@ -7,7 +7,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Ticket;
 use App\Models\Device;
-use App\Models\User;
+use App\Models\Customer;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -27,9 +27,9 @@ class TicketController extends Controller
 
     public function create()
     {
-        $users = User::all();
+        $customers = Customer::all();
         $devices = Device::all();
-        return view('tickets.create', compact('users','devices'));
+        return view('tickets.create', compact('customers','devices'));
     }
 
 
@@ -38,7 +38,7 @@ class TicketController extends Controller
 
         $this->validate($request, [
             'title' => 'required',
-            'user_id' => 'required',
+            'customer_id' => 'required',
             'device_id' => 'required',
             'priority' => 'required',
             'message' => 'required'
@@ -46,7 +46,7 @@ class TicketController extends Controller
 
         $ticket = new Ticket([
             'title' => $request->input('title'),
-            'user_id' => $request->input('user_id'),
+            'customer_id' => $request->input('customer_id'),
             'ticket_id' => strtoupper(Str::random(10)),
             'device_id' => $request->input('device_id'),
             'priority' => $request->input('priority'),
@@ -63,14 +63,14 @@ class TicketController extends Controller
     {
         $this->validate($request, [
             'title' => 'required',
-            'user_id' => 'required',
+            'customer_id' => 'required',
             'priority' => 'required',
             'message' => 'required'
         ]);
         $ticket = Ticket::where('ticket_id', $request->ticket_id)->firstOrFail();
 
         $ticket->title = $request->title;
-        $ticket->user_id = $request->user_id;
+        $ticket->customer_id = $request->customer_id;
         $ticket->priority = $request->priority;
         $ticket->message = $request->message;
         $ticket->save();
@@ -106,13 +106,13 @@ class TicketController extends Controller
     public function print_ticket(Request $request)
     {
         $ticket_id = $request->ticket_id_print;
-        $user_id = $request->user_id_print;
+        $customer_id = $request->customer_id_print;
         $device_id = $request->device_id_print;
         $ticket = Ticket::where('ticket_id', $ticket_id)->firstOrFail();
-        $user = User::where('id', $user_id)->firstOrFail();
+        $customer = Customer::where('id', $customer_id)->firstOrFail();
         $device = Device::where('id', $device_id)->firstOrFail();
 
 
-        return view('tickets.print', compact('ticket','user','device'));
+        return view('tickets.print', compact('ticket','customer','device'));
     }
 }

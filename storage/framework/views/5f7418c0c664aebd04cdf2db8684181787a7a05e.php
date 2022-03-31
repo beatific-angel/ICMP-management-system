@@ -1,10 +1,11 @@
 <center>
     <h1>Ticket Information</h1>
     <table class="table" >
-        <tr><th>Name</th><th>Email</th><th>Phone</th><th>Device IP</th><th>Group</th><th>Issue</th><th>Created At</th></tr>
-            <tr><td><?php echo e($user->firstname); ?> <?php echo e($user->lastname); ?></td>
-                <td><?php echo e($user->email); ?></td>
-                <td><?php echo e($user->phone); ?></td>
+        <tr><th>Name</th><th>Email</th><th>Phone</th><th>Address</th><th> IP</th><th>Group</th><th>Issue</th><th>Created At</th></tr>
+            <tr><td><?php echo e($customer->first_name); ?> <?php echo e($customer->last_name); ?></td>
+                <td><?php echo e($customer->email); ?></td>
+                <td><?php echo e($customer->phone); ?></td>
+                <td><?php echo e($customer->address); ?></td>
                 <td><?php echo e($device->ipaddress); ?></td>
                 <td><?php
                     $groups = DB::select(DB::raw('select * from groups where id = ' . $device->groupid));

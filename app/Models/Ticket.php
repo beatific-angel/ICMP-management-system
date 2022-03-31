@@ -13,5 +13,5 @@ class Ticket extends Model
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['user_id','ticket_id','title','priority','device_id','message','status','created_at','updated_at'];
+    protected $fillable = ['customer_id','ticket_id','title','priority','device_id','message','status','created_at','updated_at'];
 }

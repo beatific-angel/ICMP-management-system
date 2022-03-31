@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Acamposm\Ping\Ping;
+use Acamposm\Ping\PingCommandBuilder;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -51,7 +53,8 @@ class HomeController extends Controller
                 ->where('status', '=', 'dead')
                 ->get()->count();
         }
-        $status_lists = Status::all();
+        $status_lists = Status::where('status', '=', 'dead')
+            ->get();
 
         return view('home',['usercnt' => $usercnt,'groups' => $groups,'groups_cnt' => $groups_cnt,'devices_cnt' => $devices_cnt,'status_lists' => $status_lists, 'devicelists' => $devicelists, 'uplists' => $uplists, 'downlists' => $downlists]);
     }

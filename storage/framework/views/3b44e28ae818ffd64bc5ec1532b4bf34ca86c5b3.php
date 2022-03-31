@@ -59,19 +59,19 @@
                             <div class="col-lg-6 p-t-20">
                                 <div
                                     class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height txt-full-width <?php echo e($errors->has('username') ? ' has-error' : ''); ?>">
-                                    <input class="mdl-textfield__input" type="text" id="username" name="username" readonly
+                                    <input class="mdl-textfield__input" type="text" id="customername" name="customername" readonly
                                            tabIndex="-1">
-                                    <label for="username" class="pull-right margin-0">
+                                    <label for="customername" class="pull-right margin-0">
                                         <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
                                     </label>
-                                    <label for="username" class="mdl-textfield__label">Select User</label>
-                                    <ul data-mdl-for="username" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                                        <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                            <li class="mdl-menu__item" data-val="<?php echo e($user->id); ?>" ><?php echo e($user->username); ?></li>
+                                    <label for="customername" class="mdl-textfield__label">Select Customer</label>
+                                    <ul data-mdl-for="customername" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                                        <?php $__currentLoopData = $customers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $customer): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <li class="mdl-menu__item" data-val="<?php echo e($customer->id); ?>" ><?php echo e($customer->short_name); ?></li>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </ul>
-                                    <?php if($errors->has('username')): ?>
-                                        <span class="text-danger"><?php echo e($errors->first('username')); ?></span>
+                                    <?php if($errors->has('customername')): ?>
+                                        <span class="text-danger"><?php echo e($errors->first('customername')); ?></span>
                                     <?php endif; ?>
                                 </div>
                             </div>

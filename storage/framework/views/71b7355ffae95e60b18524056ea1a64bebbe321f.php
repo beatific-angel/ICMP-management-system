@@ -63,20 +63,20 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group row <?php echo e($errors->has('userid') ? ' has-error' : ''); ?>">
-                                    <label for="category" class="col-md-2 col-form-label form-control-label">Select User</label>
+                                <div class="form-group row <?php echo e($errors->has('customer_id') ? ' has-error' : ''); ?>">
+                                    <label for="category" class="col-md-2 col-form-label form-control-label">Select Customer</label>
 
                                     <div class="col-md-7">
-                                        <select id="user_id" type="category" class="form-control" name="user_id">
-                                            <option value="">Select User</option>
-                                            <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                                <option value="<?php echo e($user->id); ?>"><?php echo e($user->username); ?></option>
+                                        <select id="customer_id" type="category" class="form-control" name="customer_id">
+                                            <option value="">Select Customer</option>
+                                            <?php $__currentLoopData = $customers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $customer): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <option value="<?php echo e($customer->id); ?>"><?php echo e($customer->short_name); ?></option>
                                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </select>
 
-                                        <?php if($errors->has('userid')): ?>
+                                        <?php if($errors->has('customer_id')): ?>
                                             <span class="help-block">
-                                                <span class="text-danger"><?php echo e($errors->first('userid')); ?></span>
+                                                <span class="text-danger"><?php echo e($errors->first('customer_id')); ?></span>
                                             </span>
                                         <?php endif; ?>
                                     </div>

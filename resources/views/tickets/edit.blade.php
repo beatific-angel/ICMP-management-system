@@ -35,8 +35,8 @@
                         <form id="ticket_print_form" action="{{ route('ticket.print_ticket') }}" method="POST" style="display: none;">
                             <input id="ticket_id_print" type="text" class="form-control" name="ticket_id_print"
                                    value="{{ $ticket->ticket_id }}" >
-                            <input id="user_id_print" type="text" class="form-control" name="user_id_print"
-                                   value="{{ $ticket->user_id }}" >
+                            <input id="customer_id_print" type="text" class="form-control" name="customer_id_print"
+                                   value="{{ $ticket->customer_id }}" >
                             <input id="device_id_print" type="text" class="form-control" name="device_id_print"
                                    value="{{ $ticket->device_id }}" >
                             {{ csrf_field() }}
@@ -55,14 +55,14 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="category" class="col-md-2 col-form-label form-control-label">Select User</label>
+                                <label for="category" class="col-md-2 col-form-label form-control-label">Selected Customer</label>
 
                                 <div class="col-md-7">
                                     <?php
-                                    $selecteduser = DB::select(DB::raw('select * from users where id = ' . $ticket->user_id));
+                                    $selectedcustomer = DB::select(DB::raw('select * from customers where id = ' . $ticket->customer_id));
                                     ?>
                                     <select id="user_id" type="category" class="form-control" name="user_id">
-                                        <option value="{{ $ticket->user_id }}">{{ $selecteduser[0]->username }}</option>
+                                        <option value="{{ $ticket->customer_id }}">{{ $selectedcustomer[0]->short_name }}</option>
                                     </select>
                                 </div>
                             </div>

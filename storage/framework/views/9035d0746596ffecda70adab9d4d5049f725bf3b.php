@@ -32,8 +32,8 @@
                         <form id="ticket_print_form" action="<?php echo e(route('ticket.print_ticket')); ?>" method="POST" style="display: none;">
                             <input id="ticket_id_print" type="text" class="form-control" name="ticket_id_print"
                                    value="<?php echo e($ticket->ticket_id); ?>" >
-                            <input id="user_id_print" type="text" class="form-control" name="user_id_print"
-                                   value="<?php echo e($ticket->user_id); ?>" >
+                            <input id="customer_id_print" type="text" class="form-control" name="customer_id_print"
+                                   value="<?php echo e($ticket->customer_id); ?>" >
                             <input id="device_id_print" type="text" class="form-control" name="device_id_print"
                                    value="<?php echo e($ticket->device_id); ?>" >
                             <?php echo e(csrf_field()); ?>
@@ -54,14 +54,14 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="category" class="col-md-2 col-form-label form-control-label">Select User</label>
+                                <label for="category" class="col-md-2 col-form-label form-control-label">Selected Customer</label>
 
                                 <div class="col-md-7">
                                     <?php
-                                    $selecteduser = DB::select(DB::raw('select * from users where id = ' . $ticket->user_id));
+                                    $selectedcustomer = DB::select(DB::raw('select * from customers where id = ' . $ticket->customer_id));
                                     ?>
                                     <select id="user_id" type="category" class="form-control" name="user_id">
-                                        <option value="<?php echo e($ticket->user_id); ?>"><?php echo e($selecteduser[0]->username); ?></option>
+                                        <option value="<?php echo e($ticket->customer_id); ?>"><?php echo e($selectedcustomer[0]->short_name); ?></option>
                                     </select>
                                 </div>
                             </div>

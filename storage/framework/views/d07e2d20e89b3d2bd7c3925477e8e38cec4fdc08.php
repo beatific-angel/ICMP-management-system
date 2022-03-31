@@ -60,17 +60,17 @@
                                 <div
                                     class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height txt-full-width">
                                     <?php
-                                    $selected_users = DB::select(DB::raw('select * from users where id = ' . $device->userid));
+                                    $selected_customers = DB::select(DB::raw('select * from customers where id = ' . $device->customerid));
                                     ?>
-                                    <input class="mdl-textfield__input" type="text" id="username" name="username" readonly value="<?php echo $selected_users[0]->username; ?>"
+                                    <input class="mdl-textfield__input" type="text" id="customername" name="customername" readonly value="<?php echo $selected_customers[0]->short_name; ?>"
                                            tabIndex="-1">
-                                    <label for="username" class="pull-right margin-0">
+                                    <label for="customername" class="pull-right margin-0">
                                         <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
                                     </label>
-                                    <label for="username" class="mdl-textfield__label">Select User</label>
-                                    <ul data-mdl-for="username" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                                        <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                            <li class="mdl-menu__item" data-val="<?php echo e($user->id); ?>" ><?php echo e($user->username); ?></li>
+                                    <label for="customername" class="mdl-textfield__label">Select Customer</label>
+                                    <ul data-mdl-for="customername" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                                        <?php $__currentLoopData = $customers; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $customer): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <li class="mdl-menu__item" data-val="<?php echo e($customer->id); ?>" ><?php echo e($customer->short_name); ?></li>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     </ul>
                                 </div>

@@ -13,5 +13,5 @@ class Device extends Model
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['userid','groupid','name','ipaddress','created_at','updated_at'];
+    protected $fillable = ['customerid','groupid','name','ipaddress','created_at','updated_at'];
 }

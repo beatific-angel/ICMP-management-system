@@ -12,7 +12,7 @@
                 </div>
                 <ol class="breadcrumb page-breadcrumb pull-right">
                     <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item"
-                                                           href="index.html">Home</a>&nbsp;<i
+                                                           href="{{route('home')}}">Home</a>&nbsp;<i
                             class="fa fa-angle-right"></i>
                     </li>
                     <li class="active">Dashboard</li>
@@ -153,7 +153,7 @@
                                     <tbody id="home_device_status">
                                     @if($status_lists)
                                         @foreach($status_lists as $key => $device)
-
+                                            @if($device->status == 'dead')
                                             <tr class="odd">
                                                 <td><i data-feather="monitor"></i></td>
                                                 <td>{{$device->deviceid}}</td>
@@ -174,6 +174,7 @@
                                                     {{$device->status}}</td>
                                                 <td>{{$device->updated_at}}</td>
                                             </tr>
+                                            @endif
                                         @endforeach
                                     @endif
                                     </tbody>
@@ -219,7 +220,6 @@
                 type: 'get',
                 dataType: 'json',
                 success: function (response) {
-                    console.log(response);
                     document.getElementById('home_device_status').innerHTML = response.get_status;
                 }
             });
@@ -228,7 +228,6 @@
                 type: 'get',
                 dataType: 'json',
                 success: function (response) {
-                    console.log(response);
                     document.getElementById('home_group_status').innerHTML = response.get_status;
                 }
             });

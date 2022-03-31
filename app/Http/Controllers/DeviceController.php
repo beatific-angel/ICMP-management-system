@@ -7,7 +7,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Device;
 use App\Models\Group;
-use App\Models\User;
+use App\Models\Customer;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -27,21 +27,21 @@ class DeviceController extends Controller
     public function create()
     {
         $groups = group::all();
-        $users = User::all();
-        return view('device.create', ['groups' => $groups,'users' => $users]);
+        $customers = Customer::all();
+        return view('device.create', ['groups' => $groups,'customers' => $customers]);
     }
 
     public function store(Request $request)
     {
         $this->validate($request, [
         'devicename' => 'required',
-        'username' => 'required',
+        'customername' => 'required',
         'groupname' => 'required',
         'ipaddress' => 'required'
         ]);
 
         $name = $request->input('devicename');
-        $username = $request->input('username');
+        $customername = $request->input('customername');
         $groupname = $request->input('groupname');
         $ipaddress = $request->input('ipaddress');
         $description = $request->input('devicedescription');
@@ -49,12 +49,12 @@ class DeviceController extends Controller
         $group = DB::select("select * from groups where name='$groupname'");
         $groupid = $group[0]->id;
 
-        $userget = DB::select("select * from users where username='$username'");
-        $userid = $userget[0]->id;
+        $customerget = DB::select("select * from customers where short_name='$customername'");
+        $customerid = $customerget[0]->id;
 
         $device = new Device([
             'name' => $name,
-            'userid' => $userid,
+            'customerid' => $customerid,
             'groupid' => $groupid,
             'ipaddress' => $ipaddress,
             'description' => $description
@@ -68,8 +68,8 @@ class DeviceController extends Controller
     {
         $device = Device::where('id', '=', $id)->get();
         $groups = group::all();
-        $users = User::all();
-        return view('device.edit', ['device' => $device[0], 'groups' => $groups, 'users' => $users]);
+        $customers = Customer::all();
+        return view('device.edit', ['device' => $device[0], 'groups' => $groups, 'customers' => $customers]);
     }
 
 
@@ -77,13 +77,13 @@ class DeviceController extends Controller
     {
         $this->validate($request, [
             'devicename' => 'required',
-            'username' => 'required',
+            'customername' => 'required',
             'groupname' => 'required',
             'ipaddress' => 'required'
         ]);
 
         $id = $request->input('deviceid');
-        $username = $request->input('username');
+        $customername = $request->input('customername');
         $name = $request->input('devicename');
         $groupname = $request->input('groupname');
         $ipaddress = $request->input('ipaddress');
@@ -91,14 +91,14 @@ class DeviceController extends Controller
 
         $group = DB::select("select * from groups where name='$groupname'");
         $groupid = $group[0]->id;
-        $getuser = DB::select("select * from users where username='$username'");
-        $userid = $getuser[0]->id;
+        $getcustomer = DB::select("select * from customers where short_name='$customername'");
+        $customerid = $getcustomer[0]->id;
 
 
         $device = Device::findOrFail($id);
 
         $device->name = $name ;
-        $device->userid = $userid;
+        $device->customerid = $customerid;
         $device->groupid = $groupid;
         $device->ipaddress = $ipaddress;
         $device->description = $description;

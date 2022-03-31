@@ -74,7 +74,7 @@
                     </ul>
                 </li>
                 <li class="nav-item {{ return_if(on_page('customers.index') or on_page('customers.create') , ' active open') }}">
-                    <a href="#" class="nav-link nav-toggle"><i data-feather="users"></i>
+                    <a href="#" class="nav-link nav-toggle"><i data-feather="globe"></i>
                         <span class="title">Customers</span><span class="arrow"></span></a>
                     <ul class="sub-menu">
                         <li class="nav-item">

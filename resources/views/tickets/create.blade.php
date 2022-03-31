@@ -64,20 +64,20 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group row {{ $errors->has('userid') ? ' has-error' : '' }}">
-                                    <label for="category" class="col-md-2 col-form-label form-control-label">Select User</label>
+                                <div class="form-group row {{ $errors->has('customer_id') ? ' has-error' : '' }}">
+                                    <label for="category" class="col-md-2 col-form-label form-control-label">Select Customer</label>
 
                                     <div class="col-md-7">
-                                        <select id="user_id" type="category" class="form-control" name="user_id">
-                                            <option value="">Select User</option>
-                                            @foreach ($users as $user)
-                                                <option value="{{ $user->id }}">{{ $user->username }}</option>
+                                        <select id="customer_id" type="category" class="form-control" name="customer_id">
+                                            <option value="">Select Customer</option>
+                                            @foreach ($customers as $customer)
+                                                <option value="{{ $customer->id }}">{{ $customer->short_name }}</option>
                                             @endforeach
                                         </select>
 
-                                        @if ($errors->has('userid'))
+                                        @if ($errors->has('customer_id'))
                                             <span class="help-block">
-                                                <span class="text-danger">{{ $errors->first('userid') }}</span>
+                                                <span class="text-danger">{{ $errors->first('customer_id') }}</span>
                                             </span>
                                         @endif
                                     </div>

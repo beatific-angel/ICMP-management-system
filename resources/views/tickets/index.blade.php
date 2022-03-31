@@ -59,7 +59,7 @@
                                     <tr>
                                         <th>Ticket Id</th>
                                         <th>Title</th>
-                                        <th>Assigned User</th>
+                                        <th>Assigned Customer</th>
                                         <th>Status</th>
                                         <th>Last Update</th>
                                         <th>Action</th>
@@ -76,8 +76,8 @@
                                             </td>
                                             <td>
                                                 <span> <?php
-                                                    $selecteduser = DB::select(DB::raw('select * from users where id = ' . $ticket->user_id));
-                                                    echo $selecteduser[0]->username;
+                                                    $selectedcustomer = DB::select(DB::raw('select * from customers where id = ' . $ticket->customer_id));
+                                                    echo $selectedcustomer[0]->short_name;
                                                     ?>
                                                     </span>
                                             </td>

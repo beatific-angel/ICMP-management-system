@@ -61,19 +61,19 @@
                             <div class="col-lg-6 p-t-20">
                                 <div
                                     class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height txt-full-width {{ $errors->has('username') ? ' has-error' : '' }}">
-                                    <input class="mdl-textfield__input" type="text" id="username" name="username" readonly
+                                    <input class="mdl-textfield__input" type="text" id="customername" name="customername" readonly
                                            tabIndex="-1">
-                                    <label for="username" class="pull-right margin-0">
+                                    <label for="customername" class="pull-right margin-0">
                                         <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
                                     </label>
-                                    <label for="username" class="mdl-textfield__label">Select User</label>
-                                    <ul data-mdl-for="username" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-                                        @foreach($users as $user)
-                                            <li class="mdl-menu__item" data-val="{{$user->id}}" >{{$user->username}}</li>
+                                    <label for="customername" class="mdl-textfield__label">Select Customer</label>
+                                    <ul data-mdl-for="customername" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                                        @foreach($customers as $customer)
+                                            <li class="mdl-menu__item" data-val="{{$customer->id}}" >{{$customer->short_name}}</li>
                                         @endforeach
                                     </ul>
-                                    @if ($errors->has('username'))
-                                        <span class="text-danger">{{ $errors->first('username') }}</span>
+                                    @if ($errors->has('customername'))
+                                        <span class="text-danger">{{ $errors->first('customername') }}</span>
                                     @endif
                                 </div>
                             </div>
