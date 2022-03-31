@@ -3,28 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7ad21a33-8551-423a-8ca6-b79f66d5af63" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DeviceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DeviceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TicketController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TicketController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Device.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Device.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Ticket.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Ticket.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/common/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/common/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/device/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/device/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/device/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/device/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/device/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/device/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tickets/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tickets/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tickets/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tickets/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tickets/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tickets/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/tickets/print.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/tickets/print.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/2d5022a05c2557d9e7d41c146d2869db23864190.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/2d5022a05c2557d9e7d41c146d2869db23864190.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/3b44e28ae818ffd64bc5ec1532b4bf34ca86c5b3.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/3b44e28ae818ffd64bc5ec1532b4bf34ca86c5b3.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/5f7418c0c664aebd04cdf2db8684181787a7a05e.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/5f7418c0c664aebd04cdf2db8684181787a7a05e.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/71b7355ffae95e60b18524056ea1a64bebbe321f.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/71b7355ffae95e60b18524056ea1a64bebbe321f.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/841918359bda79581f3a3aed2452ce17b0b28c02.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/841918359bda79581f3a3aed2452ce17b0b28c02.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/9035d0746596ffecda70adab9d4d5049f725bf3b.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/9035d0746596ffecda70adab9d4d5049f725bf3b.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/9f972fc15f4e4b084589ea95f2d82dcec423e6eb.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/9f972fc15f4e4b084589ea95f2d82dcec423e6eb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/d07e2d20e89b3d2bd7c3925477e8e38cec4fdc08.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/d07e2d20e89b3d2bd7c3925477e8e38cec4fdc08.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ICMPController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ICMPController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Status.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Status.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/status/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/status/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/status/status.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/status/status.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/55d07a7f33e8c7c2d36c77a5ed2abc33efeb1ea5.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/55d07a7f33e8c7c2d36c77a5ed2abc33efeb1ea5.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/897c4e23b089607e649050ca806a4fc889b96911.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/897c4e23b089607e649050ca806a4fc889b96911.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,6 +199,7 @@
       <workItem from="1648264635780" duration="6286000" />
       <workItem from="1648536577367" duration="7925000" />
       <workItem from="1648688034330" duration="9675000" />
+      <workItem from="1648708430868" duration="6936000" />
     </task>
     <servers />
   </component>
@@ -234,10 +219,10 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="740" y="271" key="FileChooserDialogImpl/0.0.1920.1032@0.0.1920.1032" timestamp="1648549592501" />
-    <state x="92" y="92" width="1736" height="848" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1647862116992">
+    <state x="92" y="92" width="1736" height="848" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1648709693505">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="92" y="92" width="1736" height="848" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1647862116992" />
+    <state x="92" y="92" width="1736" height="848" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1648709693505" />
     <state x="656" y="248" width="1098" height="536" key="find.popup" timestamp="1648538779156">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>

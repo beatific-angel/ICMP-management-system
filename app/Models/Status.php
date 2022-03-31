@@ -13,5 +13,5 @@ class Status extends Model
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['deviceid','devicename','groupid','ipaddress','status','created_at','updated_at'];
+    protected $fillable = ['deviceid','devicename','groupid','ipaddress','status','access_count','up_count','down_count','created_at','updated_at'];
 }

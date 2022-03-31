@@ -48,6 +48,8 @@
                                 <th>Group Name</th>
                                 <th>IP Address</th>
                                 <th>Status</th>
+                                <th>Up %</th>
+                                <th>Down %</th>
                                 <th>Last Seen</th>
                             </tr>
                             </thead>
@@ -74,6 +76,15 @@
                                                 <i class="fas fa-circle col-red me-2"></i>
                                             <?php endif; ?>
                                             <?php echo e($device->status); ?></td>
+                                        <td><?php
+                                            $allcnt = $device->access_count;$up_count = $device->up_count;$down_count = $device->down_count;
+                                            $up_per = $up_count/$allcnt*100;
+                                            $down_per = $down_count/$allcnt*100;
+                                            echo $up_per. "%";
+                                            ?></td>
+                                        <td><?php
+                                            echo $down_per. "%";
+                                            ?></td>
                                         <td><?php echo e($device->updated_at); ?></td>
                                     </tr>
                                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

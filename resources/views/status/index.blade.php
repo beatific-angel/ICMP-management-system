@@ -51,6 +51,8 @@
                                 <th>Group Name</th>
                                 <th>IP Address</th>
                                 <th>Status</th>
+                                <th>Up %</th>
+                                <th>Down %</th>
                                 <th>Last Seen</th>
                             </tr>
                             </thead>
@@ -77,6 +79,15 @@
                                                 <i class="fas fa-circle col-red me-2"></i>
                                             @endif
                                             {{$device->status}}</td>
+                                        <td><?php
+                                            $allcnt = $device->access_count;$up_count = $device->up_count;$down_count = $device->down_count;
+                                            $up_per = $up_count/$allcnt*100;
+                                            $down_per = $down_count/$allcnt*100;
+                                            echo $up_per. "%";
+                                            ?></td>
+                                        <td><?php
+                                            echo $down_per. "%";
+                                            ?></td>
                                         <td>{{$device->updated_at}}</td>
                                     </tr>
                                 @endforeach
@@ -96,7 +107,6 @@
             type: 'get',
             dataType: 'json',
             success: function (response) {
-                console.log(response);
                 document.getElementById('device_status').innerHTML = response.get_status;
             }
         });
