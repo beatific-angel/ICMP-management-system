@@ -6,6 +6,7 @@ use App\Http\Controllers\DeviceController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ICMPController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\TicketController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -80,7 +81,15 @@ Route::prefix('ticket')->name('ticket.')->middleware('auth')->group(function(){
     Route::get('/delete/{id}', [TicketController::class, 'delete'])->name('delete');
     Route::post('/print_ticket', [TicketController::class, 'print_ticket'])->name('print_ticket');
 });
-
+/*  Customer Part */
+Route::prefix('customers')->name('customers.')->middleware('auth')->group(function(){
+    Route::get('/', [CustomerController::class, 'index'])->name('index');
+    Route::get('/create', [CustomerController::class, 'create'])->name('create');
+    Route::post('/store', [CustomerController::class, 'store'])->name('store');
+    Route::get('/edit/{id}', [CustomerController::class, 'edit'])->name('edit');
+    Route::post('/update', [CustomerController::class, 'update'])->name('update');
+    Route::get('/delete/{id}', [CustomerController::class, 'delete'])->name('delete');
+});
 // Users
 Route::middleware('auth')->prefix('users')->name('users.')->group(function(){
     Route::get('/', [UserController::class, 'index'])->name('index');

@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ad21a33-8551-423a-8ca6-b79f66d5af63" name="Default Changelist" comment="" />
+    <list default="true" id="7ad21a33-8551-423a-8ca6-b79f66d5af63" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/common/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/common/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/users/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/views/9f972fc15f4e4b084589ea95f2d82dcec423e6eb.php" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/views/9f972fc15f4e4b084589ea95f2d82dcec423e6eb.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -152,16 +161,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="G:/PROJECT/2021/4-1/Work/htdocs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\resources\views\status" />
-      <recent name="C:\xampp\htdocs\resources\views\tickets" />
+      <recent name="C:\xampp\htdocs\resources\views" />
       <recent name="C:\xampp\htdocs\app\Models" />
       <recent name="C:\xampp\htdocs\app\Http\Controllers" />
-      <recent name="C:\xampp\htdocs\resources\views" />
+      <recent name="C:\xampp\htdocs\resources\views\status" />
+      <recent name="C:\xampp\htdocs\resources\views\tickets" />
     </key>
   </component>
   <component name="RunManager">
@@ -190,6 +199,7 @@
       <workItem from="1648219821054" duration="2586000" />
       <workItem from="1648264635780" duration="6286000" />
       <workItem from="1648536577367" duration="7925000" />
+      <workItem from="1648688034330" duration="5608000" />
     </task>
     <servers />
   </component>
@@ -197,10 +207,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="271" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1648214854548">
+    <state x="690" y="271" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1648691191701">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="690" y="271" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1648214854548" />
+    <state x="690" y="271" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1648691191701" />
     <state x="92" y="92" width="1736" height="848" key="DiffContextDialog" timestamp="1647943253915">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
@@ -221,10 +231,10 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="637" y="307" key="git4idea.merge.GitPullDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1647943222085" />
-    <state x="616" y="238" width="672" height="677" key="run.anything.popup" timestamp="1648265693347">
+    <state x="616" y="238" width="672" height="677" key="run.anything.popup" timestamp="1648693534644">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="616" y="238" width="672" height="677" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1648265693347" />
+    <state x="616" y="238" width="672" height="677" key="run.anything.popup/0.0.1920.1032@0.0.1920.1032" timestamp="1648693534644" />
     <state x="616" y="169" width="672" height="676" key="search.everywhere.popup" timestamp="1648006500502">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>

@@ -73,22 +73,42 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item <?php echo e(return_if(on_page('users.index') or on_page('users.create') , ' active open')); ?>">
+                <li class="nav-item <?php echo e(return_if(on_page('customers.index') or on_page('customers.create') , ' active open')); ?>">
                     <a href="#" class="nav-link nav-toggle"><i data-feather="users"></i>
                         <span class="title">Customers</span><span class="arrow"></span></a>
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a class="nav-link<?php echo e(return_if(on_page('customers.create'), ' active')); ?>"
+                               href="<?php echo e(route('customers.create')); ?>">
+                                <i class="icon-plus"></i>
+                                <span class="title">Add Customer</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link<?php echo e(return_if(on_page('customers.index'), ' active')); ?>"
+                               href="<?php echo e(route('customers.index')); ?>">
+                                <i class="fas fa-user-friends"></i>
+                                <span class="title">Customers</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item <?php echo e(return_if(on_page('users.index') or on_page('users.create') , ' active open')); ?>">
+                    <a href="#" class="nav-link nav-toggle"><i data-feather="users"></i>
+                        <span class="title">Employees</span><span class="arrow"></span></a>
                     <ul class="sub-menu">
                         <li class="nav-item">
                             <a class="nav-link<?php echo e(return_if(on_page('users.create'), ' active')); ?>"
                                href="<?php echo e(route('users.create')); ?>">
                                 <i class="icon-plus"></i>
-                                <span class="title">Add Customer</span>
+                                <span class="title">Add Employee</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link<?php echo e(return_if(on_page('users.index'), ' active')); ?>"
                                href="<?php echo e(route('users.index')); ?>">
                                 <i class="fas fa-user-friends"></i>
-                                <span class="title">Customers</span>
+                                <span class="title">Employees</span>
                             </a>
                         </li>
                     </ul>
