@@ -107,13 +107,41 @@
                                     class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                     <input class="mdl-textfield__input" type="text" id="address" name="address" value="{{ old('address') }}">
                                     <label class="mdl-textfield__label" for="address">Address</label>
-                                    <span class="mdl-textfield__error">Number required!</span>
                                     @if ($errors->has('address'))
                                         <span class="text-danger">{{ $errors->first('address') }}</span>
                                     @endif
                                 </div>
                             </div>
-
+                            <div class="col-lg-6 p-t-20">
+                                <div
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+                                    <input class="mdl-textfield__input" type="text" id="city" name="city" value="{{ old('city') }}">
+                                    <label class="mdl-textfield__label" for="city">City</label>
+                                    @if ($errors->has('city'))
+                                        <span class="text-danger">{{ $errors->first('city') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="col-lg-6 p-t-20">
+                                <div
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+                                    <input class="mdl-textfield__input" type="text" id="state" name="state" value="{{ old('state') }}">
+                                    <label class="mdl-textfield__label" for="state">State</label>
+                                    @if ($errors->has('state'))
+                                        <span class="text-danger">{{ $errors->first('state') }}</span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="col-lg-6 p-t-20">
+                                <div
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+                                    <input class="mdl-textfield__input" type="text" id="postcode" name="postcode" value="{{ old('postcode') }}">
+                                    <label class="mdl-textfield__label" for="postcode">Post Code</label>
+                                    @if ($errors->has('postcode'))
+                                        <span class="text-danger">{{ $errors->first('postcode') }}</span>
+                                    @endif
+                                </div>
+                            </div>
                             <div class="col-lg-12 p-t-20 text-center">
                                 <button type="submit"
                                         class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 m-r-20 btn-circle btn-primary">

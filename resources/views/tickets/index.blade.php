@@ -83,7 +83,7 @@
                                             </td>
                                             <td>
                                     <span class="badge badge-dot mr-4">
-                                        @if($ticket->status == "Open")
+                                        @if($ticket->status == "open" || $ticket->status == "in-progress" || $ticket->status == "ready-to-bill")
                                             <span class="badge badge-info"> {{ $ticket->status }}</span>
                                         @else
                                             <span class="badge badge-danger"> {{ $ticket->status }}</span>

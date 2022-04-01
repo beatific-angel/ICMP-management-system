@@ -27,14 +27,23 @@ class ICMPController extends Controller
         foreach ($devices as $key => $device) {
             $ipaddress = $device->ipaddress;
             $status = '';
-            $command = (new PingCommandBuilder($ipaddress));
-            $ping = (new Ping($command))->run();
-            if ($ping->host_status == 'Ok') {
-                $status = "alive";
-            } else {
-                $status = "dead";
+            if (PHP_OS === 'WINNT') {
+                exec("ping -n 3 $ipaddress", $outcome, $status);
+                if (0 == $status) {
+                    $status = "alive";
+                } else {
+                    $status = "dead";
+                }
+            } else if (PHP_OS === 'Linux') {
+                $command = (new PingCommandBuilder($ipaddress));
+                $ping = (new Ping($command))->run();
+                if ($ping->host_status == 'Ok') {
+                    $status = "alive";
+                } else {
+                    $status = "dead";
+                }
             }
-
+            $devicestatus[$key] = $status;
             $get_device = DB::select("select * from servicestatus where deviceid='$device->id'");
             if (empty($get_device)) {
                 if($status == "alive"){
@@ -70,13 +79,22 @@ class ICMPController extends Controller
         foreach ($devices as $key => $device) {
             $ipaddress = $device->ipaddress;
             $status = '';
-		$command = (new PingCommandBuilder($ipaddress));
+            if (PHP_OS === 'WINNT') {
+                exec("ping -n 3 $ipaddress", $outcome, $status);
+                if (0 == $status) {
+                    $status = "alive";
+                } else {
+                    $status = "dead";
+                }
+            } else if (PHP_OS === 'Linux') {
+                $command = (new PingCommandBuilder($ipaddress));
                 $ping = (new Ping($command))->run();
                 if ($ping->host_status == 'Ok') {
                     $status = "alive";
                 } else {
                     $status = "dead";
                 }
+            }
             $devicestatus[$key] = $status;
             $get_device = DB::select("select * from servicestatus where deviceid='$device->id'");
             if (!empty($get_device)) {

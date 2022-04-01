@@ -105,13 +105,41 @@
                                     class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
                                     <input class="mdl-textfield__input" type="text" id="address" name="address" value="<?php echo e(old('address')); ?>">
                                     <label class="mdl-textfield__label" for="address">Address</label>
-                                    <span class="mdl-textfield__error">Number required!</span>
                                     <?php if($errors->has('address')): ?>
                                         <span class="text-danger"><?php echo e($errors->first('address')); ?></span>
                                     <?php endif; ?>
                                 </div>
                             </div>
-
+                            <div class="col-lg-6 p-t-20">
+                                <div
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+                                    <input class="mdl-textfield__input" type="text" id="city" name="city" value="<?php echo e(old('city')); ?>">
+                                    <label class="mdl-textfield__label" for="city">City</label>
+                                    <?php if($errors->has('city')): ?>
+                                        <span class="text-danger"><?php echo e($errors->first('city')); ?></span>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 p-t-20">
+                                <div
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+                                    <input class="mdl-textfield__input" type="text" id="state" name="state" value="<?php echo e(old('state')); ?>">
+                                    <label class="mdl-textfield__label" for="state">State</label>
+                                    <?php if($errors->has('state')): ?>
+                                        <span class="text-danger"><?php echo e($errors->first('state')); ?></span>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 p-t-20">
+                                <div
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+                                    <input class="mdl-textfield__input" type="text" id="postcode" name="postcode" value="<?php echo e(old('postcode')); ?>">
+                                    <label class="mdl-textfield__label" for="postcode">Post Code</label>
+                                    <?php if($errors->has('postcode')): ?>
+                                        <span class="text-danger"><?php echo e($errors->first('postcode')); ?></span>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
                             <div class="col-lg-12 p-t-20 text-center">
                                 <button type="submit"
                                         class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 m-r-20 btn-circle btn-primary">

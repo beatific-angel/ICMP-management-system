@@ -39,10 +39,6 @@
     <script src="{{asset('assets/plugins/flatpicker/js/flatpicker.min.js')}}"></script>
     <script src="{{asset('assets/js/pages/material-select/getmdl-select.js')}}"></script>
 
-    <!--apex chart-->
-    <script src="{{asset('assets/plugins/apexcharts/apexcharts.min.js')}}"></script>
-    <script src="{{asset('assets/js/pages/chart/apex/home-data.js')}}"></script>
-
     <!-- data table -->
     <script src="{{asset('assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('assets/plugins/datatables/plugins/bootstrap/dataTables.bootstrap5.min.js')}}"></script>

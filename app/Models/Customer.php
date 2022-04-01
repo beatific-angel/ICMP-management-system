@@ -12,5 +12,5 @@ class Customer extends Model
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['first_name','last_name','short_name','email','phone','address','created_at','updated_at'];
+    protected $fillable = ['first_name','last_name','short_name','email','phone','address','city','state','postcode','created_at','updated_at'];
 }

@@ -147,6 +147,8 @@
                                         <th>Group Name</th>
                                         <th>IP Address</th>
                                         <th>Status</th>
+                                        <th>Up Percent</th>
+                                        <th>Down Percent</th>
                                         <th>Last Seen</th>
                                     </tr>
                                     </thead>
@@ -172,6 +174,15 @@
                                                         <i class="fas fa-circle col-red me-2"></i>
                                                     @endif
                                                     {{$device->status}}</td>
+                                                <td><?php
+                                                    $allcnt = $device->access_count;$up_count = $device->up_count;$down_count = $device->down_count;
+                                                    $up_per = $up_count/$allcnt*100;
+                                                    $down_per = $down_count/$allcnt*100;
+                                                    echo $up_per. "%";
+                                                    ?></td>
+                                                <td><?php
+                                                    echo $down_per. "%";
+                                                    ?></td>
                                                 <td>{{$device->updated_at}}</td>
                                             </tr>
                                             @endif
@@ -188,23 +199,44 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="box-title"><small class="pull-right small-lbl-green"><i
-                                    class="far fa-arrow-alt-circle-up"></i> Good</small> Performance
+                                    class="far fa-arrow-alt-circle-up"></i></small> Open Ticket
                         </div>
-                        <div class="mt-3">
-                            <div class="stat-item">
-                                <div class="h6">Overall Growth</div>
-                                <b>35.80%</b>
-                            </div>
-                            <div class="stat-item">
-                                <div class="h6">Montly</div>
-                                <b>45.20%</b>
-                            </div>
-                            <div class="stat-item">
-                                <div class="h6">Day</div>
-                                <b>5.50%</b>
-                            </div>
-                        </div>
-                        <div id="schart1">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Ticket Id</th>
+                                    <th>Device</th>
+                                    <th>Assigned Customer</th>
+                                    <th>Status</th>
+                                </tr>
+                                </thead>
+                                <tbody id="ticket_status">
+                                @if($tickets)
+                                    @foreach($tickets as $key => $ticket)
+                                            <tr class="odd">
+                                                <td>
+                                                    <a href="{{ route('ticket.edit', ['ticket_id' => $ticket->ticket_id]) }}">
+                                                    {{$ticket->ticket_id}}
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <?php
+                                                    $deviceget = DB::select(DB::raw('select * from devices where id = ' . $ticket->device_id));
+                                                    echo $deviceget[0]->name;
+                                                    ?>
+                                                </td>
+                                                <td><?php
+                                                    $getcustomer = DB::select(DB::raw('select * from customers where id = ' . $ticket->customer_id));
+                                                    echo $getcustomer[0]->short_name;
+                                                    ?></td>
+                                                <td>
+                                                    {{$ticket->status}}</td>
+                                            </tr>
+                                    @endforeach
+                                @endif
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -216,7 +248,7 @@
     <script>
         var ajax_call = function () {
             $.ajax({
-                url: '/getdevicestatus',
+                url: '/downdevice',
                 type: 'get',
                 dataType: 'json',
                 success: function (response) {

@@ -100,6 +100,36 @@
                                     <?php endif; ?>
                                 </div>
                             </div>
+                            <div class="col-lg-6 p-t-20">
+                                <div
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+                                    <input class="mdl-textfield__input" type="text" id="city" name="city" value="<?php echo e($customer->city); ?>">
+                                    <label class="mdl-textfield__label" for="city">City</label>
+                                    <?php if($errors->has('city')): ?>
+                                        <span class="text-danger"><?php echo e($errors->first('city')); ?></span>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 p-t-20">
+                                <div
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+                                    <input class="mdl-textfield__input" type="text" id="state" name="state" value="<?php echo e($customer->state); ?>">
+                                    <label class="mdl-textfield__label" for="state">State</label>
+                                    <?php if($errors->has('state')): ?>
+                                        <span class="text-danger"><?php echo e($errors->first('state')); ?></span>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 p-t-20">
+                                <div
+                                    class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label txt-full-width">
+                                    <input class="mdl-textfield__input" type="text" id="postcode" name="postcode" value="<?php echo e($customer->postcode); ?>">
+                                    <label class="mdl-textfield__label" for="postcode">Post Code</label>
+                                    <?php if($errors->has('postcode')): ?>
+                                        <span class="text-danger"><?php echo e($errors->first('postcode')); ?></span>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
                             <input class="mdl-textfield__input" type="hidden" id="customerid"
                                    name="customerid" value="<?php echo e($customer->id); ?>">
                             <div class="col-lg-12 p-t-20 text-center">

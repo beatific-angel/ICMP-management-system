@@ -64,7 +64,7 @@
                                 </div>
 
                                 <div class="form-group row <?php echo e($errors->has('customer_id') ? ' has-error' : ''); ?>">
-                                    <label for="category" class="col-md-2 col-form-label form-control-label">Select Customer</label>
+                                    <label for="customer_id" class="col-md-2 col-form-label form-control-label">Select Customer</label>
 
                                     <div class="col-md-7">
                                         <select id="customer_id" type="category" class="form-control" name="customer_id">
@@ -99,20 +99,21 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group row <?php echo e($errors->has('priority') ? ' has-error' : ''); ?>">
-                                    <label for="priority" class="col-md-2 col-form-label form-control-label">Priority</label>
+                                <div class="form-group row <?php echo e($errors->has('status') ? ' has-error' : ''); ?>">
+                                    <label for="status" class="col-md-2 col-form-label form-control-label">Status</label>
 
                                     <div class="col-md-7">
-                                        <select id="priority" type="" class="form-control" name="priority">
-                                            <option value="">Select Priority</option>
-                                            <option value="low">Low</option>
-                                            <option value="medium">Medium</option>
-                                            <option value="high">High</option>
+                                        <select id="priority" type="" class="form-control" name="status">
+                                            <option value="">Select Status</option>
+                                            <option value="open">Open</option>
+                                            <option value="in-progress">In-Progress</option>
+                                            <option value="ready-to-bill">Ready-to-Bill</option>
+                                            <option value="closed">Closed</option>
                                         </select>
 
-                                        <?php if($errors->has('priority')): ?>
+                                        <?php if($errors->has('status')): ?>
                                             <span class="help-block">
-                            <span class="text-danger"><?php echo e($errors->first('priority')); ?></span>
+                            <span class="text-danger"><?php echo e($errors->first('status')); ?></span>
                         </span>
                                         <?php endif; ?>
                                     </div>

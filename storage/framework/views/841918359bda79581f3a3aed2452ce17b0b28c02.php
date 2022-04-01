@@ -80,7 +80,7 @@
                                             </td>
                                             <td>
                                     <span class="badge badge-dot mr-4">
-                                        <?php if($ticket->status == "Open"): ?>
+                                        <?php if($ticket->status == "open" || $ticket->status == "in-progress" || $ticket->status == "ready-to-bill"): ?>
                                             <span class="badge badge-info"> <?php echo e($ticket->status); ?></span>
                                         <?php else: ?>
                                             <span class="badge badge-danger"> <?php echo e($ticket->status); ?></span>

@@ -9,7 +9,7 @@
                 </div>
                 <ol class="breadcrumb page-breadcrumb pull-right">
                     <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item"
-                                                           href="index.html">Home</a>&nbsp;<i
+                                                           href="<?php echo e(route('home')); ?>">Home</a>&nbsp;<i
                             class="fa fa-angle-right"></i>
                     </li>
                     <li class="active">Dashboard</li>
@@ -144,13 +144,15 @@
                                         <th>Group Name</th>
                                         <th>IP Address</th>
                                         <th>Status</th>
+                                        <th>Up Percent</th>
+                                        <th>Down Percent</th>
                                         <th>Last Seen</th>
                                     </tr>
                                     </thead>
                                     <tbody id="home_device_status">
                                     <?php if($status_lists): ?>
                                         <?php $__currentLoopData = $status_lists; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $device): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-
+                                            <?php if($device->status == 'dead'): ?>
                                             <tr class="odd">
                                                 <td><i data-feather="monitor"></i></td>
                                                 <td><?php echo e($device->deviceid); ?></td>
@@ -169,8 +171,18 @@
                                                         <i class="fas fa-circle col-red me-2"></i>
                                                     <?php endif; ?>
                                                     <?php echo e($device->status); ?></td>
+                                                <td><?php
+                                                    $allcnt = $device->access_count;$up_count = $device->up_count;$down_count = $device->down_count;
+                                                    $up_per = $up_count/$allcnt*100;
+                                                    $down_per = $down_count/$allcnt*100;
+                                                    echo $up_per. "%";
+                                                    ?></td>
+                                                <td><?php
+                                                    echo $down_per. "%";
+                                                    ?></td>
                                                 <td><?php echo e($device->updated_at); ?></td>
                                             </tr>
+                                            <?php endif; ?>
                                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                     <?php endif; ?>
                                     </tbody>
@@ -184,23 +196,45 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="box-title"><small class="pull-right small-lbl-green"><i
-                                    class="far fa-arrow-alt-circle-up"></i> Good</small> Performance
+                                    class="far fa-arrow-alt-circle-up"></i></small> Open Ticket
                         </div>
-                        <div class="mt-3">
-                            <div class="stat-item">
-                                <div class="h6">Overall Growth</div>
-                                <b>35.80%</b>
-                            </div>
-                            <div class="stat-item">
-                                <div class="h6">Montly</div>
-                                <b>45.20%</b>
-                            </div>
-                            <div class="stat-item">
-                                <div class="h6">Day</div>
-                                <b>5.50%</b>
-                            </div>
-                        </div>
-                        <div id="schart1">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Ticket Id</th>
+                                    <th>Device</th>
+                                    <th>Assigned Customer</th>
+                                    <th>Status</th>
+                                </tr>
+                                </thead>
+                                <tbody id="ticket_status">
+                                <?php if($tickets): ?>
+                                    <?php $__currentLoopData = $tickets; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $ticket): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                            <tr class="odd">
+                                                <td>
+                                                    <a href="<?php echo e(route('ticket.edit', ['ticket_id' => $ticket->ticket_id])); ?>">
+                                                    <?php echo e($ticket->ticket_id); ?>
+
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <?php
+                                                    $deviceget = DB::select(DB::raw('select * from devices where id = ' . $ticket->device_id));
+                                                    echo $deviceget[0]->name;
+                                                    ?>
+                                                </td>
+                                                <td><?php
+                                                    $getcustomer = DB::select(DB::raw('select * from customers where id = ' . $ticket->customer_id));
+                                                    echo $getcustomer[0]->short_name;
+                                                    ?></td>
+                                                <td>
+                                                    <?php echo e($ticket->status); ?></td>
+                                            </tr>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                <?php endif; ?>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -212,11 +246,10 @@
     <script>
         var ajax_call = function () {
             $.ajax({
-                url: '/getdevicestatus',
+                url: '/downdevice',
                 type: 'get',
                 dataType: 'json',
                 success: function (response) {
-                    console.log(response);
                     document.getElementById('home_device_status').innerHTML = response.get_status;
                 }
             });
@@ -225,7 +258,6 @@
                 type: 'get',
                 dataType: 'json',
                 success: function (response) {
-                    console.log(response);
                     document.getElementById('home_group_status').innerHTML = response.get_status;
                 }
             });

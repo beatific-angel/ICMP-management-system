@@ -37,7 +37,10 @@ class CustomerController extends Controller
         'short_name' => 'required',
         'phone' => 'required',
         'email' => 'required',
-        'address' => 'required'
+        'address' => 'required',
+        'city' => 'required',
+        'state' => 'required',
+        'postcode' => 'required'
         ]);
 
         $firstname = $request->input('first_name');
@@ -46,6 +49,9 @@ class CustomerController extends Controller
         $phone = $request->input('phone');
         $email = $request->input('email');
         $address = $request->input('address');
+        $city = $request->input('city');
+        $state = $request->input('state');
+        $postcode = $request->input('postcode');
 
         $customer = new Customer([
             'first_name' => $firstname,
@@ -53,7 +59,10 @@ class CustomerController extends Controller
             'short_name' => $shortname,
             'phone' => $phone,
             'email' => $email,
-            'address' => $address
+            'address' => $address,
+            'city' => $city,
+            'state' => $state,
+            'postcode' => $postcode
         ]);
 
         $customer->save();
@@ -76,7 +85,10 @@ class CustomerController extends Controller
             'short_name' => 'required',
             'phone' => 'required',
             'email' => 'required',
-            'address' => 'required'
+            'address' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+            'postcode' => 'required'
         ]);
 
         $customerid = $request->input('customerid');
@@ -86,6 +98,9 @@ class CustomerController extends Controller
         $phone = $request->input('phone');
         $email = $request->input('email');
         $address = $request->input('address');
+        $city = $request->input('city');
+        $state = $request->input('state');
+        $postcode = $request->input('postcode');
 
 
         $customer = Customer::findOrFail($customerid);
@@ -96,6 +111,9 @@ class CustomerController extends Controller
         $customer->phone = $phone;
         $customer->email = $email;
         $customer->address = $address;
+        $customer->city = $city;
+        $customer->state = $state;
+        $customer->postcode = $postcode;
         $customer->save();
 
         return redirect()->back()->with("success", "The Customer has been updated.");

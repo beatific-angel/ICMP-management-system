@@ -55,37 +55,38 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="category" class="col-md-2 col-form-label form-control-label">Selected Customer</label>
+                                <label for="user_id" class="col-md-2 col-form-label form-control-label">Selected Customer</label>
 
                                 <div class="col-md-7">
                                     <?php
                                     $selectedcustomer = DB::select(DB::raw('select * from customers where id = ' . $ticket->customer_id));
                                     ?>
-                                    <select id="user_id" type="category" class="form-control" name="user_id">
+                                    <select id="user_id" type="category" class="form-control" name="user_id" readonly>
                                         <option value="{{ $ticket->customer_id }}">{{ $selectedcustomer[0]->short_name }}</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group row {{ $errors->has('device_id') ? ' has-error' : '' }}">
-                                <label for="category" class="col-md-2 col-form-label form-control-label">Select Device</label>
+                                <label for="device_id" class="col-md-2 col-form-label form-control-label">Select Device</label>
 
                                 <div class="col-md-7">
                                     <?php
                                     $selecteddevice = DB::select(DB::raw('select * from devices where id = ' . $ticket->device_id));
                                     ?>
-                                    <select id="user_id" type="category" class="form-control" name="user_id">
+                                    <select id="device_id" type="category" class="form-control" name="device_id" readonly>
                                         <option value="{{ $ticket->device_id }}">{{ $selecteddevice[0]->name }}</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="priority" class="col-md-2 col-form-label form-control-label">Priority</label>
+                                <label for="status" class="col-md-2 col-form-label form-control-label">Status</label>
                                 <div class="col-md-7">
-                                    <select id="priority" type="" class="form-control" name="priority">
-                                        <option value="">Select Priority</option>
-                                        <option value="low"  {{ $ticket->priority == 'low' ? 'selected' : '' }}>Low</option>
-                                        <option value="medium" {{ $ticket->priority == 'medium' ? 'selected' : '' }}>Medium</option>
-                                        <option value="high" {{ $ticket->priority == 'high' ? 'selected' : '' }}>High</option>
+                                    <select id="status" type="" class="form-control" name="status">
+                                        <option value="">Select Status</option>
+                                        <option value="open"  {{ $ticket->status == 'open' ? 'selected' : '' }}>Open</option>
+                                        <option value="in-progress" {{ $ticket->status == 'in-progress' ? 'selected' : '' }}>In-Progress</option>
+                                        <option value="ready-to-bill" {{ $ticket->status == 'ready-to-bill' ? 'selected' : '' }}>Ready-to-Bill</option>
+                                        <option value="closed" {{ $ticket->status == 'closed' ? 'selected' : '' }}>Closed</option>
                                     </select>
                                 </div>
                             </div>
@@ -105,10 +106,6 @@
                                     <button type="submit" class="btn btn-primary" >
                                         <i class="fas fa-ticket-alt"></i> Update Ticket
                                     </button>
-                                </div>
-                                <div class="col-md-4 col-3">
-                                    <a href="{{ route('ticket.close', ['ticket_id' => $ticket->ticket_id]) }}" class="btn btn-secondary">Close
-                                    </a>
                                 </div>
                                 <div class="col-md-4 col-3">
                                     <a href="{{ route('ticket.index') }}" class="btn btn-secondary-alt">Cancel
@@ -153,14 +150,4 @@
         }
     }
 </style>
-@endsection
-@section('scripts')
-    <script>
-        $(document).ready(function(){
-            $('#panel-print').on('click', function(event) {
-                window.location.href = "https://beatficangel.work";
-
-            });
-        });
-    </script>
 @endsection

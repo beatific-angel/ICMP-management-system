@@ -104,7 +104,6 @@
             type: 'get',
             dataType: 'json',
             success: function (response) {
-                console.log(response);
                 document.getElementById('device_status').innerHTML = response.get_status;
             }
         });

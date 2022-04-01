@@ -32,6 +32,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/servicestatus', [App\Http\Controllers\ICMPController::class, 'index'])->name('servicestatus');
 Route::get('/groupstatus', [App\Http\Controllers\HomeController::class, 'groupstatus'])->name('groupstatus');
 Route::get('/getdevicestatus', [App\Http\Controllers\ICMPController::class, 'getstatus'])->name('getstatus');
+Route::get('/downdevice', [App\Http\Controllers\HomeController::class, 'downdevice'])->name('downdevice');
 Route::get('/logvisit', [App\Http\Controllers\HomeController::class, 'visitlog'])->name('visitlog');
 // Profile Routes
 Route::prefix('profile')->name('profile.')->middleware('auth')->group(function(){

@@ -40,7 +40,7 @@ class TicketController extends Controller
             'title' => 'required',
             'customer_id' => 'required',
             'device_id' => 'required',
-            'priority' => 'required',
+            'status' => 'required',
             'message' => 'required'
         ]);
 
@@ -49,9 +49,8 @@ class TicketController extends Controller
             'customer_id' => $request->input('customer_id'),
             'ticket_id' => strtoupper(Str::random(10)),
             'device_id' => $request->input('device_id'),
-            'priority' => $request->input('priority'),
-            'message' => $request->input('message'),
-            'status' => "Open"
+            'status' => $request->input('status'),
+            'message' => $request->input('message')
         ]);
 
         $ticket->save();
@@ -62,16 +61,12 @@ class TicketController extends Controller
     public function update(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required',
-            'customer_id' => 'required',
-            'priority' => 'required',
+            'status' => 'required',
             'message' => 'required'
         ]);
         $ticket = Ticket::where('ticket_id', $request->ticket_id)->firstOrFail();
 
-        $ticket->title = $request->title;
-        $ticket->customer_id = $request->customer_id;
-        $ticket->priority = $request->priority;
+        $ticket->status = $request->status;
         $ticket->message = $request->message;
         $ticket->save();
 
@@ -113,6 +108,6 @@ class TicketController extends Controller
         $device = Device::where('id', $device_id)->firstOrFail();
 
 
-        return view('tickets.print', compact('ticket','customer','device'));
+        return view('tickets.printorder', compact('ticket','customer','device'));
     }
 }
