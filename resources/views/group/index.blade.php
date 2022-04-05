@@ -12,9 +12,9 @@
                 </div>
                 <ol class="breadcrumb page-breadcrumb pull-right">
                     <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item"
-                                                           href="index.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
+                                                           href="{{route('home')}}">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
                     </li>
-                    <li><a class="parent-item" href="">Group</a>&nbsp;<i class="fa fa-angle-right"></i>
+                    <li><a class="parent-item" href="{{route('group.index')}}">Group</a>&nbsp;<i class="fa fa-angle-right"></i>
                     </li>
                     <li class="active">Group List</li>
                 </ol>
