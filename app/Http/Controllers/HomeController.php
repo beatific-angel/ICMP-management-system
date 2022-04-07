@@ -198,12 +198,7 @@ class HomeController extends Controller
         }
     }
 
-    /**
-     * Change Password
-     * @param Old Password, New Password, Confirm New Password
-     * @return Boolean With Success Message
-     * @author Shani Singh
-     */
+
     public function changePassword(Request $request)
     {
         $request->validate([
@@ -232,7 +227,7 @@ class HomeController extends Controller
 
     public function visitlog(){
         $visitlogs = VisitLog::all();
-        // dd($visitlogs);
+       
         return view('visitlog.index', compact('visitlogs'));
     }
 }
